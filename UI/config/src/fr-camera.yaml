@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fr-cam
+  namespace: default
+  labels:
+    name: "fr-cam"
+  annotations:
+    keel.sh/policy: "glob:dev"
+    keel.sh/trigger: poll
+    keel.sh/pollSchedule: "@every 30s"
+spec:
+  selector:
+    matchLabels:
+      app: fr-cam
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: fr-cam
+    spec:
+      containers:
+      - name: fr-cam
+        image: rgs/cn/fr:tag
+        # resources:
+        #   limits:
+        #     memory: "2000Mi"
+        #     cpu: "1"
+        #   requests:
+        #     memory: "2000Mi"
+        #     cpu: "1"
+        imagePullPolicy: IfNotPresent
+        env:
+          - name: pincode
+            value: a
+          - name: cam_name
+            value: a
+          - name: cam_url
+            value: a
+        volumeMounts:
+        - mountPath: /app/images
+          name: glusterfs
+        - mountPath: /app/config
+          name: config 
+      volumes:
+      - name: glusterfs
+        hostPath:
+          path: /mnt/ravenfs/pivotchain
+          type: Directory
+      - name: config
+        configMap:
+          name: backend-config
+      imagePullSecrets:
+      - name: raven-registry
+
+

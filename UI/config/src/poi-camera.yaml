@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: raven-poi
+spec:
+  selector:
+    matchLabels:
+      app: raven-poi
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: raven-poi
+    spec:
+      containers:
+      - name: raven-poi
+        image: rgs/cn/raven-poi:tag
+        resources:
+          limits:
+            memory: "8000Mi"
+            cpu: "16"
+          requests:
+            memory: "6000Mi"
+            cpu: "16"
+        imagePullPolicy: IfNotPresent
+        env:
+          - name: pincode
+            value: a
+          - name: cam_name
+            value: a
+          - name: cam_url
+            value: a
+        volumeMounts:
+        - mountPath: /app/images
+          name: glusterfs
+        - mountPath: /app/config
+          name: config 
+      volumes:
+      - name: glusterfs
+        hostPath:
+          path: /mnt/ravenfs/pivotchain
+          type: Directory
+      - name: config
+        configMap:
+          name: backend-config
+      imagePullSecrets:
+      - name: raven-registry
+
+

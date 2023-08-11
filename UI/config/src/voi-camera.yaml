@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: raven-voi
+spec:
+  selector:
+    matchLabels:
+      app: raven-voi
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: raven-voi
+    spec:
+      containers:
+      - name: raven-voi
+        image: rgs/cn/raven-voi:tag
+        # resources:
+        #   limits:
+        #     memory: "4000Mi"
+        #     cpu: "8"
+        #   requests:
+        #     memory: "4000Mi"
+        #     cpu: "8"
+        imagePullPolicy: IfNotPresent
+        env:
+          - name: pincode
+            value: a
+          - name: cam_name
+            value: a
+          - name: cam_url
+            value: a
+        volumeMounts:
+        - mountPath: /app/images
+          name: glusterfs
+        - mountPath: /app/config
+          name: config 
+      volumes:
+      - name: glusterfs
+        hostPath:
+          path: /mnt/ravenfs/pivotchain
+          type: Directory
+      - name: config
+        configMap:
+          name: backend-config
+      imagePullSecrets:
+      - name: raven-registry
+
+

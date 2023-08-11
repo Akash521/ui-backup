@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: livestream
+spec:
+  selector:
+    matchLabels:
+      app: livestream
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: livestream
+    spec:
+      containers:
+      - name: livestream
+        image: rgs/cn/livestream:tag
+        resources:
+          limits:
+            memory: "750Mi"
+            cpu: "0.5"
+          requests:
+            memory: "750Mi"
+            cpu: "0.5"
+        imagePullPolicy: IfNotPresent
+        env:
+          - name: cam_url
+            value: a
+          - name: cam_name
+            value: a
+        volumeMounts:
+        - mountPath: /app/images
+          name: glusterfs
+      volumes:
+      - name: glusterfs
+        hostPath:
+          path: /mnt/ravenfs/pivotchain
+          type: Directory
+      imagePullSecrets:
+      - name: raven-registry
+

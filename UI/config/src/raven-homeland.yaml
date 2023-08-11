@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: raven-homeland
+spec:
+  selector:
+    matchLabels:
+      app: raven-homeland
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: raven-homeland
+    spec:
+      containers:
+      - name: raven-homeland
+        image: rgs/cn/raven-homeland:tag
+        resources:
+          limits:
+            memory: "2500Mi"
+            cpu: "1.5"
+          requests:
+            memory: "2000Mi"
+            cpu: "1.5"
+        imagePullPolicy: IfNotPresent
+        env:
+          - name: pincode
+            value: a
+          - name: cam_name
+            value: a
+          - name: cam_url
+            value: a
+        volumeMounts:
+        - mountPath: /app/images
+          name: glusterfs
+        - mountPath: /app/config
+          name: config 
+      volumes:
+      - name: glusterfs
+        hostPath:
+          path: /mnt/ravenfs/pivotchain
+          type: Directory
+      - name: config
+        configMap:
+          name: backend-config
+      imagePullSecrets:
+      - name: raven-registry
+
+

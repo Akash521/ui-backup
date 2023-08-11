@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ffmpeg-rtmp
+  namespace: default
+  labels:
+    name: "ffmpeg-rtmp"
+  annotations:
+    keel.sh/policy: "glob:dev"
+    keel.sh/trigger: poll
+    keel.sh/pollSchedule: "@every 30s"
+spec:
+  selector:
+    matchLabels:
+      app: ffmpeg-rtmp
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ffmpeg-rtmp
+    spec:
+      containers:
+      - name: ffmpeg-rtmp
+        image: rgs/cn/ffmpeg-rtmp:tag
+        # resources:
+        #   limits:
+        #     memory: "1000Mi"
+        #     cpu: "1"
+        #   requests:
+        #     memory: "1000Mi"
+        #     cpu: "1"
+        imagePullPolicy: IfNotPresent
+        env:
+          - name: cam_url
+            value: a
+          - name: cam_name
+            value: a
+          - name: ffmpeg_fps
+            value: a
+        volumeMounts:
+        - mountPath: /app/images
+          name: glusterfs
+      volumes:
+      - name: glusterfs
+        hostPath:
+          path: /mnt/ravenfs/pivotchain
+          type: Directory
+      imagePullSecrets:
+      - name: raven-registry
+

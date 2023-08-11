@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: download
+spec:
+  selector:
+    matchLabels:
+      app: download
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: download
+    spec:
+      containers:
+      - name: download
+        image: rgs/cn/vms-download:tag
+        resources:
+          limits:
+            memory: "1000Mi"
+            cpu: "1"
+          requests:
+            memory: "1000Mi"
+            cpu: "1"
+        imagePullPolicy: IfNotPresent
+        env:
+          - name: from_time
+            value: a
+          - name: to_time
+            value: a
+          - name: session_id
+            value: a
+          - name: video_id
+            value: a
+          - name: cam_name
+            value: a  
+        volumeMounts:
+        - mountPath: /app/images
+          name: glusterfs
+        - mountPath: /app/config
+          name: config 
+        - mountPath: /app/k8s
+          name: kubeconfig
+      volumes:
+      - name: glusterfs
+        hostPath:
+          path: /mnt/ravenfs/pivotchain
+          type: Directory
+      - name: config
+        configMap:
+          name: backend-config
+      - name: kubeconfig
+        configMap:  
+          name: kubeconfig
+      imagePullSecrets:
+      - name: raven-registry
+
