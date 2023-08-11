@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>RAVEN AI | Pivotchain Solutions</title>
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"
+    />
+    <link rel="stylesheet" href="" />
+    <!--    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>-->
+    <!--    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>-->
+    <!--<link rel="stylesheet" href="./style.css">-->
+    
+    <link href="css/application.css" rel="stylesheet">
+<!--    <link href="js/bootstrap-datetimepicker.css" rel="styleshet">-->
+    <link href="css/custom-css/custom-style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom-css/map_nav.css">
+    <link rel="stylesheet" href="lib/Tags-Input/jquery.tagsinput.css">
+    
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomik23/autocomplete@latest/docs/css/autocomplete.css"> -->
+
+    <!--<link rel="stylesheet" href="lib/Tags-Input/jquery.tagsinput.css">-->
+    <!--<link rel="stylesheet" href="css/normalize/normalize.min.css">-->
+    <!--<link rel="stylesheet" href="Frontend/pruneCluster/src/pranu-css.css">-->
+  </head>
+
+  <body class="over">
+    <header id="desktop_headermp" class="page-header navbar-header mpnavdesk" style="height: 0;">
+      <div id="topheader" class="navbar">
+        <nav
+          id="sidebar"
+          class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top"
+        >
+          <!-- <div class="b1" >
+                <a href="/addcam" class="navbar-brand link-menu navbar-nav">
+                    <p class="menu-2" style="text-align: center;">
+                        <i class="fa fa-plus-square"></i><br><br>
+                        <span class="link_p text">Add Camera</span></p>
+                </a>
+            </div>
+
+            <div class="b2" >
+                <a href="/cam" id="cam_moni" class="navbar-brand link-menu">
+                    <p class="menu-1 " style="text-align: center;">
+                        <i class="fa fa-home"></i><br><br>
+                        <span class="link_p text add_cameratext">City</span></p>
+                </a>
+            </div>
+
+            <div class="b3" >
+                <a href="/analytics" class="navbar-brand link-menu">
+                    <p class="menu-1 " style="text-align: center;">
+                        <i class="fa fa-bars" aria-hidden="true"></i><br><br>
+                        <span class="link_p text">Analytics</span></p>
+                </a></div> -->
+
+          <!--            <div class="b4" >-->
+          <!--                <a href="/logs" class="navbar-brand link-menu">-->
+          <!--                    <p class="menu-1 " style="text-align: center;">-->
+          <!--                        <i class="fa fa-clipboard" aria-hidden="true"></i><br><br>-->
+          <!--                        <span class="link_p text">Alerts</span></p>-->
+
+          <!--                </a>-->
+          <!--            </div>-->
+
+          <!-- <div class="b4" >
+                <a href="/cctv_voi" class="navbar-brand link-menu">
+                    <p class="menu-1 " style="text-align: center;">
+                        <i class="fa fa-car" aria-hidden="true"></i><br><br>
+                        <span class="link_p text">VOI</span></p>
+
+                </a>
+            </div>
+
+            <div class="b4" >
+                <a href="/cctv_poi" class="navbar-brand link-menu">
+                    <p class="menu-1 " style="text-align: center;">
+                        <i class="fa fa-user" aria-hidden="true"></i><br><br>
+                        <span class="link_p text">POI</span></p>
+
+                </a>
+            </div> -->
+
+          <!-- <div class="b5" >
+                <a href="/users" class="navbar-brand link-menu">
+                    <p class="menu-1 " style="text-align: center;">
+                        <i class="fa fa-users"></i><br><br>
+                        <span class="link_p text">Users</span></p>
+
+                </a>
+            </div> -->
+
+          <!-- <div class="b5" >
+                <a href="/cctv_map" class="navbar-brand link-menu active-li">
+                    <p class="menu-1 " style="text-align: center;">
+                        <i class="fa fa-map-o" aria-hidden="true"></i><br><br>
+                        <span class="link_p text">Map</span></p>
+
+                </a>
+            </div> -->
+          <!--
+            <div class="b6" onclick="openmodalSMTP();">
+                <span class="navbar-brand link-menu" >
+                     <p class="menu-1 " style="text-align: center;">
+                    <i class="fa fa-cog"></i><br><br>
+                    <span class="link_p text">Main Setup</span></p>
+
+                </span></div> -->
+
+          <ul class="nav navbar-nav nav bar-right pull-right">
+            <li class="visible-phone-landscape">
+              <a href="#" id="search-toggle">
+                <i class="fa fa-search"></i>
+              </a>
+            </li>
+            <button
+              type="button"
+              class="btn btn-default dropdown-toggle tagbt"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="glyphicon glyphicon-user"></i
+              >&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span>
+            </button>
+            <ul id="acc_setting" class="dropdown-menu user_select">
+              <!-- <li><a href="/userprofile"><i class="glyphicon glyphicon-cog">&nbsp;</i><span>Account Settings</span></a></li><hr>
+                    <li><a href="/logout"><i class="glyphicon glyphicon-off">&nbsp;</i><span>Logout</span></a></li> -->
+            </ul>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- header for mobile view start-->
+    <nav id="mobile_header" class="sidebar nav-collapse navbar-dark collapse">
+      <div class="row mobrw">
+        <div class="col-sm-6 mobrw1">
+          <!-- <a href="/cctv_map"
+            ><img
+              src="img/Raven-logo.png"
+              height="50px"
+              class="branding_logomob"
+          /></a> -->
+        </div>
+        <div class="col-sm-6 mobrw2" style="display: flex; align-items: center">
+          <a
+            href="#"
+            class="btn-navbar hum"
+            data-toggle="collapse"
+            data-target=".sidebar"
+            title=""
+          >
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+      </div>
+      <ul id="mobile_sidebar_nav" class="side-nav">
+        <!-- <li class="">
+            <a href="/addcam" class="navbar-brand link-menum active-li">
+                <p class="menu-2">
+                    <i class="fa fa-plus-square"></i>
+                    <span class="link_p text">Add Camera</span></p>
+            </a>
+        </li>
+        <li class="">
+            <a href="/cam" id="cam_moni" class="navbar-brand link-menum ">
+                <p class="menu-1 ">
+                    <i class="fa fa-home"></i>
+                    <span class="link_p text add_cameratext">City</span></p>
+            </a>
+        </li>
+        <li class="">
+            <a href="/analytics" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <span class="link_p text">Analytics</span></p>
+            </a>
+        </li>
+        <li class="">
+            <a href="/cctv_voi" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-car" aria-hidden="true"></i>
+                    <span class="link_p text">VOI</span></p>
+
+            </a>
+        </li>
+        <li class="">
+            <a href="/cctv_poi" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <span class="link_p text">POI</span></p>
+
+            </a>
+        </li>
+        <li class="">
+            <a href="/users" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-users"></i>
+                    <span class="link_p text">Users</span></p>
+
+            </a>
+        </li>
+        <li class="">
+            <a href="/map-nav" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-map-o" aria-hidden="true"></i>
+                    <span class="link_p text">Map</span></p>
+
+            </a>
+        </li> -->
+        <!-- <li class=""> -->
+        <!-- <a href="main_setup.html"><img src="img/clr6.svg">&nbsp;<span class="name">Main Setup </span></a> -->
+        <!-- <div class="b6 navbar-brand link-menum" onclick="openmodalSMTP();"><i class="fa fa-cog"></i><span class="name">Main Setup </span></div>
+        </li> -->
+
+        <!-- <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#tables-collapse"><i class="glyphicon glyphicon-user select_clr"></i></a>
+            <ul id="tables-collapse" class="panel-collapse collapse ">
+                <li><a href="/userprofile"><i class="glyphicon glyphicon-cog select_clr">&nbsp;</i><span>Settings</span></a></li><hr>
+                <li><a href="/logout"><i class="glyphicon glyphicon-off select_clr">&nbsp;</i><span>Logout</span></a></li>
+            </ul>
+        </li> -->
+        <!-- <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#sub-menu-1-collapse" href="#sub-menu-2-collapse"><i class="fa fa-folder-open"></i>&nbsp;Item 2.3</a>
+            <ul id="sub-menu-2-collapse" class="panel-collapse collapse">
+                <li><a href="#">Item 3.4</a></li>
+                <li><a href="#">Item 3.5</a></li>
+                <li><a href="#">Item 3.6</a></li>
+            </ul>
+        </li> -->
+      </ul>
+
+      <!-- <nav id="sidebar" class="mobsidesrch mobilecam">
+        <input type="search" id="search" class="live-search-box" placeholder="Search" autocomplete="off" />
+        <ul id="side-nav" class="side-nav live-search-list">
+            <li class="panel">
+                <ul id="menu-levels-collapse" class="panel-collapse collapse in">
+                </ul>
+            </li>
+        </ul>
+    </nav> -->
+
+      <!-- <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5> -->
+      <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
+      <!-- <ul class="sidebar-labels">
+        <li>
+            <a href="#">
+                 yep, .circle again
+                <i class="fa fa-circle text-warning"></i>
+                <span class="label-name">My Recent</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-circle text-gray"></i>
+                <span class="label-name">Starred</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-circle text-danger"></i>
+                <span class="label-name">Background</span>
+            </a>
+        </li>
+    </ul> -->
+
+      <!--  <h5 class="sidebar-nav-title">Projects</h5> -->
+      <!-- A place for sidebar notifications & alerts -->
+      <!--  <div class="sidebar-alerts">
+         <div class="alert fade in">
+             <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+             <span class="text-white fw-semi-bold">Sales Report</span> <br>
+             <div class="progress progress-xs mt-xs mb-0">
+                 <div class="progress-bar progress-bar-gray-light" style="width: 16%"></div>
+             </div>
+             <small>Calculating x-axis bias... 65%</small>
+         </div>
+         <div class="alert fade in">
+             <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+             <span class="text-white fw-semi-bold">Personal Responsibility</span> <br>
+             <div class="progress progress-xs mt-xs mb-0">
+                 <div class="progress-bar progress-bar-danger" style="width: 23%"></div>
+             </div>
+             <small>Provide required notes</small>
+         </div>
+     </div> -->
+    </nav>
+    <!-- header for mobile view end-->
+
+    <!-- header for ipad and ipadpro view start-->
+    <div class="navbar-dark ipdhdr" style="width: 100%" id="ipad_header">
+      <div class="row">
+        <div class="col-sm-6 ipadrw">
+          <!-- <a href="/cctv_map"
+            ><img
+              src="img/Raven-logo.png"
+              height="60px"
+              class="branding_logomob"
+          /></a> -->
+        </div>
+        <div class="col-xs-6">
+          <div class="dropdown ipddrp">
+            <button
+              class="btn btn-primary dropdown-toggle ipdrp"
+              type="button"
+              data-toggle="dropdown"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+            <ul id="ipad_dropdown_menu" class="dropdown-menu dropipad mapdrp">
+              <!-- <li>
+                        <a href="/addcam" class="navbar-brand link-menum">
+                            <p class="menu-2">
+                                <i class="fa fa-plus-square"></i>
+                                <span class="link_p text">Add Camera</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cam" id="cam_moni" class="navbar-brand link-menum ">
+                            <p class="menu-1 ">
+                                <i class="fa fa-home"></i>
+                                <span class="link_p text add_cameratext">City</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/analytics" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                <span class="link_p text">Analytics</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cctv_voi" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-car" aria-hidden="true"></i>
+                                <span class="link_p text">VOI</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cctv_poi" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="link_p text">POI</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/users" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-users"></i>
+                                <span class="link_p text">Users</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/map-nav" class="navbar-brand link-menum active-li">
+                            <p class="menu-1">
+                                <i class="fa fa-map-o" aria-hidden="true"></i>
+                                <span class="link_p text">Map</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <div class="b6 navbar-brand link-menum" onclick="openmodalSMTP();"><i class="fa fa-cog"></i><span class="name"> Main Setup </span></div>
+                    </li>
+                    <li>
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default acpn">
+                                <div class="panel-heading2" role="tab" id="headingThree">
+                                    <a class="collapsed acipc" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <i class="glyphicon glyphicon-user select_clr" style="color: #767a81;"></i> &nbsp;Account Setting
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse2 collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        <ul id="tables-collapse" class="panel-collapse" aria-expanded="false" style="height: 0px;">
+                                            <li><a href="/userprofile" class="acipa"><i class="glyphicon glyphicon-cog select_clr">&nbsp;</i><span>Settings</span></a></li><hr>
+                                            <li><a href="/logout" class="acipa"><i class="glyphicon glyphicon-off select_clr">&nbsp;</i><span>Logout</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="menudropdownmobile" style="display: none;">
+        <select id="downloaddropdown" style="
+                            border-radius: 2px;
+                            background-color: var(--main-bg-color) !important;
+                            border: 0px;
+                            color: var(--white);
+                            width: 100%;
+                            text-align: center;
+                            padding: 10px;
+                            display: none;
+                          ">
+        </select>
+    </div>
+    <!-- header for ipad and ipadpro view end-->
+
+    <!--<div id="wrapper" class="wrap" style="padding-left: 0px;background-color: transparent !important;margin-left: 0px;">-->
+    <!--        <div id="map"  style="position: unset;display: block; height: 100vh;" ></div>-->
+    <!--</div>-->
+    <div class="wrap mapwrp" style="margin-left: 0px;width: 100%;overflow: hidden;">
+
+
+       <nav id="sidebar" class="sidebar nav-collapse collapse homeside" style="display: none;">
+            <input type="search" id="search" class="live-search-box" placeholder="Search" autocomplete="off" />
+            <ul id="side-nav" class="side-nav">
+                <li class="panel">
+                    <ul id="menu-levels-collapse" class="panel-collapse collapse in">
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+      <div class="content container main_body">
+        <!-- <div> -->
+        
+        <div id="map_card" style="position: absolute;z-index: 11;right: 0;width: 100%;transition: transform 1s;">
+
+    <div style="margin-top: 74px;padding-top: 0 !important;">
+        
+     <div class="col-md-3" style="position: relative;">
+        <div id="map_searchdiv" style="top: 80px;">
+          <label id="searchicon">
+            <input
+              id="search-autocomplete"
+              type="text"
+              autocomplete="off"
+              class="search-field"
+              placeholder="Search..."
+              value=""
+              name="s"
+              title="Search Location"
+            />
+            <i
+              id="searchiconformap"
+              class="fa fa-search"
+              aria-hidden="true"
+              style="
+                right: 15%;
+                position: absolute;
+                margin-top: 10px;
+                color: #808080;
+              "
+            ></i>
+          </label>
+          
+        </div>
+     </div>
+    
+       <div class="col-md-3" title="Location's Count">
+      <div class="card-counter map_card_counter" style="cursor: default;">
+        <i class="fa fa-map-marker"></i>
+        <span class="count-numbers" id="mapatm_card_count">0</span>
+        <span class="count-name">Location's</span>
+      </div>
+    </div>
+    <div class="col-md-3" title="Live Camera's Count">
+     <div id="cameracounter" class="card-counter map_card_counter" style="border: 1px solid var(--main-bg-color);cursor: default;">
+       <i class="fa fa-video-camera"></i>
+        <span class="count-numbers" id="mapcamera_card_count">0</span>
+        <span class="count-name">Live Camera's</span>
+      </div>
+    </div>
+    <div class="col-md-3" title="Alerts Count">
+     <div id="alertcounter" class="card-counter map_card_counter" style="border: 1px solid var(--main-bg-color);cursor: default;">
+        <i class="fa fa-bullhorn"></i>
+        <span class="count-numbers" id="mapalert_card_count">0</span>
+        <span class="count-name">Alerts</span>
+      </div>
+    </div>
+    
+     
+    
+  </div>
+</div>
+        <div id="map"></div>
+        <div
+          id="map_loader"
+          style="
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            top: 0px;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <div class="loader-wrap-spin-preview">
+            <!--                            <i class="fa fa-circle-o-notch fa-spin" style="font-size: 26px;"></i>-->
+            <img src="img/edlo3.gif" width="28px" />
+          </div>
+        </div>
+        <div
+          id="nav"
+          class="side-nav nav-left nav_com"
+          style="transform: translatex(-110%)"
+        >
+          <div
+            class="leaflet-sidebar left visible"
+            style="z-index: 999; background: #212936"
+          >
+            <div id="sidebar" class="leaflet-control">
+              <div class="top-menu">
+                <div class="row">
+                  <div class="col-md-6">
+                    <span class="side_title" title="CCTVs" style="font-size: 15px;vertical-align: bottom;font-weight: 500;">CCTVs</span>
+                    <!-- <span class="counter" id="camera_counter"></span> -->
+                  </div>
+                  <div class="col-md-6" style="text-align: end">
+                    <span
+                      style="vertical-align: bottom"
+                      class="side_title mapcam_status"
+                      id="navleft_atmid"
+                      title="ATM Id"
+                    ></span>
+                  </div>
+                  <a class="close" onclick="closebtn();" title="Close">×</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content" style="padding: 0">
+            <!-- <div class="pos">
+              <div class="side">
+                <span class="side_title">Live CCTVs</span> -->
+            <!-- <div id="nome" onclick="openright();"></div> -->
+            <!-- </div> -->
+            <!-- <div class="side item-side">
+                        <div id="nome" onclick="openright();">
+
+                        </div>
+                    </div>-->
+            <!-- sidebar-header  -->
+            <!-- <div class="search-form form search-br">
+                <label>
+                  <span class="screen-reader-text">Search for...</span>
+                  <input
+                    id="search-criteria"
+                    type="search"
+                    class="search-field"
+                    placeholder="Search..."
+                    value=""
+                    name="s"
+                    title=""
+                  />
+                </label> -->
+            <!-- <input type="submit" class="search-submit button" > -->
+            <!--            <i class="fa fa-search search-submit button-sr"></i>-->
+            <!-- </div> -->
+            <!-- </div> -->
+            <!-- sidebar-search  -->
+            <div id="sidecontent" class="sidecont">
+              <hr />
+              <div
+                id="left_loader"
+                class="loader-wrap-spin-preview mapnav_loader"
+                style="position: absolute; right: 50%; margin-top: 10%"
+              >
+                <!--                            <i class="fa fa-circle-o-notch fa-spin" style="font-size: 26px;"></i>-->
+                <img src="img/edlo3.gif" width="28px" />
+              </div>
+              <!-- <div class="item-side leftsrh active" onclick="openright();">  -->
+              <!-- <img src="10.jpg" style="border-color: rgb(0, 128, 0);width: 80px;height: 60px;">
+                                   <h6 class="it-sih">
+                                      
+                                       <p><strong>Camera Status :</strong> Online</p>
+                                       <p><strong>City Name :</strong> delhi, delhi</p>
+                                       <p><strong>Area Name :</strong> mandavali</p>
+
+                                   </h6> -->
+              <!-- <div class="row" style="color: #fff;">
+                            <div class="col-md-8">
+                                <p style="opacity: 0.5;font-weight: 100;line-height: 21px;font-size: 11px"><span class="clock-icon"><img src="img/clock.png" style="width: 15px !important;height: 15px !important;margin-top: 0px !important;"></span><span class="clocktime" style="padding-left: 5px;"> 01:30:45, 5 March, 2021</span></p>
+                            </div>
+                            <div class="col-md-4">
+                                <p style="background-color: #2d3643;width: 100%;padding: 3px 5px;text-align: center;border-radius: 15px;font-size: 11px;"><i class="fa fa-circle blink2" style="color: green;font-size: 11px;display: initial;"></i> Online</p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: -13px;">
+                            <div class="col-md-2">
+                                <img src="img/10.jpg" style="border-color: rgb(0, 128, 0);width: 60px !important;height: 50px !important;">
+                            </div>
+                            <div id="sidedt" class="col-md-10" style="    padding-top: 19px;padding-left: 40px; color: #fff;">
+                                <ul class="">
+                                    <li><span style="line-height: 19px;font-weight: 500;opacity: 0.5;font-size: 12px;">mandavali, Mumbai</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                   <hr /> -->
+              <!--                    <div class="item-side leftsrh" onclick="openright();">-->
+              <!--                        &lt;!&ndash;            <img src="10.jpg" style="border-color: rgb(0, 128, 0);width: 80px;height: 60px;">&ndash;&gt;-->
+              <!--                        &lt;!&ndash;            <h6 class="it-sih">&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>Camera Status :</strong> Online</p>&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>City Name :</strong> mumbai, MH</p>&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>Area Name :</strong> dadar</p>&ndash;&gt;-->
+
+              <!--                        &lt;!&ndash;            </h6>&ndash;&gt;-->
+              <!--                        <div class="row" style="color: #fff;">-->
+              <!--                            <div class="col-md-8">-->
+              <!--                                <p style="opacity: 0.5;font-weight: 100;line-height: 21px;font-size: 11px"><span class="clock-icon"><img src="img/clock.png" style="width: 15px !important;height: 15px !important;margin-top: 0px !important;"></span><span class="clocktime" style="padding-left: 5px;"> 01:30:45, 5 March, 2021</span></p>-->
+              <!--                            </div>-->
+              <!--                            <div class="col-md-4">-->
+              <!--                                <p style="background-color: #2d3643;width: 100%;padding: 3px 5px;text-align: center;border-radius: 15px;font-size: 11px;"><i class="fa fa-circle blink2" style="color: #FC573D ;font-size: 11px;display: initial;"></i> Offline</p>-->
+              <!--                            </div>-->
+              <!--                        </div>-->
+              <!--                        <div class="row" style="margin-top: -13px;">-->
+              <!--                            <div class="col-md-2">-->
+              <!--                                <img src="img/10.jpg" style="border-color: rgb(0, 128, 0);width: 60px !important;height: 50px !important;">-->
+              <!--                            </div>-->
+              <!--                            <div class="col-md-10" style="    padding-top: 19px;padding-left: 40px; color: #fff;">-->
+              <!--                                <ul class="">-->
+              <!--                                    <li><span style="line-height: 19px;font-weight: 500;opacity: 0.5;font-size: 12px;">mandavali, delhi</span></li>-->
+              <!--                                </ul>-->
+              <!--                            </div>-->
+              <!--                        </div>-->
+              <!--                    </div>-->
+              <!--                    <hr />-->
+              <!--                    <div class="item-side leftsrh" onclick="openright();">-->
+              <!--                        &lt;!&ndash;            <img src="10.jpg" style="border-color: rgb(0, 128, 0);width: 80px;height: 60px;">&ndash;&gt;-->
+              <!--                        &lt;!&ndash;            <h6 class="it-sih">&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>Camera Status :</strong> Online</p>&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>City Name :</strong>pune, MH</p>&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>Area Name :</strong> vimannagar</p>&ndash;&gt;-->
+
+              <!--                        &lt;!&ndash;            </h6>&ndash;&gt;-->
+              <!--                        <div class="row" style="color: #fff;">-->
+              <!--                            <div class="col-md-8">-->
+              <!--                                <p style="opacity: 0.5;font-weight: 100;line-height: 21px;font-size: 11px"><span class="clock-icon"><img src="img/clock.png" style="width: 15px !important;height: 15px !important;margin-top: 0px !important;"></span><span class="clocktime" style="padding-left: 5px;"> 01:30:45, 5 March, 2021</span></p>-->
+              <!--                            </div>-->
+              <!--                            <div class="col-md-4">-->
+              <!--                                <p style="background-color: #2d3643;width: 100%;padding: 3px 5px;text-align: center;border-radius: 15px;font-size: 11px;"><i class="fa fa-circle blink2" style="color: green;font-size: 11px;display: initial;"></i> Online</p>-->
+              <!--                            </div>-->
+              <!--                        </div>-->
+              <!--                        <div class="row" style="margin-top: -13px;">-->
+              <!--                            <div class="col-md-2">-->
+              <!--                                <img src="img/10.jpg" style="border-color: rgb(0, 128, 0);width: 60px !important;height: 50px !important;">-->
+              <!--                            </div>-->
+              <!--                            <div class="col-md-10" style="    padding-top: 12px;padding-left: 40px; color: #fff;">-->
+              <!--                                <ul class="">-->
+              <!--                                    <li><span style="line-height: 19px;font-weight: 500;opacity: 0.5;font-size: 12px;">delhi, delhi</span></li>-->
+              <!--                                </ul>-->
+              <!--                            </div>-->
+              <!--                        </div>-->
+              <!--                    </div>-->
+              <!--                    <hr />-->
+              <!--                    <div class="item-side leftsrh" onclick="openright();">-->
+              <!--                        &lt;!&ndash;            <img src="10.jpg" style="border-color: rgb(0, 128, 0);width: 80px;height: 60px;">&ndash;&gt;-->
+              <!--                        &lt;!&ndash;            <h6 class="it-sih">&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>Camera Status :</strong> Online</p>&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>City Name :</strong> delhi, delhi</p>&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>Area Name :</strong> mandavali</p>&ndash;&gt;-->
+
+              <!--                        &lt;!&ndash;            </h6>&ndash;&gt;-->
+              <!--                        <div class="row" style="color: #fff;">-->
+              <!--                            <div class="col-md-8">-->
+              <!--                                <p style="opacity: 0.5;font-weight: 100;line-height: 21px;font-size: 11px"><span class="clock-icon"><img src="img/clock.png" style="width: 15px !important;height: 15px !important;margin-top: 0px !important;"></span><span class="clocktime" style="padding-left: 5px;"> 01:30:45, 5 March, 2021</span></p>-->
+              <!--                            </div>-->
+              <!--                            <div class="col-md-4">-->
+              <!--                                <p style="background-color: #2d3643;width: 100%;padding: 3px 5px;text-align: center;border-radius: 15px;font-size: 11px;"><i class="fa fa-circle blink2" style="color: green;font-size: 11px;display: initial;"></i> Online</p>-->
+              <!--                            </div>-->
+              <!--                        </div>-->
+              <!--                        <div class="row" style="margin-top: -13px;">-->
+              <!--                            <div class="col-md-2">-->
+              <!--                                <img src="img/10.jpg" style="border-color: rgb(0, 128, 0);width: 60px !important;height: 50px !important;">-->
+              <!--                            </div>-->
+              <!--                            <div class="col-md-10" style="    padding-top: 19px;padding-left: 40px; color: #fff;">-->
+              <!--                                <ul class="">-->
+              <!--                                    <li><span style="line-height: 19px;font-weight: 500;opacity: 0.5;font-size: 12px;">vimannagar, pune</span></li>-->
+              <!--                                </ul>-->
+              <!--                            </div>-->
+              <!--                        </div>-->
+              <!--                    </div>-->
+              <!--                    <hr />-->
+              <!--                    <div class="item-side leftsrh" onclick="openright();">-->
+              <!--                        &lt;!&ndash;            <img src="10.jpg" style="border-color: rgb(0, 128, 0);width: 80px;height: 60px;">&ndash;&gt;-->
+              <!--                        &lt;!&ndash;            <h6 class="it-sih">&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>Camera Status :</strong> Online</p>&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>City Name :</strong> mumbai, MH</p>&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>Area Name :</strong> dadar</p>&ndash;&gt;-->
+
+              <!--                        &lt;!&ndash;            </h6>&ndash;&gt;-->
+              <!--                        <div class="row" style="color: #fff;">-->
+              <!--                            <div class="col-md-8">-->
+              <!--                                <p style="opacity: 0.5;font-weight: 100;line-height: 21px;font-size: 11px"><span class="clock-icon"><img src="img/clock.png" style="width: 15px !important;height: 15px !important;margin-top: 0px !important;"></span><span class="clocktime" style="padding-left: 5px;"> 01:30:45, 5 March, 2021</span></p>-->
+              <!--                            </div>-->
+              <!--                            <div class="col-md-4">-->
+              <!--                                <p style="background-color: #2d3643;width: 100%;padding: 3px 5px;text-align: center;border-radius: 15px;font-size: 11px;"><i class="fa fa-circle blink2" style="color: green;font-size: 11px;display: initial;"></i> Online</p>-->
+              <!--                            </div>-->
+              <!--                        </div>-->
+              <!--                        <div class="row" style="margin-top: -13px;">-->
+              <!--                            <div class="col-md-2">-->
+              <!--                                <img src="img/10.jpg" style="border-color: rgb(0, 128, 0);width: 60px !important;height: 50px !important;">-->
+              <!--                            </div>-->
+              <!--                            <div class="col-md-10" style="    padding-top: 19px;padding-left: 40px; color: #fff;">-->
+              <!--                                <ul class="">-->
+              <!--                                    <li><span style="line-height: 19px;font-weight: 500;opacity: 0.5;font-size: 12px;">Vimannagar, Pune</span></li>-->
+              <!--                                </ul>-->
+              <!--                            </div>-->
+              <!--                        </div>-->
+              <!--                    </div>-->
+              <!--                    <hr />-->
+              <!--                    <div class="item-side leftsrh" onclick="openright();">-->
+              <!--                        &lt;!&ndash;            <img src="10.jpg" style="border-color: rgb(0, 128, 0);width: 80px;height: 60px;">&ndash;&gt;-->
+              <!--                        &lt;!&ndash;            <h6 class="it-sih">&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>Camera Status :</strong> Online</p>&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>City Name :</strong> delhi, delhi</p>&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>Area Name :</strong> mandavali</p>&ndash;&gt;-->
+
+              <!--                        &lt;!&ndash;            </h6>&ndash;&gt;-->
+              <!--                        <div class="row" style="color: #fff;">-->
+              <!--                            <div class="col-md-8">-->
+              <!--                                <p style="opacity: 0.5;font-weight: 100;line-height: 21px;font-size: 11px"><span class="clock-icon"><img src="img/clock.png" style="width: 15px !important;height: 15px !important;margin-top: 0px !important;"></span><span class="clocktime" style="padding-left: 5px;"> 01:30:45, 5 March, 2021</span></p>-->
+              <!--                            </div>-->
+              <!--                            <div class="col-md-4">-->
+              <!--                                <p style="background-color: #2d3643;width: 100%;padding: 3px 5px;text-align: center;border-radius: 15px;font-size: 11px;"><i class="fa fa-circle blink2" style="color: green;font-size: 11px;display: initial;"></i> Online</p>-->
+              <!--                            </div>-->
+              <!--                        </div>-->
+              <!--                        <div class="row" style="margin-top: -13px;">-->
+              <!--                            <div class="col-md-2">-->
+              <!--                                <img src="img/10.jpg" style="border-color: rgb(0, 128, 0);width: 60px !important;height: 50px !important;">-->
+              <!--                            </div>-->
+              <!--                            <div class="col-md-10" style="    padding-top: 19px;padding-left: 40px; color: #fff;">-->
+              <!--                                <ul class="">-->
+              <!--                                    <li><span style="line-height: 19px;font-weight: 500;opacity: 0.5;font-size: 12px;">mandavali, Mumbai</span></li>-->
+              <!--                                </ul>-->
+              <!--                            </div>-->
+              <!--                        </div>-->
+              <!--                    </div>-->
+              <!--                    <hr />-->
+              <!--                    <div class="item-side leftsrh" onclick="openright();">-->
+              <!--                        &lt;!&ndash;            <img src="10.jpg" style="border-color: rgb(0, 128, 0);width: 80px;height: 60px;">&ndash;&gt;-->
+              <!--                        &lt;!&ndash;            <h6 class="it-sih">&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>Camera Status :</strong> Online</p>&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>City Name :</strong>pune, MH</p>&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>Area Name :</strong> vimannagar</p>&ndash;&gt;-->
+
+              <!--                        &lt;!&ndash;            </h6>&ndash;&gt;-->
+              <!--                        <div class="row" style="color: #fff;">-->
+              <!--                            <div class="col-md-8">-->
+              <!--                                <p style="opacity: 0.5;font-weight: 100;line-height: 21px;font-size: 11px"><span class="clock-icon"><img src="img/clock.png" style="width: 15px !important;height: 15px !important;margin-top: 0px !important;"></span><span class="clocktime" style="padding-left: 5px;"> 01:30:45, 5 March, 2021</span></p>-->
+              <!--                            </div>-->
+              <!--                            <div class="col-md-4">-->
+              <!--                                <p style="background-color: #2d3643;width: 100%;padding: 3px 5px;text-align: center;border-radius: 15px;font-size: 11px;"><i class="fa fa-circle blink2" style="color: green;font-size: 11px;display: initial;"></i> Online</p>-->
+              <!--                            </div>-->
+              <!--                        </div>-->
+              <!--                        <div class="row" style="margin-top: -13px;">-->
+              <!--                            <div class="col-md-2">-->
+              <!--                                <img src="img/10.jpg" style="border-color: rgb(0, 128, 0);width: 60px !important;height: 50px !important;">-->
+              <!--                            </div>-->
+              <!--                            <div class="col-md-10" style="    padding-top: 19px;padding-left: 40px; color: #fff;">-->
+              <!--                                <ul class="">-->
+              <!--                                    <li><span style="line-height: 19px;font-weight: 500;opacity: 0.5;font-size: 12px;">mandavali, Mumbai</span></li>-->
+              <!--                                </ul>-->
+              <!--                            </div>-->
+              <!--                        </div>-->
+              <!--                    </div>-->
+              <!--                    <hr />-->
+              <!--                    <div class="item-side leftsrh" onclick="openright();">-->
+              <!--                        &lt;!&ndash;            <img src="10.jpg" style="border-color: rgb(0, 128, 0);width: 80px;height: 60px;">&ndash;&gt;-->
+              <!--                        &lt;!&ndash;            <h6 class="it-sih">&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>Camera Status :</strong> Online</p>&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>City Name :</strong> delhi, delhi</p>&ndash;&gt;-->
+              <!--                        &lt;!&ndash;                <p><strong>Area Name :</strong> mandavali</p>&ndash;&gt;-->
+
+              <!--                        &lt;!&ndash;            </h6>&ndash;&gt;-->
+              <!--                        <div class="row" style="color: #fff;">-->
+              <!--                            <div class="col-md-8">-->
+              <!--                                <p style="opacity: 0.5;font-weight: 100;line-height: 21px;font-size: 11px"><span class="clock-icon"><img src="img/clock.png" style="width: 15px !important;height: 15px !important;margin-top: 0px !important;"></span><span class="clocktime" style="padding-left: 5px;"> 01:30:45, 5 March, 2021</span></p>-->
+              <!--                            </div>-->
+              <!--                            <div class="col-md-4">-->
+              <!--                                <p style="background-color: #2d3643;width: 100%;padding: 3px 5px;text-align: center;border-radius: 15px;font-size: 11px;"><i class="fa fa-circle blink2" style="color: green;font-size: 11px;display: initial;"></i> Online</p>-->
+              <!--                            </div>-->
+              <!--                        </div>-->
+              <!--                        <div class="row" style="margin-top: -13px;">-->
+              <!--                            <div class="col-md-2">-->
+              <!--                                <img src="img/10.jpg" style="border-color: rgb(0, 128, 0);width: 60px !important;height: 50px !important;">-->
+              <!--                            </div>-->
+              <!--                            <div class="col-md-10" style="    padding-top: 19px;padding-left: 40px; color: #fff;">-->
+              <!--                                <ul class="">-->
+              <!--                                    <li><span style="line-height: 19px;font-weight: 500;opacity: 0.5;font-size: 12px;">mandavali, Mumbai</span></li>-->
+              <!--                                </ul>-->
+              <!--                            </div>-->
+              <!--                        </div>-->
+              <!--                    </div>-->
+            </div>
+          </div>
+        </div>
+        <div
+          id="nav"
+          class="side-nav nav-right nav_com"
+          style="overflow: scroll; transform: translatex(130%)"
+        >
+          <div
+            class="leaflet-sidebar left visible"
+            style="z-index: 999; background: #212936"
+          >
+            <div id="sidebar" class="leaflet-control">
+              <div class="top-menu">
+                <div class="row">
+                  <div class="col-md-6">
+                    <span class="side_title" title="Alerts" style="font-size: 15px;font-weight: 500;">Alerts</span>
+                    <span class="counter" id="alerts_counter" title="Alerts Count"></span>
+                  </div>
+                  <div class="col-md-6" style="text-align: end">
+                    <span
+                      style="vertical-align: bottom"
+                      class="side_title mapcam_status"
+                      id="navright_camname"
+                      title="ATM Id - Camera Name"
+                    ></span>
+                  </div>
+                  <a class="close" onclick="closebtn1();" title="Close" style="padding: 0 7px;">×</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content" style="padding: 0">
+            <!-- <div class="pos"> -->
+            <!-- <div class="side"> -->
+
+            <!-- <div id="nome"></div> -->
+            <!-- </div> -->
+            <!-- sidebar-header  -->
+            <!-- <div class="search-form form search-br">
+                        <label>
+                            <span class="screen-reader-text">Search for...</span>
+                            <input id="rightsrch" type="search" class="search-field" placeholder="Search..." value="" name="s" title="" />
+                        </label> -->
+            <!-- <input type="submit" class="search-submit button" > -->
+            <!--            <i class="fa fa-search search-submit button-sr"></i>-->
+            <!-- </div> -->
+            <!-- </div> -->
+            <!-- sidebar-search  -->
+            <div
+              id="right_loader"
+              class="loader-wrap-spin-preview mapnav_loader"
+              style="position: absolute; right: 50%; margin-top: 10%"
+            >
+              <!--                            <i class="fa fa-circle-o-notch fa-spin" style="font-size: 26px;"></i>-->
+              <img src="img/edlo3.gif" width="28px" />
+            </div>
+            <div class="sidecont" id="rightsidecont">
+              <!-- <div class="item-side rightsrh"> -->
+              <!--                <img src="10.jpg" style="border-color: rgb(0, 128, 0);width: 80px;height: 60px;">-->
+              <!--                <h6 class="it-sih sirt">-->
+              <!--                    <p>STREAM | DISCONNECTED</p>-->
+              <!--                    <p><strong>Alert Id :</strong> 4b265</p>-->
+              <!--                    <p><strong>Time :</strong> 02/04/21 18:08:48</p>-->
+              <!--                </h6>-->
+              <!-- <div class="row" style="color: #fff;">
+                            <div class="col-md-8">
+                                <p>Stream : Disconnected</p>
+                            </div>
+                            <div class="col-md-4">
+                                <p style="font-size: 11px;">P1</p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: -13px;">
+                            <div class="col-md-2">
+                                <img src="img/10.jpg" style="border-color: rgb(0, 128, 0);width: 60px !important;height: 50px !important;">
+                            </div>
+                            <div class="col-md-10" style="    padding-top: 16px;padding-left: 40px; color: #fff;">
+                                <p style="margin-bottom: 0px;font-weight: 500;">Alert Id : 000001</p>
+                                <p style="opacity: 0.5;font-weight: 100;line-height: 29px;font-size: 11px"><span class="clock-icon"><img src="img/clock.png" style="width: 15px !important;height: 15px !important;margin-top: 0px !important;"></span><span class="clocktime" style="padding-left: 5px;"> 01:30:45, 5 March, 2021</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="item-side rightsrh"> -->
+              <!--                <img src="10.jpg" style="border-color: rgb(0, 128, 0);width: 80px;height: 60px;">-->
+              <!--                <h6 class="it-sih sirt">-->
+              <!--                    <p>STREAM | DISCONNECTED</p>-->
+              <!--                    <p><strong>Alert Id :</strong> 4b265</p>-->
+              <!--                    <p><strong>Time :</strong> 02/04/21 18:08:48</p>-->
+              <!--                </h6>-->
+              <!-- <div class="row" style="color: #fff;">
+                            <div class="col-md-8">
+                                <p>Stream : Connected</p>
+                            </div>
+                            <div class="col-md-4">
+                                <p style="font-size: 11px;">P1</p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: -13px;">
+                            <div class="col-md-2">
+                                <img src="img/10.jpg" style="border-color: rgb(0, 128, 0);width: 60px !important;height: 50px !important;">
+                            </div>
+                            <div class="col-md-10" style="    padding-top: 16px;padding-left: 40px; color: #fff;">
+                                <p style="margin-bottom: 0px;font-weight: 500;">Alert Id : 000001</p>
+                                <p style="opacity: 0.5;font-weight: 100;line-height: 29px;font-size: 11px"><span class="clock-icon"><img src="img/clock.png" style="width: 15px !important;height: 15px !important;margin-top: 0px !important;"></span><span class="clocktime" style="padding-left: 5px;"> 01:30:45, 5 March, 2021</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="item-side rightsrh"> -->
+              <!--                <img src="10.jpg" style="border-color: rgb(0, 128, 0);width: 80px;height: 60px;">-->
+              <!--                <h6 class="it-sih sirt">-->
+              <!--                    <p>STREAM | DISCONNECTED</p>-->
+              <!--                    <p><strong>Alert Id :</strong> 4b265</p>-->
+              <!--                    <p><strong>Time :</strong> 02/04/21 18:08:48</p>-->
+              <!--                </h6>-->
+              <!-- <div class="row" style="color: #fff;">
+                            <div class="col-md-8">
+                                <p>Stream : Connected</p>
+                            </div>
+                            <div class="col-md-4">
+                                <p style="font-size: 11px;">P1</p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: -13px;">
+                            <div class="col-md-2">
+                                <img src="img/10.jpg" style="border-color: rgb(0, 128, 0);width: 60px !important;height: 50px !important;">
+                            </div>
+                            <div class="col-md-10" style="    padding-top: 16px;padding-left: 40px; color: #fff;">
+                                <p style="margin-bottom: 0px;font-weight: 500;">Alert Id : 000001</p>
+                                <p style="opacity: 0.5;font-weight: 100;line-height: 29px;font-size: 11px"><span class="clock-icon"><img src="img/clock.png" style="width: 15px !important;height: 15px !important;margin-top: 0px !important;"></span><span class="clocktime" style="padding-left: 5px;"> 01:30:45, 5 March, 2021</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="item-side rightsrh"> -->
+              <!--                <img src="10.jpg" style="border-color: rgb(0, 128, 0);width: 80px;height: 60px;">-->
+              <!--                <h6 class="it-sih sirt">-->
+              <!--                    <p>STREAM | DISCONNECTED</p>-->
+              <!--                    <p><strong>Alert Id :</strong> 4b265</p>-->
+              <!--                    <p><strong>Time :</strong> 02/04/21 18:08:48</p>-->
+              <!--                </h6>-->
+              <!-- <div class="row" style="color: #fff;">
+                            <div class="col-md-8">
+                                <p>Stream : Connected</p>
+                            </div>
+                            <div class="col-md-4">
+                                <p style="font-size: 11px;">P1</p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: -13px;">
+                            <div class="col-md-2">
+                                <img src="img/10.jpg" style="border-color: rgb(0, 128, 0);width: 60px !important;height: 50px !important;">
+                            </div>
+                            <div class="col-md-10" style="    padding-top: 16px;padding-left: 40px; color: #fff;">
+                                <p style="margin-bottom: 0px;font-weight: 500;">Alert Id : 000001</p>
+                                <p style="opacity: 0.5;font-weight: 100;line-height: 29px;font-size: 11px"><span class="clock-icon"><img src="img/clock.png" style="width: 15px !important;height: 15px !important;margin-top: 0px !important;"></span><span class="clocktime" style="padding-left: 5px;"> 01:30:45, 5 March, 2021</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="item-side rightsrh"> -->
+              <!--                <img src="10.jpg" style="border-color: rgb(0, 128, 0);width: 80px;height: 60px;">-->
+              <!--                <h6 class="it-sih sirt">-->
+              <!--                    <p>STREAM | DISCONNECTED</p>-->
+              <!--                    <p><strong>Alert Id :</strong> 4b265</p>-->
+              <!--                    <p><strong>Time :</strong> 02/04/21 18:08:48</p>-->
+              <!--                </h6>-->
+              <!-- <div class="row" style="color: #fff;">
+                            <div class="col-md-8">
+                                <p>Stream : Connected</p>
+                            </div>
+                            <div class="col-md-4">
+                                <p style="font-size: 11px;">P1</p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: -13px;">
+                            <div class="col-md-2">
+                                <img src="img/10.jpg" style="border-color: rgb(0, 128, 0);width: 60px !important;height: 50px !important;">
+                            </div>
+                            <div class="col-md-10" style="    padding-top: 16px;padding-left: 40px; color: #fff;">
+                                <p style="margin-bottom: 0px;font-weight: 500;">Alert Id : 000001</p>
+                                <p style="opacity: 0.5;font-weight: 100;line-height: 29px;font-size: 11px"><span class="clock-icon"><img src="img/clock.png" style="width: 15px !important;height: 15px !important;margin-top: 0px !important;"></span><span class="clocktime" style="padding-left: 5px;"> 01:30:45, 5 March, 2021</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="item-side rightsrh"> -->
+              <!--                <img src="10.jpg" style="border-color: rgb(0, 128, 0);width: 80px;height: 60px;">-->
+              <!--                <h6 class="it-sih sirt">-->
+              <!--                    <p>STREAM | DISCONNECTED</p>-->
+              <!--                    <p><strong>Alert Id :</strong> 4b265</p>-->
+              <!--                    <p><strong>Time :</strong> 02/04/21 18:08:48</p>-->
+              <!--                </h6>-->
+              <!-- <div class="row" style="color: #fff;">
+                            <div class="col-md-8">
+                                <p>Stream : Connected</p>
+                            </div>
+                            <div class="col-md-4">
+                                <p style="font-size: 11px;">P1</p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: -13px;">
+                            <div class="col-md-2">
+                                <img src="img/10.jpg" style="border-color: rgb(0, 128, 0);width: 60px !important;height: 50px !important;">
+                            </div>
+                            <div class="col-md-10" style="    padding-top: 16px;padding-left: 40px; color: #fff;">
+                                <p style="margin-bottom: 0px;font-weight: 500;">Alert Id : 000001</p>
+                                <p style="opacity: 0.5;font-weight: 100;line-height: 29px;font-size: 11px"><span class="clock-icon"><img src="img/clock.png" style="width: 15px !important;height: 15px !important;margin-top: 0px !important;"></span><span class="clocktime" style="padding-left: 5px;"> 01:30:45, 5 March, 2021</span></p>
+                            </div>
+                        </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="showAlertDetailsModal"
+          class="modal fade"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="myModalLabel"
+          aria-hidden="true"
+          data-keyboard="false"
+          data-backdrop="static"
+        >
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div
+                class="modal-header"
+              >
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-hidden="true"
+                  onclick="close_modal();"
+                  title="Close"
+                >
+                  ×
+                </button>
+                <h4
+                  class="modal-title"
+                  id="myModalLabel2"
+                >
+                  <span id="alert_name" title="Alert Name"> </span>
+                </h4>
+              </div>
+              <div class="modal-body">
+                <div class="">
+                  <!-- <button
+                    onclick="reloadvideo()"
+                    id="reloadvideo"
+                    style="
+                      width: 96.7%;
+                      background: transparent;
+                      z-index: 100000;
+                      position: absolute;
+                      top: 35%;
+                      border: none;
+                      outline: none;
+                      color: #fff;
+                    "
+                  >
+                    <i
+                      class="fa fa-refresh"
+                      aria-hidden="true"
+                      style="font-size: 30px"
+                    ></i>
+                  </button> -->
+                  <video
+                    id="videoAlerts"
+                    style="width: 100%; height: 400px"
+                    controls
+                    autoplay
+                    loop
+                    title="Alert Video"
+                  >
+                    <source id="videoSourceAlerts" type="video/mp4" />
+                  </video>
+                  <div class="caption">
+                    <div class="row" style="margin-top: 30px;">
+                                        <div class="col-lg-12">
+
+
+                                        <address class="col-lg-4">
+                                             <span>Id: </span><a title="Alert Id" id="alert_id"> </a><br>
+                                             <span>Date: </span><a title="Alert Date" id="alert_date"> </a><br>
+                                            <span>Time: </span><a title="Alert Time" id="alert_time"> </a><br>
+                                            <span>Status: </span><a title="Alert Status" id="alert_status"> </a>
+
+
+
+                                            <!--                                        <span title="Work email" >Area Name: </span><a id="stand_type_Alerts"> Connected</a><br>-->
+                                        </address>
+                                        <address class="col-lg-4">
+                                            <span>ATM Id: </span><a title="ATM Id" id="alert_atmid"> </a><br>
+                                            <span>Camera Name: </span><a title="Camera Name" id="alert_camname"> </a><br>
+                                            <span>City Name: </span><a title="ATM City" id="alert_city"> </a><br>
+                                            <span>Area Name: </span><a title="ATM Location" id="alert_area"></a><br>
+                                        </address>
+                                        <div class="col-lg-4">
+                                            <div class="support_messagediv" style="height: 40px;overflow: scroll;"><span>Support Message: </span><a title="Message By Support" id="support_message"> </a><br></div>
+                                        <!-- <div style="display: flex;height: fit-content; justify-content: start;" class="assignoptions">
+                                            
+                                             <input style="margin-left: 2.25rem;cursor: pointer;" class="checkbox-primary" type="checkbox" id="assignqrt" name="assignqrt" value="assignqrt">
+                                            <label style="margin-left:1rem; cursor: pointer; flex-grow: 0 !important;" for="assignqrt" id="assignqrt_label">QRT</label><br>
+                                            <input style="margin-left: 2.05rem;cursor: pointer;" class="checkbox-primary" type="checkbox" id="assignclose" name="assignclose" value="assignclose">
+                                            <label style="margin-left:1rem; cursor: pointer; flex-grow: 0 !important;" for="assignclose" id="assignclose_label">Close</label><br>
+                                            <input style="margin-left: 2.05rem;cursor: pointer;" class="checkbox-primary" type="checkbox" id="assignfalse" name="assignfalse" value="assignfalse">
+                                            <label style="margin-left:1rem; cursor: pointer; flex-grow: 0 !important;" for="assignfalse" id="assignfalse_label">False</label><br>
+                                       </div> -->
+                                       
+                                            <h5 style="display: none; background: var(--green);text-align: center;padding: 5px;border-radius: 10px;color: #fff;" class="alreadyresolved" title="This Alert is Resolved.">This Alert is Resolved.</h5>
+
+                                       <!-- <div class="form-group" id="addclosecomment">
+    <textarea autofocus id="closecomment" rows="1" style="resize: none;border-radius: 8px;background: #2d3743;border: none;color: #fff;margin: 5px 0;width: 100%; outline: none; padding: 5px;" placeholder="Add Comment"></textarea>
+    <div style="
+    display: flex;
+    justify-content: center;
+">
+<p onclick="submitclose()" style="text-align: center;background: #0282e1;padding: 2px 5px;border-radius: 2px;width: fit-content;cursor: pointer;">Submit</p>
+</div>
+  </div> -->
+                                     </div>
+
+                                    </div>
+
+
+</div>
+                    <hr />
+                    <div class="row">
+                      <div class="col-lg-12" id="qrt_details" style="display: none;">
+        <!-- <h4>QRT Details</h4> -->
+        <ul class="steps" style="margin: 50px 0;">
+      <li class="step_li step--incomplete step--inactive step-1">
+        <span class="step__icon"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+        <span class="step__label">Assigned</span>
+      </li>
+      <li class="step_li step--incomplete step--inactive step-2">
+        <span class="step__icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+        <span class="step__label">Accepted</span>
+      </li>
+      <li class="step_li step--incomplete step--inactive step-3">
+        <span class="step__icon"><i class="fa fa-location-arrow" aria-hidden="true"></i></span>
+        <span class="step__label">Reached</span>
+      </li>
+      <li class="step_li step--incomplete step--inactive step-4">
+        <span class="step__icon"><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+        <span class="step__label">Resolved</span>
+      </li>
+    </ul>
+         <div class="row">
+            <address class="col-lg-3">
+                                            <span id="qrt_name_span" ><span>Name: </span><a title="QRT Name" class="qrt_name"> </a><br></span>
+                                            <span id="qrt_status_span" ><span>Status: </span><a title="QRT Status" class="qrt_status"> </a><br></span>
+                                            
+                                           
+        </address>
+        <address class="col-lg-3">
+                                            <span id="qrt_accepted_span" ><span>Accepted: </span><a title="QRT Accepted" class="qrt_accepted"> </a><br></span>
+                                            <span id="qrt_reached_span" ><span>Reached: </span><a title="QRT Reached" class="qrt_reached"> </a><br></span>
+                                            <span id="qrt_resolved_span" ><span>Resolved: </span><a title="QRT Resolved" class="qrt_resolved"> </a><br></span>
+        </address>
+        <address class="col-lg-6">
+           <textarea title="Message by QRT" readonly class="qrt_message" style="background: var(--secondary-bg-color);border: none;outline: none;resize: none;padding: 3px 10px;border-radius: 3px;width: 100%;height: 100%;"></textarea><br></span>
+        </address>
+    
+       </div>
+       
+        <hr style="margin-bottom: 30px;">
+       <div class="row qrtmapimage">
+           <div title="QRT Map" class="col-lg-8" id="qrt_map_container" style="height: 100%;">
+   
+    </div>
+
+    <div class="col-lg-4" style="display: flex;justify-content: center;align-items: flex-start;height: 100%;border-left: 1px solid #313c4e !important;">
+            <img title="Image by QRT" style="width: 100%;height:100%;transition: transform 1s;display: none;" class="qrt_image" src="" alt="">
+             <video title="Video by QRT" style="height: 400px;transition: transform 1s;display: none;" class="qrt_video" autoplay controls muted src="" alt="">
+
+        </div>
+       </div>
+
+    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--                <div class="modal-footer" style="background: rgb(25, 59, 63);">-->
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+    </div>
+    <div
+      class="loader-wrap hiding hide pageloader_wrap"
+      id="loading-logs"
+      style="margin-left: 0 !important"
+    >
+      <div class="page_progress" id="progress_div">
+        <div class="bar" id="bar1"></div>
+        <div class="percent" id="percent1"></div>
+      </div>
+
+      <input type="hidden" id="progress_width" value="0" />
+    </div>
+    <footer class="footer">
+      <div class="container-fluid foot_container">
+        <div class="copyright float-right">
+          Raven AI - Powered by
+          <a
+            href="https://pivotchain.com"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+            >Pivotchain</a
+          >
+        </div>
+        <!-- your footer here -->
+      </div>
+    </footer>
+    <!-- maps js -->
+
+        <div id="modal-smtp"></div>
+
+
+    <script src="js/mapJS/leaflet.js"></script>
+    <script src="js/pruneCluster.js"></script>
+
+    <!-- <script id="mapLeaflet" ></script>
+<script id="mapPurne" ></script> -->
+    <!-- common libraries. required for every page-->
+
+    <!--<script src="lib/jquery/dist/jquery.min.js"></script>-->
+    <!-- <script src="js/config/config.js"></script> -->
+    <!--<script src="lib/jquery-migrate/jquery-migrate-3.1.0.js"></script>-->
+    <!--<script src="lib/jquery-pjax/jquery.pjax.js"></script>-->
+    <!--<script src="lib/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>-->
+    <!--<script src="lib/widgster/widgster.js"></script>-->
+    <!--<script src="lib/underscore/underscore.js"></script>-->
+    <!--<script src="lib/messenger/build/js/messenger.js"></script>-->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/tomik23/autocomplete@latest/docs/js/autocomplete.min.js"></script> -->
+    <!-- <script src="js/map-autocomplete.js"></script> -->
+
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/jquery-migrate/jquery-migrate-3.1.0.js"></script>
+    <!-- <script src="js/config/config.js"></script> -->
+    <script src="lib/jquery-pjax/jquery.pjax.js"></script>
+    <script src="lib/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="lib/widgster/widgster.js"></script>
+    <script src="lib/underscore/underscore.js"></script>
+<script src="lib/moment/moment.js"></script>
+<script src="lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- common application js -->
+    <script src="js/app.js"></script>
+    <script src="js/settings.js"></script>
+
+    <!-- page specific scripts -->
+    <!-- page specific libs -->
+    <script src="lib/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="lib/underscore/underscore.js"></script>
+    <script src="lib/backbone/backbone.js"></script>
+    <script src="lib/backbone.paginator/lib/backbone.paginator.min.js"></script>
+    <script src="lib/backgrid/lib/backgrid.js"></script>
+    <script src="lib/backgrid-paginator/backgrid-paginator.js"></script>
+    <script src="lib/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="js/tables-dynamic.js"></script>
+
+    <script src="lib/messenger/build/js/messenger.js"></script>
+    <!-- <script src="js/ui-notifications.js"></script> -->
+    <!--<script src="js/index.js"></script>-->
+
+    <!-- common application js -->
+    <!--<script src="js/app.js"></script>-->
+
+    <!--<script src="js/settings.js"></script>-->
+
+    <script></script>
+  </body>
+</html>

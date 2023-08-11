@@ -1,0 +1,501 @@
+  <!-- light-blue - v4.0.1 - 2019-12-10 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>RAVEN AI | Pivotchain Solutions</title>
+
+  <link href="css/application.css" rel="stylesheet">
+  <link href="css/custom-css/custom-style.css" rel="stylesheet">
+  <link id="comp_vmscss" rel="stylesheet" href="css/custom-css/vmscss.css">
+  <link rel="stylesheet" href="css/custom-css/map_nav.css">
+<!--  <link rel="stylesheet" href="css/custom-css/singlecss.css">-->
+  <link rel="shortcut icon" href="img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RAVEN AI | Pivotchain Solutions">
+  <meta name="keywords" content="RAVEN AI | Pivotchain Solutions">
+  <meta name="author" content="Pivotchain">
+  <link rel="stylesheet" href="lib/Tags-Input/jquery.tagsinput.css">
+  <meta charset="utf-8">
+
+</head>
+
+<body class="vmsscr">
+
+  <header id="desktop_header" class="page-header navbar-header">
+    <div id='topheader' class="navbar">
+      <nav id="sidebar" class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top">  
+
+
+        <ul class="nav navbar-nav nav bar-right pull-right">
+            <li class="visible-phone-landscape">
+                <a href="#" id="search-toggle">
+                    <i class="fa fa-search"></i>
+                </a>
+            </li>
+            <button type="button" class="btn btn-default dropdown-toggle tagbt" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu user_select" id="acc_setting">
+                <!-- <li><a href="/userprofile"><i class="glyphicon glyphicon-cog">&nbsp;</i><span>Account Settings</span></a></li><hr>
+                <li><a href="/logout"><i class="glyphicon glyphicon-off">&nbsp;</i><span>Logout</span></a></li> -->
+            </ul>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<!-- header for mobile view start-->
+<nav id="mobile_header" class="sidebar nav-collapse navbar-dark collapse">
+    <div class="row mobrw">
+        <div class="col-sm-6 mobrw1" style="height: 50px;">
+            <a href="/cctv_monitoring"><img src="img/Raven-logo.png" alt="" height="100%" class="branding_logomob"></a>
+        </div>
+        <div class="col-sm-6 mobrw2">
+            <a href=""
+               class="btn-navbar hum"
+               data-toggle="collapse"
+               data-target=".sidebar"
+               title="">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+    </div>
+    <ul id="side-nav" class="side-nav">
+        <li class="">
+            <a href="/addcam" class="navbar-brand link-menum active-li">
+                <p class="menu-2">
+                    <i class="fa fa-plus-square"></i>
+                    <span class="link_p text">Add Camera</span></p>
+            </a>
+        </li>
+        <li class="">
+            <a href="/cam" id="cam_moni" class="navbar-brand link-menum ">
+                <p class="menu-1 ">
+                    <i class="fa fa-home"></i>
+                    <span class="link_p text add_cameratext">City</span></p>
+            </a>
+        </li>
+        <li class="">
+            <a href="/analytics" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <span class="link_p text">Analytics</span></p>
+            </a>
+        </li>
+        <li class="">
+            <a href="/cctv_voi" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-car" aria-hidden="true"></i>
+                    <span class="link_p text">VOI</span></p>
+
+            </a>
+        </li>
+        <li class="">
+            <a href="/cctv_poi" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <span class="link_p text">POI</span></p>
+
+            </a>
+        </li>
+        <li class="">
+            <a href="/users" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-users"></i>
+                    <span class="link_p text">Users</span></p>
+
+            </a>
+        </li>
+        <li class="">
+            <a href="/map-nav" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-map-o" aria-hidden="true"></i>
+                    <span class="link_p text">Map</span></p>
+
+            </a>
+        </li>
+        <li class="">
+            <!-- <a href="main_setup.html"><img src="img/clr6.svg">&nbsp;<span class="name">Main Setup </span></a> -->
+            <div class="b6 navbar-brand link-menum" onclick="openmodalSMTP();"><i class="fa fa-cog"></i><span class="name">Main Setup </span></div>
+        </li>
+
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#tables-collapse"><i class="glyphicon glyphicon-user select_clr"></i></a>
+            <ul id="tables-collapse" class="panel-collapse collapse ">
+                <li><a href="/userprofile"><i class="glyphicon glyphicon-cog select_clr">&nbsp;</i><span>Settings</span></a></li><hr>
+                <li><a href="/logout"><i class="glyphicon glyphicon-off select_clr">&nbsp;</i><span>Logout</span></a></li>
+            </ul>
+        </li>
+        <!-- <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#sub-menu-1-collapse" href="#sub-menu-2-collapse"><i class="fa fa-folder-open"></i>&nbsp;Item 2.3</a>
+            <ul id="sub-menu-2-collapse" class="panel-collapse collapse">
+                <li><a href="#">Item 3.4</a></li>
+                <li><a href="#">Item 3.5</a></li>
+                <li><a href="#">Item 3.6</a></li>
+            </ul>
+        </li> -->
+
+    </ul>
+    <!-- <nav id="sidebar" class="mobsidesrch mobilecam">
+        <input type="search" id="search" class="live-search-box" placeholder="Search" autocomplete="off" />
+        <ul id="side-nav" class="side-nav live-search-list">
+            <li class="panel">
+                <ul id="menu-levels-collapse" class="panel-collapse collapse in">
+                </ul>
+            </li>
+        </ul>
+    </nav> -->
+
+    </ul>
+
+    <!-- <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5> -->
+    <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
+    <!-- <ul class="sidebar-labels">
+        <li>
+            <a href="#">
+                 yep, .circle again
+                <i class="fa fa-circle text-warning"></i>
+                <span class="label-name">My Recent</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-circle text-gray"></i>
+                <span class="label-name">Starred</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-circle text-danger"></i>
+                <span class="label-name">Background</span>
+            </a>
+        </li>
+    </ul> -->
+
+    <!--  <h5 class="sidebar-nav-title">Projects</h5> -->
+    <!-- A place for sidebar notifications & alerts -->
+    <!--  <div class="sidebar-alerts">
+         <div class="alert fade in">
+             <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+             <span class="text-white fw-semi-bold">Sales Report</span> <br>
+             <div class="progress progress-xs mt-xs mb-0">
+                 <div class="progress-bar progress-bar-gray-light" style="width: 16%"></div>
+             </div>
+             <small>Calculating x-axis bias... 65%</small>
+         </div>
+         <div class="alert fade in">
+             <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+             <span class="text-white fw-semi-bold">Personal Responsibility</span> <br>
+             <div class="progress progress-xs mt-xs mb-0">
+                 <div class="progress-bar progress-bar-danger" style="width: 23%"></div>
+             </div>
+             <small>Provide required notes</small>
+         </div>
+     </div> -->
+</nav>
+<!-- header for mobile view end-->
+
+<!-- header for ipad and ipadpro view start-->
+<div class="navbar-dark ipdhdr" style="width: 100%" id="ipad_header">
+      <div class="row">
+        <div class="col-sm-6 ipadrw">
+          <!-- <a href="/cctv_map"
+            ><img
+              src="img/Raven-logo.png"
+              height="60px"
+              class="branding_logomob"
+          /></a> -->
+        </div>
+        <div class="col-xs-6">
+          <div class="dropdown ipddrp">
+            <button
+              class="btn btn-primary dropdown-toggle ipdrp"
+              type="button"
+              data-toggle="dropdown"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+            <ul id="ipad_dropdown_menu" class="dropdown-menu dropipad mapdrp">
+              <!-- <li>
+                        <a href="/addcam" class="navbar-brand link-menum">
+                            <p class="menu-2">
+                                <i class="fa fa-plus-square"></i>
+                                <span class="link_p text">Add Camera</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cam" id="cam_moni" class="navbar-brand link-menum ">
+                            <p class="menu-1 ">
+                                <i class="fa fa-home"></i>
+                                <span class="link_p text add_cameratext">City</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/analytics" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                <span class="link_p text">Analytics</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cctv_voi" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-car" aria-hidden="true"></i>
+                                <span class="link_p text">VOI</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cctv_poi" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="link_p text">POI</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/users" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-users"></i>
+                                <span class="link_p text">Users</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/map-nav" class="navbar-brand link-menum active-li">
+                            <p class="menu-1">
+                                <i class="fa fa-map-o" aria-hidden="true"></i>
+                                <span class="link_p text">Map</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <div class="b6 navbar-brand link-menum" onclick="openmodalSMTP();"><i class="fa fa-cog"></i><span class="name"> Main Setup </span></div>
+                    </li>
+                    <li>
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default acpn">
+                                <div class="panel-heading2" role="tab" id="headingThree">
+                                    <a class="collapsed acipc" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <i class="glyphicon glyphicon-user select_clr" style="color: #767a81;"></i> &nbsp;Account Setting
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse2 collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        <ul id="tables-collapse" class="panel-collapse" aria-expanded="false" style="height: 0px;">
+                                            <li><a href="/userprofile" class="acipa"><i class="glyphicon glyphicon-cog select_clr">&nbsp;</i><span>Settings</span></a></li><hr>
+                                            <li><a href="/logout" class="acipa"><i class="glyphicon glyphicon-off select_clr">&nbsp;</i><span>Logout</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- header for ipad and ipadpro view end-->
+
+  <div class="wrap" style="margin-left: 0px;">
+
+    <nav id="sidebar" class="sidebar nav-collapse collapse homeside">
+            <input type="search" id="search" class="live-search-box" placeholder="Search" autocomplete="off" />
+            <ul id="side-nav" class="side-nav">
+                <li class="panel">
+                    <ul id="menu-levels-collapse" class="panel-collapse collapse in">
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+    <!--  body content  -->
+    <div class="content container main_body addcam-body new-bdy">
+<!--      <nav id="sidebar" class="sidebar nav-collapse collapse homeside">-->
+<!--        <input type="search" id="search" class="live-search-box" placeholder="Search" autocomplete="off" />-->
+<!--        <div class="sidebr-cont dropcont">-->
+<!--          <h5>Cameras</h5>-->
+<!--          <div class="custom-select">-->
+<!--            <select class="selectpicker">-->
+<!--              <option data-icon="fa fa-plus-square" data-subtext="petrification"><span class="selop">Vimannagar</span>-->
+<!--              </option>-->
+<!--              <option data-icon="fa fa-plus-square" data-subtext="petrification"><span class="selop">Mumbai</span>-->
+<!--              </option>-->
+<!--              <option data-icon="fa fa-plus-square" data-subtext="area damage"><span class="selop">Delhi</span></option>-->
+<!--            </select>-->
+<!--            <ul class="side-nav1 ulvcul">-->
+<!--              <li class="panel livc">-->
+<!--                <a href="" class="livc-active"><i class="glyphicon glyphicon-facetime-video"></i><span class="lispn">-->
+<!--                    Camera 1</span></a>-->
+<!--              </li>-->
+<!--              <li class="panel livc">-->
+<!--                <a href="" class="livc-inactive"><i class="glyphicon glyphicon-facetime-video"></i><span class="lispn">-->
+<!--                    Camera 2</span></a>-->
+<!--              </li>-->
+<!--              <li class="panel livc">-->
+<!--                <a href="" class="livc-inactive"><i class="glyphicon glyphicon-facetime-video"></i><span class="lispn">-->
+<!--                    Camera 3</span></a>-->
+<!--              </li>-->
+<!--              <li class="panel livc">-->
+<!--                <a href="" class="livc-inactive"><i class="glyphicon glyphicon-facetime-video"></i><span class="lispn">-->
+<!--                    Camera 4</span></a>-->
+<!--              </li>-->
+<!--              <li class="panel livc">-->
+<!--                <a href="" class="livc-inactive"><i class="glyphicon glyphicon-facetime-video"></i><span class="lispn">-->
+<!--                    Camera 5</span></a>-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </nav>-->
+<!-- 
+      <nav id="sidebar" class="sidebar nav-collapse collapse homeside">
+        <input type="search" id="search" class="live-search-box" placeholder="Search" autocomplete="off" />
+        <ul id="side-nav" class="side-nav live-search-list">
+          <li class="panel">
+            <ul id="menu-levels-collapse" class="panel-collapse collapse in">
+            </ul>
+          </li>
+        </ul>
+      </nav> -->
+
+      <!--        <div class="row">-->
+      <!--            <div class="col-md-9">-->
+      <!--&lt;!&ndash;                <h2 class="page-title">Add CCTV Camera <small></small></h2>&ndash;&gt;-->
+      <!--            </div>-->
+      <!--            <div class="col-md-3">-->
+      <!--&lt;!&ndash;                <h2 class="page-title">Help  <small></small></h2>&ndash;&gt;-->
+      <!--            </div>-->
+      <!--        </div>-->
+
+
+      <div class="row cont-rw" style="margin-left: 280px;padding-left:0;padding-top: 86px;">
+        <div class="alltabrw ipadallrw" style="height: fit-content;margin-bottom: 50px;min-height: 80vh;background-color: #212936;
+    padding: 10px;
+    margin: 0;">
+        <div class="" style="border-bottom: 1px solid #333d48;">
+          <span class="breadp"><a href="#" class="bred1a" id="area_name_vmsMultipleStream">-</a> </span>
+          <select id="stream_s" style="height: 24px;background-color: rgb(48 59 73) !important; border: none; outline: none;margin: 5px;" aria-placeholder="Select Camera type" onchange="chnage_Stream(this)">
+            <option value="main_stream">Main Stream</option>
+            <option value="sub_stream">Sub Stream</option>
+            
+        </select>
+<!--          > <a href="#" class="bread2">Vimannagar</a>-->
+        
+
+          <div class="allcam_btngrp" style="margin-top: 0px;float: right;">
+            <button class="btn btn-sm btn-primary bton btton_active_class" id="bttw" title="2*2 Screen"><i class="fa fa-th-large"></i></button>
+            <button class="btn btn-sm btn-primary bton btton_active_class" id="bttw_8" title="2*2 Screen"><img style="width: 16px;margin-bottom: 2px;" src="img/vms_image/8layout.png"></button>
+<!--           <button class="btn btn-sm btn-primary bton" id="bton" title="1*1 Screen"><i class="fa fa-square" ></i></button>-->
+
+          <button class="btn btn-sm btn-primary bton btton_active_class active" id="bttr" title="3*3 Screen"><i class="fa fa-th"></i></button>
+          </div>
+        </div>
+        <!-- start 2*2 frame section -->
+          <div class="loader-wrap multipleLoadingGif" style="position:absolute; display: none; top:50%;text-align: center;"><img src="img/edlo3.gif" width="50px" id="imldr"></div>
+        <section class="2frame secdv" style="display: none;margin-top:10px;margin-left: 20px; margin-right: 20px;width: 100%;">
+          <div class="row 2frmdiv twlayout" id="4layout">
+
+          </div>
+
+        </section>
+
+        <!-- end 2*2 frame section -->
+
+<!--          2frmdiv-->
+        <!-- start 3*3 frame section -->
+        <section class="3frame" style="margin-top:10px;margin-left: 20px; margin-right: 20px;width: 100%;">
+          <div class="row 2frmdiv nilayout" id="9layout">
+
+          </div>
+        </section>
+
+          <section class="8frame" style=" display:none;margin-top:10px;margin-left: 20px; margin-right: 20px;width: 100%;">
+            <div class="row eglayout" id="8layout">
+                  <div class="col-md-3" style=" padding-left: 3px;padding-right: 2px;width: 25%; display:none;" id="3by3sectionHLS">
+
+                  </div>
+            </div>
+          </section>
+
+        <!-- end 3*3 frame section -->
+      </div>
+    </div>
+    </div>
+    <div id="modal-smtp"></div>
+  </div>
+  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+  <script src="lib/jquery/dist/jquery.min.js"></script>
+  <!-- <script src="js/config/config.js"></script> -->
+  <script src="lib/jquery-migrate/jquery-migrate-3.1.0.js"></script>
+  <script src="lib/jquery-pjax/jquery.pjax.js"></script>
+  <!--<script src="js/cameraAddition.js"></script>-->
+  <script src="lib/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+  <script src="lib/widgster/widgster.js"></script>
+  <script src="lib/underscore/underscore.js"></script>
+  <script src="js/d3.v3.min.js" charset="utf-8"></script>
+  <!--    <script src="js/perimeter/addCamPerimeter.js"></script>-->
+  <!--    <script src="js/cameraAddition.js"></script>-->
+
+  <!-- common application js -->
+  <script src="js/app.js"></script>
+  <script src="js/settings.js"></script>
+
+  <!-- common templates -->
+
+  <!-- page specific scripts -->
+  <!-- page libs -->
+  <script>
+  </script>
+  <script src="lib/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+  <script src="lib/jquery-autosize/dist/autosize.min.js"></script>
+  <script src="lib/bootstrap3-wysihtml5-bower/dist/bootstrap3-wysihtml5.all.min.js"></script>
+  <script src="lib/select2/dist/js/select2.min.js"></script>
+  <script src="lib/switchery/dist/switchery.min.js"></script>
+  <script src="lib/moment/moment.js"></script>
+  <script src="lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+  <script src="lib/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+  <script src="lib/jquery.maskedinput/dist/jquery.maskedinput.min.js"></script>
+  <script src="lib/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+  <script src="lib/messenger/build/js/messenger.js"></script>
+  
+  <script src="./js/jsmpeg/jsmpeg.min.js"></script>
+
+  <!-- page application js -->
+
+  <!-- <script src="js/ui-notifications.js"></script> -->
+
+
+  <!-- page application js -->
+  <!-- <script src="js/forms-elements.js"></script> -->
+
+  <script src="js/index.js"></script>
+
+  <script src="js/tables-dynamic.js"></script>
+
+
+  <!--dropdown lib-->
+
+  <!--<script src="//geodata.solutions/includes/countrystatecity.js"></script>-->
+
+  <footer class="footer ">
+    <div class="container-fluid foot_container">
+
+      <div class="copyright float-right">
+        RAVEN AI - Powered by <a href="https://pivotchain.com" rel="nofollow noopener noreferrer" target="_blank">Pivotchain</a>
+      </div>
+      <!-- your footer here -->
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

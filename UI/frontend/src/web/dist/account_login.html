@@ -1,0 +1,257 @@
+<!-- DXB Admin -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RAVEN AI | Pivotchain Solutions</title>
+    <link href="css/application.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="RAVEN AI | Pivotchain Solutions" />
+    <meta name="keywords" content="RAVEN AI | Pivotchain Solutions" />
+    <meta name="author" content="Pivotchaon" />
+    <link rel="stylesheet" href="lib/Tags-Input/jquery.tagsinput.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body class="bdf">
+    <!-- Logo -->
+    <!-- <div class="logo" style="top: 4px;">
+    <h4><a href="/cam"><img style="height: 66px;width: 79px;vertical-align: sub;" src="img/logo/logo-raven1.png"> </a> </h4>
+</div> -->
+    <!-- start header -->
+    <!--  <header id="desktop_header" class="page-header">
+        <div class="logo" style="top: 4px;">
+        <h4><a href="/cam"><img style="height: 66px;width: 79px;vertical-align: sub;" src="img/logo/logo-raven1.png"> </a> </h4>
+    </div>
+    </header>  -->
+    <div class="navbar">
+      <nav
+        id="sidebar2"
+        class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top"
+      >
+        <div class="container-fluid loginpg_header">
+          <div class="navbar-header">
+            <!-- <h4><a href="/cam"><img style="height: 96px;width: 119px;" src="img/logo/logo-raven1.png"> </a> </h4> -->
+            <h4>
+              <a href="/cctv_monitoring"
+                ><img
+                  src="img/Raven-logo.png"
+                  alt=""
+                  height="60px"
+                  class="log_lo"
+              /></a>
+            </h4>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- end header -->
+
+    <!-- body Content -->
+    <div class="single-widget-container">
+      <!-- login -->
+      <section class="widget login-widget log-wid">
+        <div
+          id="login_loader"
+          style="
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            position: absolute;
+            z-index: 999;
+            margin-left: -15px;
+          "
+        >
+          <div
+            class="loader-wrap-spin"
+            style="
+              position: absolute;
+              right: 50%;
+              top: 51%;
+              z-index: 999; /* background: rgba(0, 0, 0, 0.5); */
+            "
+          >
+            <!--                        <i class="fa fa-circle-o-notch fa-spin" style="font-size: 26px;"></i>-->
+            <img src="img/edlo3.gif" width="28px" />
+          </div>
+        </div>
+        <header class="text-align-center">
+          <h4>Login to your account</h4>
+        </header>
+        <div class="body login_pg">
+          <form id="form" method="post">
+            <fieldset>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="fa fa-user"></i>
+                  </span>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    class="form-control input-lg input-transparent login_in"
+                    placeholder="Your Email"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-group input-group-lg">
+                  <span class="input-group-addon">
+                    <i class="fa fa-lock"></i>
+                  </span>
+                  <input
+                    id="password"
+                    type="password"
+                    name="password"
+                    class="form-control input-lg input-transparent login_in"
+                    placeholder="Your Password"
+                  />
+                </div>
+              </div>
+            </fieldset>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-block btn-lg su_btn">
+                <a><small>Sign In</small></a>
+              </button>
+              <!--                     <a class="forgot" style="cursor: pointer"  onclick="forgetPassword();">Forgot Username or Password?</a>-->
+              <span class="forgot"
+                >RAVEN AI - Powered by
+                <a
+                  href="https://pivotchain.com"
+                  rel="nofollow noopener noreferrer"
+                  target="_blank"
+                  >Pivotchain</a
+                ></span
+              >
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="container-fluid foot_container">
+        <!--            <nav class="float-left">-->
+        <!--                <ul>-->
+        <!--                    <li>-->
+        <!--                        <a href="#">-->
+        <!--                            About Us-->
+        <!--                        </a>-->
+        <!--                        <a href="#">-->
+        <!--                            Services-->
+        <!--                        </a>-->
+        <!--                        <a href="#">-->
+        <!--                            Contact Us-->
+        <!--                        </a>-->
+        <!--                    </li>-->
+        <!--                </ul>-->
+        <!--            </nav>-->
+        <div class="copyright float-right">
+          RAVEN AI - Powered by
+          <a
+            href="https://pivotchain.com"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+            >Pivotchain</a
+          >
+        </div>
+        <!-- your footer here -->
+      </div>
+    </footer>
+    <!-- common libraries. required for every page-->
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/jquery-migrate/jquery-migrate-3.1.0.js"></script>
+    <script src="lib/jquery-pjax/jquery.pjax.js"></script>
+    <script src="lib/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="lib/widgster/widgster.js"></script>
+    <script src="lib/underscore/underscore.js"></script>
+    <script src="js/tables-dynamic.js"></script>
+    <script src="lib/moment/moment.js"></script>
+    <script src="lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+    <script src="lib/moment/moment.js"></script>
+    <script src="lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- common application js -->
+    <script src="js/app.js"></script>
+    <script src="js/settings.js"></script>
+    <!--<script src="js/localStore/store.legacy.js"></script>-->
+    <script src="lib/messenger/build/js/messenger.js"></script>
+    <!-- page application js -->
+    <!-- <script src="js/ui-notifications.js"></script> -->
+    <script src="js/index.js"></script>
+    <!-- page specific scripts -->
+    <script>
+      $("#login_loader").hide();
+      $(document).ready(function () {
+        $("#form").submit(function (event) {
+          event.preventDefault();
+
+          $("#login_loader").show();
+          $.ajax({
+            type: "POST",
+            url: "/login",
+            data: $("#form").serialize(),
+            dataType: "json",
+            success: function (response) {
+              $("#form")[0].reset();
+              if (response.Success == "Success!") {
+                localStorage.setItem(
+                  "userStatus",
+                  response.data.userlogin_status
+                );
+                // localStorage.setItem('userNameDXB',response.data.username);
+                // localStorage.setItem('useruniqueIdDXB',response.data.unique_id);
+
+                window.location.href = "/";
+                $("#login_loader").hide();
+                Messenger().post({
+                  message: response.Success,
+                  type: "success",
+                  showCloseButton: true,
+                });
+              } else {
+                $("#login_loader").hide();
+                Messenger().post({
+                  message: response.Failure,
+                  type: "error",
+                  showCloseButton: true,
+                });
+              }
+            },
+            error: function (err) {
+              $("#login_loader").hide();
+              Messenger().post({
+                message: "Sorry please try again later",
+                type: "error",
+                showCloseButton: true,
+              });
+              console.log(err);
+            },
+          });
+        });
+      });
+
+      VerifyDetails = function () {
+        if ($("#email").val() == "Akash" && $("#password").val() == "Akash") {
+          Messenger().post({
+            message: "Login Successfully",
+            type: "success",
+            showCloseButton: true,
+          });
+          store.set("user", $("#email").val());
+        } else {
+          Messenger().post({
+            message: "Sorry please try again later",
+            type: "error",
+            showCloseButton: true,
+          });
+        }
+      };
+    </script>
+  </body>
+</html>

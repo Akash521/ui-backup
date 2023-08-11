@@ -1,0 +1,96 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .dropdown{
+            position:relative;
+            display:inline-block;
+        }
+        .button{
+            padding:10px 40px;
+            font-size:20px;
+        }
+        .drop-content{
+            display:none ;
+            position:absolute;
+            z-index:1;
+            width:120px;
+        }
+        .drop-content a{
+            display:block;
+            background:#dfdfdf;
+            padding:10px;
+            color:black;
+            text-decoration:none;
+            font-size:20px;
+            margin-top:2px;
+        }
+        .dropdown:hover .drop-content{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <input type="button" value="draw" onclick="say_thanks_overlay_1();"/>
+
+        <div class = "parent" id="iVideo">
+            <img id="video_p"  >
+        </div>
+        <div id="int_per_cc" class="col-md-12 col-sm-12 col-xs-12" style="position:relative;margin-top: -1px;margin-left: 13px; display:none;">
+            <div id="imgCanv" style="background-position:center;background-repeat:no-repeat;background-size:contain;text-align:center">
+                <canvas id="output"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="button">Drop</button>
+    <!-- this menu will appear if we hover on the button -->
+    <div class="drop-content">
+        <a href="#">Item 1</a>
+        <a href="#">Item 1</a>
+        <a href="#">Item 1</a>
+        <a href="#">Item 1</a>
+    </div>
+</div>
+
+<select id="abc">
+    <option>option 1</option>
+    <option>option 2</option>
+    <option>option 3</option>
+    <option>option 4</option>
+    <option>option 5</option>
+</select>
+
+</body>
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="js/d3.v3.min.js" charset="utf-8"></script>
+<script src="js/perimeter/peri.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#abc').focus();
+    });
+</script>
+</html>

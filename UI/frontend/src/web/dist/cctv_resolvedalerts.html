@@ -1,0 +1,805 @@
+<!-- DXB Admin -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAVEN AI | Pivotchain Solutions</title>
+    <link href="css/application.css" rel="stylesheet">
+    <link href="css/custom-css/custom-style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom-css/map_nav.css">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RAVEN AI | Pivotchain Solutions">
+    <meta name="keywords" content="RAVEN AI | Pivotchain Solutions">
+    <meta name="author" content="Pivotchain Solutions">
+    <link rel="stylesheet" href="lib/Tags-Input/jquery.tagsinput.css">
+    <!-- <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" /> -->
+    <meta charset="utf-8">
+</head>
+<body class="" style="margin: 0;">
+
+<header id="desktop_header" class="page-header navbar-header">
+    <div id='topheader' class="navbar">
+        <nav id="sidebar" class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top">
+            <!-- <a href="/cam" id="site_logo" class="navbar-brand">
+                <img src="img/hr4logo.png" alt="" width="60%" class="branding_logo">
+
+            </a> -->
+
+            <!-- <div class="b1" >
+                <a href="/addcam" class="navbar-brand link-menu navbar-nav">
+                    <p class="menu-2" style="text-align: center;">
+                        <i class="fa fa-plus-square"></i><br><br>
+                        <span class="link_p text">Add Camera</span></p>
+                </a>
+            </div>
+
+            <div class="b2" >
+                <a href="/cam" id="cam_moni" class="navbar-brand link-menu">
+                    <p class="menu-1 " style="text-align: center;">
+                        <i class="fa fa-home"></i><br><br>
+                        <span class="link_p text add_cameratext">City</span></p>
+                </a>
+            </div> -->
+
+            <!-- <div class="b3" >
+                <a href="/analytics" class="navbar-brand link-menu">
+                    <p class="menu-1 " style="text-align: center;">
+                        <i class="fa fa-bars" aria-hidden="true"></i><br><br>
+                        <span class="link_p text">Analytics</span></p>
+                </a></div> -->
+
+            <!--            <div class="b4" >-->
+            <!--                <a href="/logs" class="navbar-brand link-menu">-->
+            <!--                    <p class="menu-1 " style="text-align: center;">-->
+            <!--                        <i class="fa fa-clipboard" aria-hidden="true"></i><br><br>-->
+            <!--                        <span class="link_p text">Alerts</span></p>-->
+
+            <!--                </a>-->
+            <!--            </div>-->
+
+<!--            <div class="b4" >-->
+<!--                <a href="/cctv_voi" class="navbar-brand link-menu">-->
+<!--                    <p class="menu-1 " style="text-align: center;">-->
+<!--                        <i class="fa fa-car" aria-hidden="true"></i><br><br>-->
+<!--                        <span class="link_p text">VOI</span></p>-->
+
+<!--                </a>-->
+<!--            </div>-->
+
+<!--            <div class="b4" >-->
+<!--                <a href="/cctv_poi" class="navbar-brand link-menu">-->
+<!--                    <p class="menu-1 " style="text-align: center;">-->
+<!--                        <i class="fa fa-user" aria-hidden="true"></i><br><br>-->
+<!--                        <span class="link_p text">POI</span></p>-->
+
+<!--                </a>-->
+<!--            </div>-->
+
+            <!-- <div class="b5" >
+                <a href="/users" class="navbar-brand link-menu active-li">
+                    <p class="menu-1 " style="text-align: center;">
+                        <i class="fa fa-users"></i><br><br>
+                        <span class="link_p text">Users</span></p>
+
+                </a>
+            </div> -->
+
+<!--            <div class="b5" >-->
+<!--                <a href="/map-nav" class="navbar-brand link-menu">-->
+<!--                    <p class="menu-1 " style="text-align: center;">-->
+<!--                        <i class="fa fa-map-o" aria-hidden="true"></i><br><br>-->
+<!--                        <span class="link_p text">Map</span></p>-->
+
+<!--                </a>-->
+<!--            </div>-->
+
+            <!-- <div class="b6" onclick="openmodalSMTP();">
+                <span class="navbar-brand link-menu" >
+                     <p class="menu-1 " style="text-align: center;">
+                    <i class="fa fa-cog"></i><br><br>
+                    <span class="link_p text">Main Setup</span></p>
+
+                </span></div> -->
+
+            <ul class="nav navbar-nav nav bar-right pull-right">
+                <li class="visible-phone-landscape">
+                    <a href="#" id="search-toggle">
+                        <i class="fa fa-search"></i>
+                    </a>
+                </li>
+                <button type="button" class="btn btn-default dropdown-toggle tagbt" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span>
+                </button>
+                <ul id="acc_setting" class="dropdown-menu user_select">
+                    <!-- <li><a href="/userprofile"><i class="glyphicon glyphicon-cog">&nbsp;</i><span>Account Settings</span></a></li><hr>
+                    <li><div style="font-size: 16px;font-weight: 400;padding: 10px 19px;" class="logout" onclick="logout()"><i class="glyphicon glyphicon-off">&nbsp;</i><span>Logout</span></div></li> -->
+                </ul>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- header for mobile view start-->
+<nav id="mobile_header" class="sidebar nav-collapse navbar-dark collapse">
+    <div class="row mobrw">
+        <div class="col-sm-6 mobrw1">
+            <!-- <a href="/cctv_map"><img src="img/Raven-logo.png" height= "50px" class="branding_logomob"></a> -->
+        </div>
+        <div class="col-sm-6 mobrw2" >
+            <a href="#"
+               class="btn-navbar hum"
+               data-toggle="collapse"
+               data-target=".sidebar"
+               title="">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+    </div>
+    <ul id="mobile_sidebar_nav" class="side-nav">
+        <!-- <li class="">
+            <a href="/addcam" class="navbar-brand link-menum active-li">
+                <p class="menu-2">
+                    <i class="fa fa-plus-square"></i>
+                    <span class="link_p text">Add Camera</span></p>
+            </a>
+        </li>
+        <li class="">
+            <a href="/cam" id="cam_moni" class="navbar-brand link-menum ">
+                <p class="menu-1 ">
+                    <i class="fa fa-home"></i>
+                    <span class="link_p text add_cameratext">City</span></p>
+            </a>
+        </li>
+        <li class="">
+            <a href="/analytics" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <span class="link_p text">Analytics</span></p>
+            </a>
+        </li>
+        <li class="">
+            <a href="/cctv_voi" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-car" aria-hidden="true"></i>
+                    <span class="link_p text">VOI</span></p>
+
+            </a>
+        </li>
+        <li class="">
+            <a href="/cctv_poi" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <span class="link_p text">POI</span></p>
+
+            </a>
+        </li>
+        <li class="">
+            <a href="/users" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-users"></i>
+                    <span class="link_p text">Users</span></p>
+
+            </a>
+        </li>
+        <li class="">
+            <a href="/map-nav" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-map-o" aria-hidden="true"></i>
+                    <span class="link_p text">Map</span></p>
+
+            </a>
+        </li>
+        <li class=""> -->
+            <!-- <a href="main_setup.html"><img src="img/clr6.svg">&nbsp;<span class="name">Main Setup </span></a> -->
+            <!-- <div class="b6 navbar-brand link-menum" onclick="openmodalSMTP();"><i class="fa fa-cog"></i><span class="name">Main Setup </span></div>
+        </li>
+
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#tables-collapse"><i class="glyphicon glyphicon-user select_clr"></i></a>
+            <ul id="tables-collapse" class="panel-collapse collapse ">
+                <li><a href="/userprofile"><i class="glyphicon glyphicon-cog select_clr">&nbsp;</i><span>Settings</span></a></li><hr>
+                <li><a href="/logout"><i class="glyphicon glyphicon-off select_clr">&nbsp;</i><span>Logout</span></a></li>
+            </ul>
+        </li> -->
+        <!-- <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#sub-menu-1-collapse" href="#sub-menu-2-collapse"><i class="fa fa-folder-open"></i>&nbsp;Item 2.3</a>
+            <ul id="sub-menu-2-collapse" class="panel-collapse collapse">
+                <li><a href="#">Item 3.4</a></li>
+                <li><a href="#">Item 3.5</a></li>
+                <li><a href="#">Item 3.6</a></li>
+            </ul>
+        </li> -->
+
+    </ul>
+    <!-- <nav id="sidebar" class="mobsidesrch mobilecam">
+        <input type="search" id="search" class="live-search-box" placeholder="Search" autocomplete="off" />
+        <ul id="side-nav" class="side-nav live-search-list">
+            <li class="panel">
+                <ul id="menu-levels-collapse" class="panel-collapse collapse in">
+                </ul>
+            </li>
+        </ul>
+    </nav> -->
+
+
+    <!-- <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5> -->
+    <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
+    <!-- <ul class="sidebar-labels">
+        <li>
+            <a href="#">
+                 yep, .circle again
+                <i class="fa fa-circle text-warning"></i>
+                <span class="label-name">My Recent</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-circle text-gray"></i>
+                <span class="label-name">Starred</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-circle text-danger"></i>
+                <span class="label-name">Background</span>
+            </a>
+        </li>
+    </ul> -->
+
+    <!--  <h5 class="sidebar-nav-title">Projects</h5> -->
+    <!-- A place for sidebar notifications & alerts -->
+    <!--  <div class="sidebar-alerts">
+         <div class="alert fade in">
+             <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+             <span class="text-white fw-semi-bold">Sales Report</span> <br>
+             <div class="progress progress-xs mt-xs mb-0">
+                 <div class="progress-bar progress-bar-gray-light" style="width: 16%"></div>
+             </div>
+             <small>Calculating x-axis bias... 65%</small>
+         </div>
+         <div class="alert fade in">
+             <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+             <span class="text-white fw-semi-bold">Personal Responsibility</span> <br>
+             <div class="progress progress-xs mt-xs mb-0">
+                 <div class="progress-bar progress-bar-danger" style="width: 23%"></div>
+             </div>
+             <small>Provide required notes</small>
+         </div>
+     </div> -->
+</nav>
+<!-- header for mobile view end-->
+
+<!-- header for ipad and ipadpro view start-->
+<div class="navbar-dark ipdhdr" style="width: 100%" id="ipad_header">
+      <div class="row">
+        <div class="col-sm-6 ipadrw">
+          <!-- <a href="/cctv_map"
+            ><img
+              src="img/Raven-logo.png"
+              height="60px"
+              class="branding_logomob"
+          /></a> -->
+        </div>
+        <div class="col-xs-6">
+          <div class="dropdown ipddrp">
+            <button
+              class="btn btn-primary dropdown-toggle ipdrp"
+              type="button"
+              data-toggle="dropdown"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+            <ul id="ipad_dropdown_menu" class="dropdown-menu dropipad mapdrp">
+              <!-- <li>
+                        <a href="/addcam" class="navbar-brand link-menum">
+                            <p class="menu-2">
+                                <i class="fa fa-plus-square"></i>
+                                <span class="link_p text">Add Camera</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cam" id="cam_moni" class="navbar-brand link-menum ">
+                            <p class="menu-1 ">
+                                <i class="fa fa-home"></i>
+                                <span class="link_p text add_cameratext">City</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/analytics" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                <span class="link_p text">Analytics</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cctv_voi" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-car" aria-hidden="true"></i>
+                                <span class="link_p text">VOI</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cctv_poi" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="link_p text">POI</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/users" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-users"></i>
+                                <span class="link_p text">Users</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/map-nav" class="navbar-brand link-menum active-li">
+                            <p class="menu-1">
+                                <i class="fa fa-map-o" aria-hidden="true"></i>
+                                <span class="link_p text">Map</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <div class="b6 navbar-brand link-menum" onclick="openmodalSMTP();"><i class="fa fa-cog"></i><span class="name"> Main Setup </span></div>
+                    </li>
+                    <li>
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default acpn">
+                                <div class="panel-heading2" role="tab" id="headingThree">
+                                    <a class="collapsed acipc" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <i class="glyphicon glyphicon-user select_clr" style="color: #767a81;"></i> &nbsp;Account Setting
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse2 collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        <ul id="tables-collapse" class="panel-collapse" aria-expanded="false" style="height: 0px;">
+                                            <li><a href="/userprofile" class="acipa"><i class="glyphicon glyphicon-cog select_clr">&nbsp;</i><span>Settings</span></a></li><hr>
+                                            <li><a href="/logout" class="acipa"><i class="glyphicon glyphicon-off select_clr">&nbsp;</i><span>Logout</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<div class="menudropdownmobile" style="display: none;">
+        <select id="downloaddropdown" style="
+                            border-radius: 2px;
+                            background-color: var(--main-bg-color) !important;
+                            border: 0px;
+                            color: var(--white);
+                            width: 100%;
+                            text-align: center;
+                            padding: 10px;
+                            display: none;
+                          ">
+        </select>
+    </div>
+<!-- header for ipad and ipadpro view end-->
+
+
+<div class="wrap">
+
+     <nav id="sidebar" class="sidebar nav-collapse collapse homeside">
+            <input type="search" id="search" class="live-search-box" placeholder="Search" autocomplete="off" />
+            <ul id="side-nav" class="side-nav">
+                <li class="panel">
+                    <ul id="menu-levels-collapse" class="panel-collapse collapse in">
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+<!--    <header class="page-header">-->
+<!--            <div class="navbar">-->
+<!--                <ul class="nav navbar-nav navbar-right pull-right">-->
+<!--                    &lt;!&ndash; <li class="visible-phone-landscape">-->
+<!--                        <a href="#" id="search-toggle">-->
+<!--                            <i class="fa fa-search"></i>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li class="divider"></li>-->
+<!--                    <li class="hidden-xs dropdown">-->
+<!--                        <a href="#" title="Account" id="account"-->
+<!--                           class="dropdown-toggle"-->
+<!--                           data-toggle="dropdown">-->
+<!--                            <i class="glyphicon glyphicon-user"></i>-->
+<!--                        </a>-->
+<!--                        <ul id="account-menu" class="dropdown-menu account" role="menu">-->
+<!--                            <li role="presentation" class="account-picture">-->
+<!--                                <img src="img/logo_dark.png" style="width: 26px;" alt="">-->
+<!--                                Pivotchain-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </li> &ndash;&gt;-->
+<!--                    <li class="visible-xs mob-bar">-->
+<!--                        <a href=""-->
+<!--                           class="btn-navbar"-->
+<!--                           data-toggle="collapse"-->
+<!--                           data-target=".sidebar"-->
+<!--                           title="">-->
+<!--                            <i class="fa fa-bars"></i>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    &lt;!&ndash; <li class="hidden-xs"><a href="/logout"><i class="glyphicon glyphicon-off"></i></a></li> &ndash;&gt;-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--    </header>-->
+
+
+<!-- Users List -->
+    <div class="content container main_body anmob">
+
+
+
+        
+
+        <div class="widget user-bdy  cont-rw" style="margin-top: 86px;margin-bottom: 50px;padding-top: 20px;" id="pendingalerts">
+            <div id="nav" class="side-nav nav-left helpdesknav nav_com" style="transform: translateX(110%);top: 0;right:0;left:auto;height: 100%;width: 59%;z-index: 10000 !important;
+">
+          <div class="leaflet-sidebar left visible" style="z-index: 999; background: #212936">
+            <div id="sidebar" class="leaflet-control">
+              <div class="top-menu">
+                <div class="row" style="margin-left: 15px;">
+                  <div style="width: 90%">
+                    <span class="counter" id="nav_alert_priority" title="Alert Priority" style="margin-right: 10px;width: 30px;border-radius: none;"></span>
+                    
+                    <span class="side_title" style="font-weight: bold;" id="event_name_Alerts" title="Alert Name"></span>
+              
+
+                    
+                  </div>
+                  <a class="close" onclick="closemodalbtn();" title="Close">×</a>
+                </div>
+              </div>
+              <div class="modal-body" style="margin-top: 10px;">
+
+                        <div class="videojs_mp4" title="Alert Video">
+                            <!-- <video id="videoAlerts"  style="width:100%; height: 400px;"  controls>
+                                <source id="videoSourceAlerts"   type="video/mp4">
+                            </video> -->
+                               <!-- <video id="MY_VIDEO_1" class="video-js vjs-default-skin" controls -->
+                   <!-- preload="auto" width="640" height="264"
+                   data-setup="{}">
+                <source type='video/mp4'>
+                <source type='video/webm'>
+            </video> -->
+                                                      <!-- <p onclick="live_camera(this)" url="Helpdesk Live Stream" class="live_camera" style="">LIVE</p> -->
+
+                        </div>
+                            <div class="caption">
+
+
+                                <div class="row" style="margin-top: 30px;">
+                                        <div class="col-lg-12">
+
+
+                                        <address class="col-lg-4">
+                                             <span>Id: </span><a title="Alert Id" id="alert_id"> </a><br>
+                                             <span>Date: </span><a title="Alert Date" id="event_date_Alerts"> </a><br>
+                                            <span>Time: </span><a title="Alert Time" id="event_time_Alerts"> </a><br>
+
+                                            <!-- <span>Status: </span><a title="Alert Status" id="status_Alerts"> </a><br> -->
+
+                                             <!-- <span>Rounder Name: </span><a title="ATM Rounder Name" id="rounder_name"></a><br>
+                                            <span>Rounder Number: </span><a title="Rounder Mobile number" id="rounder_number"></a><br> -->
+
+
+
+                                            <!--                                        <span title="Work email" >Area Name: </span><a id="stand_type_Alerts"> Connected</a><br>-->
+                                        </address>
+                                        <address class="col-lg-4">
+                                            <!-- <span>ATM Id: </span><a title="ATM Id" id="alerts_atm_id"> </a><br> -->
+                                            <span>Camera Name: </span><a title="Camera Name" id="cam_name_Alerts"> </a><br>
+                                            <span>City Name: </span><a title="ATM City" id="airport_Alerts"> </a><br>
+
+                                            <span>Area Name: </span><a title="ATM Location" id="terminal_Alerts"></a><br>
+
+                                        </address>
+
+                                        <div class="col-lg-4">
+                                            <ul class="assigncheckbox assignoptions" style="margin-bottom: 10px;">
+<li style="margin-right: 10px;">
+<input title="Verify as true" class="checkbox-primary" type="checkbox" id="assignqrt" name="assignqrt" value="assignqrt">
+                                            <label title="Verify as true" for="assignqrt" id="assignqrt_label">True</label>
+</li>
+<!-- <li style="margin: 0 10px;">
+<input title="Close Alert" class="checkbox-primary" type="checkbox" id="assignclose" name="assignclose" value="assignclose">
+                                            <label title="Close Alert" for="assignclose" id="assignclose_label">Close</label>
+                                            
+</li> -->
+<li>
+ <input title="Verify as False" class="checkbox-primary" type="checkbox" id="assignfalse" name="assignfalse" value="assignfalse">
+                                            <label title="Verify as False" for="assignfalse" id="assignfalse_label">False</label>
+                                            
+</li>
+
+</ul>
+                                        </div>
+                                        
+                                    </div>
+
+
+</div>
+<div id="poi_deatils_text" style="display:none;">
+
+
+                                        <div class="col-lg-12">
+                                            <h4 style="color:#f8f8f8;">POI Details:</h4>
+                                        </div>
+                                        <address class="col-lg-12">
+
+                                            <textarea id="poi_det_api_text" style="width: 100%;height: 63px;margin-bottom: 0px;background: #212a36;border: 1px solid #606468;" disabled>
+
+                                            </textarea>
+
+
+                                        </address>
+
+                                    </div>
+<div id="voi_deatils_text" style="display:none;">
+
+
+                                        <div class="col-lg-12" style="border-top: 1px solid #313c4e;">
+                                            <h4 style="color:#f8f8f8;">VOI Details:</h4>
+                                        </div>
+                                        <address class="col-lg-12 row" style="justify-content: space-between;">
+
+                                            <img src="" alt="" style="height: 63px;width: 40%;" id="voi_det_number_img">
+
+                                            <textarea id="voi_det_api_text" style="width: 40%;height: 63px;margin-bottom: 0px;background: #212a36;border: 1px solid #606468;" onfocus="showupdateVehicleNumber(this)">
+
+                                            </textarea>
+
+                                            <button class="btn btn-primary updatevehicleNumber" style="align-self: center;height: fit-content;display: none;" onclick="updatevehicleNumber()">Update</button>
+
+
+
+
+                                        </address>
+
+                                    </div>
+                            </div>
+                    </div>
+            </div>
+          </div>
+
+        </div>
+            <div class="row ">
+            <div class="col-lg-3">
+                <h2 class="page-title"><small>List of Alerts</small></h2>
+
+            </div>
+            <div class="col-md-offset-2 col-lg-3 findalerts">
+                <div class="col-lg-10">
+                    <div class="form-group">
+                        <label for="fromdate">Find Alerts By Date </label>
+                        <input
+                        onkeydown="()=>{return false}"
+                                autocomplete="off"
+                                type="text"
+                                class="form-control  input-transparent datepickerHelpDesk"
+                                name="fromdate"
+                                id="dateDesk"
+                                placeholder=""
+                                title="Select Date"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+            <header>
+                <div class="widget-controls">
+                </div>
+            </header>
+<!--            <div class="body">-->
+
+<!--            </div>-->
+            <div class="body" style="padding-bottom: 10px;">
+
+                <div class="mt mtuser " style="border: 1px solid #313c4e !important;">
+                    <ul id="myTabAdd" class="nav nav-tabs myTab mob-modal" style="border-bottom: 1px solid #313c4e !important; border-top: 1px solid #313c4e !important;">
+                        <li class="active" title="Priority: P1" priority_value='P1' status="pending" onclick="getpriorityval(this)"><a href="#helpdesk_P1" data-toggle="tab" class="count_P1" style="text-align: center;">P1</a></li>
+                        <li title="Priority: P2" priority_value="P2" status="pending" onclick="getpriorityval(this)"><a href="#helpdesk_P2" data-toggle="tab" class="count_P2" style="text-align: center;">P2</a></li>
+                        <li title="Priority: P3" priority_value="P3" status="pending" onclick="getpriorityval(this)" ><a href="#helpdesk_P3" data-toggle="tab" class="count_P3" style="text-align: center;">P3</a></li>
+                    </ul>
+
+                     <div class="page-500" style="display: none;">
+            <div class="outer">
+                <div class="middle">
+                    <div class="inner">
+                        <!--BEGIN CONTENT-->
+                        <div class="inner-circle"><i class="fa fa-cogs"></i><span>500</span></div>
+                        <span class="inner-status">Internal Server Error!</span>
+                        <span class="inner-detail">Unfortunately we're having trouble loading the page you are looking for <br> Please come back in a while.</span>
+                        <!--END CONTENT-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                    <div class="" id="loading-spinner" style="display: none;
+    justify-content: center;
+    width: 100%;
+    align-items: center;margin-top: 20px;" >
+                    <!--                    <i class="fa fa-circle-o-notch fa-spin"></i>-->
+                    <img src="img/edlo3.gif" width="28px">
+                </div>
+                    <div id="myTabContent" class="nav nav-tabs myTab " style="padding: 12px 17px;background-color: transparent" >
+                        <div style="position:relative;" class="tab-pane fade in active" id="helpdesk_P1">
+
+                        </div>
+                        <div style="position:relative;" class="tab-pane fade " id="helpdesk_P2">
+                            <!--                <table id="datatable-table-P2" class="table table-striped table-hover dataTable no-footer" style="width:100%">-->
+                            <!--                </table>-->
+                        </div>
+                        <div style="position:relative;" class="tab-pane fade" id="helpdesk_P3">
+                            <!--                <table id="datatable-table-P3" class="table table-striped table-hover dataTable no-footer" style="width:100%">-->
+                            <!--                </table>-->
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div id="alertsModal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog modal-lg" >
+                <div class="modal-content">
+
+                    <div class="modal-header" style="background: #212936; border-bottom: 1px solid #5f5e5e9e;">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: #d2d2d2" onclick="close_modal();">×</button>
+                        <h4 class="modal-title" id="myModalLabel2" style="color: #f8f8f8">ATM ID : <span id="alert_id_s"> </span></h4>
+                    </div>
+                    <div class="modal-body" style="background: #212936;">
+                        <div class="videojs_mp4" > -->
+                            <!-- <video id="videoAlerts"  style="width:100%; height: 400px;"  controls>
+                                <source id="videoSourceAlerts"   type="video/mp4">
+                            </video> -->
+                               <!-- <video id="MY_VIDEO_1" class="video-js vjs-default-skin" controls -->
+                   <!-- preload="auto" width="640" height="264"
+                   data-setup="{}">
+                <source type='video/mp4'>
+                <source type='video/webm'>
+            </video> -->
+                        <!-- </div>
+                            <div class="caption"  style="color: #f8f8f8">
+
+                                <div class="row" style="display:flex;">
+                                    <div class="col-lg-6" style="width: 60%;">
+                                        <div class="col-lg-7" style="width: auto !important;">
+                                            <h4 style="color: #f8f8f8" id="event_name_Alerts"></h4>
+
+                                        </div>
+                                        <div class="col-md-5"><p onclick="live_camera(this)" url="Helpdesk Live Stream" class="live_camera" style="color: red;background: transparent;border: 1px solid red;outline: none;font-size: 11px;text-align: center;padding: 2px 5px;width: 50%;border-radius:2px;margin-top: 9px;font-weight: 500;">LIVE</p></div>
+
+
+                                        <address class="col-lg-7">
+                                            <span  >Camera Name: </span><a id="cam_name_Alerts"> </a><br>
+                                            <span  >Alert Time: </span><a id="event_time_Alerts"> </a><br>
+                                            <span >Status: </span><a id="status_Alerts"> </a>
+
+                                                                                    <span title="Work email" >Area Name: </span><a id="stand_type_Alerts"> Connected</a><br>-->
+                                        <!-- </address>
+                                        <address class="col-lg-5">
+                                            <span  >City Name: </span><a id="airport_Alerts"> </a><br>
+                                            <span  >Area Name: </span><a id="terminal_Alerts"> Terminal 2</a><br>
+
+                                        </address>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div id="actions" style="display: flex;height: fit-content; justify-content: start; margin-top: 3.5rem;">
+                                            <span  >Action: </span>
+                                            <input class="actions" style="margin-left: 4rem;cursor: pointer;" type="radio" id="true" name="action" value="true">
+                                            <label style="margin: -0.7rem 0 0 1rem; cursor: pointer; flex-grow: 0 !important;" for="true">True</label><br>
+                                            <input class="actions" style="margin-left: 2rem; cursor: pointer;" type="radio" id="false" name="action" value="false">
+                                            <label style="margin: -0.7rem 0 0 1rem; cursor: pointer; flex-grow: 0 !important;" for="false">False</label><br>
+                                        </div>
+                                        <div>
+                                            <span  >Assign To: </span>
+                                            <input style="margin-left: 2rem;cursor: pointer;" class="checkbox-primary" type="checkbox" id="QRT" name="QRT" value="QRT">
+                                            <label style="margin: -0.7rem 0 0 0.3rem; cursor: pointer; flex-grow: 0 !important;" for="QRT" id="QRT_label">QRT</label><br> -->
+                                        <!-- </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div> -->
+                    <!--                <div class="modal-footer" style="background: rgb(25, 59, 63);">-->
+                <!-- </div>
+            </div>/.modal-content -->
+        <!-- </div>/.modal-dialog -->
+
+
+<!--        <footer class="content-footer homfoot" style="position: initial">Raven AI - Powered by <a href="https://pivotchain.com" rel="nofollow noopener noreferrer" target="_blank">Pivotchain</a></footer>-->
+    </div>
+
+    <div
+        class="loader-wrap hiding hide"
+        id="loading-logs"
+        style="margin-left: 0 !important; top: 65px !important"
+      >
+        <div class="page_progress" id="progress_div">
+          <div class="bar" id="bar1"></div>
+          <div class="percent" id="percent1"></div>
+        </div>
+
+        <input type="hidden" id="progress_width" value="0" />
+      </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container-fluid foot_container">
+
+        <div class="copyright float-right">
+            Raven AI - Powered by <a href="https://pivotchain.com" rel="nofollow noopener noreferrer" target="_blank">Pivotchain</a>
+        </div>
+        <!-- your footer here -->
+    </div>
+</footer>
+
+        <div id="modal-smtp"></div>
+
+
+<!-- common libraries. required for every page-->
+
+<script src="js/mapJS/leaflet.js"></script>
+    <script src="js/pruneCluster.js"></script>
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/jquery-migrate/jquery-migrate-3.1.0.js"></script>
+<!-- <script src="js/config/config.js"></script> -->
+<script src="lib/jquery-pjax/jquery.pjax.js"></script>
+<script src="lib/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+<script src="lib/widgster/widgster.js"></script>
+<script src="lib/underscore/underscore.js"></script>
+<script src="lib/moment/moment.js"></script>
+<script src="lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="lib/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+<script src="lib/jquery-ui/ui/widgets/datepicker.js"></script>
+<script src="js/video-js/video.js"></script>
+
+<!-- common application js -->
+<script src="js/app.js"></script>
+<script src="js/settings.js"></script>
+
+<!-- page specific scripts -->
+<!-- page specific libs -->
+<script src="lib/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+<script src="lib/underscore/underscore.js"></script>
+<script src="lib/backbone/backbone.js"></script>
+<script src="lib/backbone.paginator/lib/backbone.paginator.min.js"></script>
+<script src="lib/backgrid/lib/backgrid.js"></script>
+<script src="lib/backgrid-paginator/backgrid-paginator.js"></script>
+<script src="lib/datatables/media/js/jquery.dataTables.min.js"></script>
+<script src="js/tables-dynamic.js"></script>
+
+<script src="lib/messenger/build/js/messenger.js"></script>
+<!-- <script src="js/ui-notifications.js"></script> -->
+<!--<script src="js/index.js"></script>-->
+<!-- <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script> -->
+
+<!-- page application js -->
+
+
+
+</body>
+</html>

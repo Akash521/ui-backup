@@ -1,0 +1,754 @@
+<!-- DXB Admin -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAVEN AI | Pivotchain Solutions</title>
+    <link href="css/application.css" rel="stylesheet">
+    <link href="css/custom-css/custom-style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom-css/map_nav.css">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RAVEN AI | Pivotchain Solutions">
+    <meta name="keywords" content="RAVEN AI | Pivotchain Solutions">
+    <meta name="author" content="Flatlogic LLC">
+    <link rel="stylesheet" href="lib/Tags-Input/jquery.tagsinput.css">
+    <meta charset="utf-8">
+</head>
+<body class="" style="margin: 0;">
+
+<header id="desktop_header" class="page-header navbar-header">
+    <div id='topheader' class="navbar">
+        <nav id="sidebar" class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top">
+            <!-- <a href="/cam" id="site_logo" class="navbar-brand"> -->
+                <!--                <img src="img/Raven-logo.png" alt="" width="60%" class="branding_logo">-->
+                <!-- <img src="img/hr4logo.png" alt="" width="60%" class="branding_logo">
+
+            </a> -->
+
+            <!-- <div class="b1" >
+                <a href="/addcam" class="navbar-brand link-menu navbar-nav">
+                    <p class="menu-2" style="text-align: center;">
+                        <i class="fa fa-plus-square"></i><br><br>
+                        <span class="link_p text">Add Camera</span></p>
+                </a>
+            </div>
+
+            <div class="b2" >
+                <a href="/cam" id="cam_moni" class="navbar-brand link-menu">
+                    <p class="menu-1 " style="text-align: center;">
+                        <i class="fa fa-home"></i><br><br>
+                        <span class="link_p text add_cameratext">City</span></p>
+                </a>
+            </div> -->
+
+            <!-- <div class="b3" >
+                <a href="/analytics" class="navbar-brand link-menu">
+                    <p class="menu-1 " style="text-align: center;">
+                        <i class="fa fa-bars" aria-hidden="true"></i><br><br>
+                        <span class="link_p text">Analytics</span></p>
+                </a></div> -->
+
+            <!--            <div class="b4" >-->
+            <!--                <a href="/logs" class="navbar-brand link-menu">-->
+            <!--                    <p class="menu-1 " style="text-align: center;">-->
+            <!--                        <i class="fa fa-clipboard" aria-hidden="true"></i><br><br>-->
+            <!--                        <span class="link_p text">Alerts</span></p>-->
+
+            <!--                </a>-->
+            <!--            </div>-->
+
+<!--            <div class="b4" >-->
+<!--                <a href="/cctv_voi" class="navbar-brand link-menu">-->
+<!--                    <p class="menu-1 " style="text-align: center;">-->
+<!--                        <i class="fa fa-car" aria-hidden="true"></i><br><br>-->
+<!--                        <span class="link_p text">VOI</span></p>-->
+
+<!--                </a>-->
+<!--            </div>-->
+
+<!--            <div class="b4" >-->
+<!--                <a href="/cctv_poi" class="navbar-brand link-menu">-->
+<!--                    <p class="menu-1 " style="text-align: center;">-->
+<!--                        <i class="fa fa-user" aria-hidden="true"></i><br><br>-->
+<!--                        <span class="link_p text">POI</span></p>-->
+
+<!--                </a>-->
+<!--            </div>-->
+
+            <!-- <div class="b5" >
+                <a href="/users" class="navbar-brand link-menu active-li">
+                    <p class="menu-1 " style="text-align: center;">
+                        <i class="fa fa-users"></i><br><br>
+                        <span class="link_p text">Users</span></p>
+
+                </a>
+            </div> -->
+
+<!--            <div class="b5" >-->
+<!--                <a href="/map-nav" class="navbar-brand link-menu">-->
+<!--                    <p class="menu-1 " style="text-align: center;">-->
+<!--                        <i class="fa fa-map-o" aria-hidden="true"></i><br><br>-->
+<!--                        <span class="link_p text">Map</span></p>-->
+
+<!--                </a>-->
+<!--            </div>-->
+
+            <!-- <div class="b6" onclick="openmodalSMTP();">
+                <span class="navbar-brand link-menu" >
+                     <p class="menu-1 " style="text-align: center;">
+                    <i class="fa fa-cog"></i><br><br>
+                    <span class="link_p text">Main Setup</span></p>
+
+                </span></div> -->
+
+            <ul class="nav navbar-nav nav bar-right pull-right">
+                <li class="visible-phone-landscape">
+                    <a href="#" id="search-toggle">
+                        <i class="fa fa-search"></i>
+                    </a>
+                </li>
+                <button type="button" class="btn btn-default dropdown-toggle tagbt" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu user_select" id="acc_setting">
+                    <!-- <li><a href="/userprofile"><i class="glyphicon glyphicon-cog">&nbsp;</i><span>Account Settings</span></a></li><hr>
+                    <li><a href="/logout"><i class="glyphicon glyphicon-off">&nbsp;</i><span>Logout</span></a></li> -->
+                </ul>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- header for mobile view start-->
+<nav id="mobile_header" class="sidebar nav-collapse navbar-dark collapse">
+    <div class="row mobrw">
+        <div class="col-sm-6 mobrw1" style="height: 50px;">
+            <a href="/cctv_monitoring"><img src="img/Raven-logo.png" alt="" height="100%" class="branding_logomob"></a>
+        </div>
+        <div class="col-sm-6 mobrw2">
+            <a href=""
+               class="btn-navbar hum"
+               data-toggle="collapse"
+               data-target=".sidebar"
+               title="">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+    </div>
+    <ul id="side-nav" class="side-nav">
+        <li class="">
+            <a href="/addcam" class="navbar-brand link-menum active-li">
+                <p class="menu-2">
+                    <i class="fa fa-plus-square"></i>
+                    <span class="link_p text">Add Camera</span></p>
+            </a>
+        </li>
+        <li class="">
+            <a href="/cam" id="cam_moni" class="navbar-brand link-menum ">
+                <p class="menu-1 ">
+                    <i class="fa fa-home"></i>
+                    <span class="link_p text add_cameratext">City</span></p>
+            </a>
+        </li>
+        <li class="">
+            <a href="/analytics" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <span class="link_p text">Analytics</span></p>
+            </a>
+        </li>
+        <li class="">
+            <a href="/cctv_voi" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-car" aria-hidden="true"></i>
+                    <span class="link_p text">VOI</span></p>
+
+            </a>
+        </li>
+        <li class="">
+            <a href="/cctv_poi" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <span class="link_p text">POI</span></p>
+
+            </a>
+        </li>
+        <li class="">
+            <a href="/users" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-users"></i>
+                    <span class="link_p text">Users</span></p>
+
+            </a>
+        </li>
+        <li class="">
+            <a href="/map-nav" class="navbar-brand link-menum">
+                <p class="menu-1">
+                    <i class="fa fa-map-o" aria-hidden="true"></i>
+                    <span class="link_p text">Map</span></p>
+
+            </a>
+        </li>
+        <li class="">
+            <!-- <a href="main_setup.html"><img src="img/clr6.svg">&nbsp;<span class="name">Main Setup </span></a> -->
+            <div class="b6 navbar-brand link-menum" onclick="openmodalSMTP();"><i class="fa fa-cog"></i><span class="name">Main Setup </span></div>
+        </li>
+
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#tables-collapse"><i class="glyphicon glyphicon-user select_clr"></i></a>
+            <ul id="tables-collapse" class="panel-collapse collapse ">
+                <li><a href="/userprofile"><i class="glyphicon glyphicon-cog select_clr">&nbsp;</i><span>Settings</span></a></li><hr>
+                <li><a href="/logout"><i class="glyphicon glyphicon-off select_clr">&nbsp;</i><span>Logout</span></a></li>
+            </ul>
+        </li>
+        <!-- <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#sub-menu-1-collapse" href="#sub-menu-2-collapse"><i class="fa fa-folder-open"></i>&nbsp;Item 2.3</a>
+            <ul id="sub-menu-2-collapse" class="panel-collapse collapse">
+                <li><a href="#">Item 3.4</a></li>
+                <li><a href="#">Item 3.5</a></li>
+                <li><a href="#">Item 3.6</a></li>
+            </ul>
+        </li> -->
+
+    </ul>
+    <!-- <nav id="sidebar" class="mobsidesrch mobilecam">
+        <input type="search" id="search" class="live-search-box" placeholder="Search" autocomplete="off" />
+        <ul id="side-nav" class="side-nav live-search-list">
+            <li class="panel">
+                <ul id="menu-levels-collapse" class="panel-collapse collapse in">
+                </ul>
+            </li>
+        </ul>
+    </nav> -->
+
+    </ul>
+
+    <!-- <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5> -->
+    <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
+    <!-- <ul class="sidebar-labels">
+        <li>
+            <a href="#">
+                 yep, .circle again
+                <i class="fa fa-circle text-warning"></i>
+                <span class="label-name">My Recent</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-circle text-gray"></i>
+                <span class="label-name">Starred</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-circle text-danger"></i>
+                <span class="label-name">Background</span>
+            </a>
+        </li>
+    </ul> -->
+
+    <!--  <h5 class="sidebar-nav-title">Projects</h5> -->
+    <!-- A place for sidebar notifications & alerts -->
+    <!--  <div class="sidebar-alerts">
+         <div class="alert fade in">
+             <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+             <span class="text-white fw-semi-bold">Sales Report</span> <br>
+             <div class="progress progress-xs mt-xs mb-0">
+                 <div class="progress-bar progress-bar-gray-light" style="width: 16%"></div>
+             </div>
+             <small>Calculating x-axis bias... 65%</small>
+         </div>
+         <div class="alert fade in">
+             <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+             <span class="text-white fw-semi-bold">Personal Responsibility</span> <br>
+             <div class="progress progress-xs mt-xs mb-0">
+                 <div class="progress-bar progress-bar-danger" style="width: 23%"></div>
+             </div>
+             <small>Provide required notes</small>
+         </div>
+     </div> -->
+</nav>
+<!-- header for mobile view end-->
+
+<!-- header for ipad and ipadpro view start-->
+<div class="navbar-dark ipdhdr" style="width: 100%" id="ipad_header">
+      <div class="row">
+        <div class="col-sm-6 ipadrw">
+          <!-- <a href="/cctv_map"
+            ><img
+              src="img/Raven-logo.png"
+              height="60px"
+              class="branding_logomob"
+          /></a> -->
+        </div>
+        <div class="col-xs-6">
+          <div class="dropdown ipddrp">
+            <button
+              class="btn btn-primary dropdown-toggle ipdrp"
+              type="button"
+              data-toggle="dropdown"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+            <ul id="ipad_dropdown_menu" class="dropdown-menu dropipad mapdrp">
+              <!-- <li>
+                        <a href="/addcam" class="navbar-brand link-menum">
+                            <p class="menu-2">
+                                <i class="fa fa-plus-square"></i>
+                                <span class="link_p text">Add Camera</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cam" id="cam_moni" class="navbar-brand link-menum ">
+                            <p class="menu-1 ">
+                                <i class="fa fa-home"></i>
+                                <span class="link_p text add_cameratext">City</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/analytics" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                <span class="link_p text">Analytics</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cctv_voi" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-car" aria-hidden="true"></i>
+                                <span class="link_p text">VOI</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cctv_poi" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="link_p text">POI</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/users" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-users"></i>
+                                <span class="link_p text">Users</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/map-nav" class="navbar-brand link-menum active-li">
+                            <p class="menu-1">
+                                <i class="fa fa-map-o" aria-hidden="true"></i>
+                                <span class="link_p text">Map</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <div class="b6 navbar-brand link-menum" onclick="openmodalSMTP();"><i class="fa fa-cog"></i><span class="name"> Main Setup </span></div>
+                    </li>
+                    <li>
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default acpn">
+                                <div class="panel-heading2" role="tab" id="headingThree">
+                                    <a class="collapsed acipc" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <i class="glyphicon glyphicon-user select_clr" style="color: #767a81;"></i> &nbsp;Account Setting
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse2 collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        <ul id="tables-collapse" class="panel-collapse" aria-expanded="false" style="height: 0px;">
+                                            <li><a href="/userprofile" class="acipa"><i class="glyphicon glyphicon-cog select_clr">&nbsp;</i><span>Settings</span></a></li><hr>
+                                            <li><a href="/logout" class="acipa"><i class="glyphicon glyphicon-off select_clr">&nbsp;</i><span>Logout</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- header for ipad and ipadpro view end-->
+
+
+<div class="wrap">
+
+
+    <nav id="sidebar" class="sidebar nav-collapse collapse homeside">
+            <input type="search" id="search" class="live-search-box" placeholder="Search" autocomplete="off" />
+            <ul id="side-nav" class="side-nav">
+                <li class="panel">
+                    <ul id="menu-levels-collapse" class="panel-collapse collapse in">
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+<!--    <header class="page-header">-->
+<!--            <div class="navbar">-->
+<!--                <ul class="nav navbar-nav navbar-right pull-right">-->
+<!--                    &lt;!&ndash; <li class="visible-phone-landscape">-->
+<!--                        <a href="#" id="search-toggle">-->
+<!--                            <i class="fa fa-search"></i>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li class="divider"></li>-->
+<!--                    <li class="hidden-xs dropdown">-->
+<!--                        <a href="#" title="Account" id="account"-->
+<!--                           class="dropdown-toggle"-->
+<!--                           data-toggle="dropdown">-->
+<!--                            <i class="glyphicon glyphicon-user"></i>-->
+<!--                        </a>-->
+<!--                        <ul id="account-menu" class="dropdown-menu account" role="menu">-->
+<!--                            <li role="presentation" class="account-picture">-->
+<!--                                <img src="img/logo_dark.png" style="width: 26px;" alt="">-->
+<!--                                Pivotchain-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </li> &ndash;&gt;-->
+<!--                    <li class="visible-xs mob-bar">-->
+<!--                        <a href=""-->
+<!--                           class="btn-navbar"-->
+<!--                           data-toggle="collapse"-->
+<!--                           data-target=".sidebar"-->
+<!--                           title="">-->
+<!--                            <i class="fa fa-bars"></i>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    &lt;!&ndash; <li class="hidden-xs"><a href="/logout"><i class="glyphicon glyphicon-off"></i></a></li> &ndash;&gt;-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--    </header>-->
+
+
+<!-- Users List -->
+    <div class="content container main_body anmob">
+
+        
+
+        <!--        <div class="row">-->
+<!--            <div class="col-lg-7">-->
+<!--                <h2 class="page-title" >Users <small>List of added Users</small></h2>-->
+<!--            </div>-->
+<!--            <div class="col-lg-5">-->
+<!--&lt;!&ndash;                <button type="button" style="float: right; margin-top: 23px;background-color: rgba(51, 51, 51, 0.425);margin-left: 5px;" class="btn btn-default btn-sm" data-placement="top" onclick="modifySMTP();" data-original-title=".btn .btn-default .btn-sm" aria-describedby="tooltip753069">SMTP <i class="fa fa-gear"></i></button>&ndash;&gt;-->
+<!--                <button type="button" style="float: right; margin-top: 15px;margin-bottom:10px;background-color: rgba(51, 51, 51, 0.425);" class="btn btn-default btn-sm" data-placement="top" onclick="addUser();" data-original-title=".btn .btn-default .btn-sm" aria-describedby="tooltip753069">Add User</button>-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <div class="widget user-bdy" style="margin-top: 94px;">
+            <div class="row ustmob">
+                <div class="col-lg-7">
+                    <h2 class="page-title" ><small>List of Devices</small></h2>
+                </div>
+                <div class="col-lg-5">
+                    <!--                <button type="button" style="float: right; margin-top: 23px;background-color: rgba(51, 51, 51, 0.425);margin-left: 5px;" class="btn btn-default btn-sm" data-placement="top" onclick="modifySMTP();" data-original-title=".btn .btn-default .btn-sm" aria-describedby="tooltip753069">SMTP <i class="fa fa-gear"></i></button>-->
+                    <!-- <button type="button" style="float: right; margin-top: 15px;margin-bottom:10px;background-color: #315a83;
+    border-color: #315a83;" class="btn btn-primary btn-sm" data-placement="top" onclick="addUser();" data-original-title=".btn .btn-default .btn-sm" aria-describedby="tooltip753069">Add User</button> -->
+                </div>
+            </div>
+
+            <header>
+                <div class="widget-controls">
+                </div>
+            </header>
+            <div class="body">
+                <div class="" id="loading-spinner" style="text-align: center; font-size: 18px; display: none;" >
+<!--                    <i class="fa fa-circle-o-notch fa-spin"></i>-->
+                    <img src="img/edlo3.gif" width="28px">
+                </div>
+                <div class="mt mtuser mobtiuser" id="tble_cc">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Scaned device table -->
+
+        <div class="widget user-bdy" style="margin-top: 94px;">
+            <div class="row ustmob">
+                <div class="col-lg-7">
+                    <h2 class="page-title" ><small>Online Devices</small></h2>
+                    <button class="btn btn-primary" onclick="getScanDevice()">Scan Devices</button>
+                </div>
+                <div class="col-lg-5">
+                    <!--                <button type="button" style="float: right; margin-top: 23px;background-color: rgba(51, 51, 51, 0.425);margin-left: 5px;" class="btn btn-default btn-sm" data-placement="top" onclick="modifySMTP();" data-original-title=".btn .btn-default .btn-sm" aria-describedby="tooltip753069">SMTP <i class="fa fa-gear"></i></button>-->
+                    <!-- <button type="button" style="float: right; margin-top: 15px;margin-bottom:10px;background-color: #315a83;
+    border-color: #315a83;" class="btn btn-primary btn-sm" data-placement="top" onclick="addUser();" data-original-title=".btn .btn-default .btn-sm" aria-describedby="tooltip753069">Add User</button> -->
+                </div>
+            </div>
+
+            <header>
+                <div class="widget-controls">
+                </div>
+            </header>
+            <div class="body">
+                <div class="" id="loading-spinner-scan" style="text-align: center; font-size: 18px; display: none;" >
+<!--                    <i class="fa fa-circle-o-notch fa-spin"></i>-->
+                    <img src="img/edlo3.gif" width="28px">
+                </div>
+                <div class="mt mtuser mobtiuser" id="tble_cc_scan">
+                   <table id="user-datatable-table-scan" class="table table-striped table-hover dataTable no-footer" role="grid" aria-describedby="user-datatable-table-scan_info"> 
+                        <thead> 
+                            <tr role="row">
+                                <th class="sorting" tabindex="0" aria-controls="user-datatable-table-scan" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 404.406px;">Name</th>
+                                <th class="hidden-xs sorting" tabindex="0" aria-controls="user-datatable-table-scan" rowspan="1" colspan="1" aria-label=" IP: activate to sort column ascending" style="width: 230.109px;"> IP</th>
+                                <th class="hidden-xs sorting" tabindex="0" aria-controls="user-datatable-table-scan" rowspan="1" colspan="1" aria-label="Device Type: activate to sort column ascending" style="width: 228px;">Device Type</th>
+                                <th class="hidden-xs sorting" tabindex="0" aria-controls="user-datatable-table-scan" rowspan="1" colspan="1" aria-label="Hardware: activate to sort column ascending" style="width: 367.141px;">Hardware</th>
+                                <th class="hidden-xs sorting" tabindex="0" aria-controls="user-datatable-table-scan" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 149.344px;">Status</th>
+                            </tr> 
+                        </thead>
+                        <tbody id="allusersScan">
+                            <tr>
+                                <td colspan="5" class="text-center">No Records Found</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="addUserDXB" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-md" style="top: 15%;">
+                <form style="padding: 0px !important;">
+                    <div class="modal-content">
+                        <div class="modal-header" style="background: #212936; border-bottom: 1px solid #afadad26;">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: #d2d2d2">×</button>
+                            <h4 class="modal-title" id="myModalLabel2" style="color: #d2d2d2">Add User Details</h4>
+                        </div>
+                        <div class="modal-body" style="background: #212936;">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group tempsing-formsmtp">
+                                        <label style="color: #d2d2d2" for="addUsernameDXB">Add Name</label>
+                                        <input type="text" style="border-radius: 2px;background-color: #36424e !important;border: 0px;color: #fff;" class="form-control" id="addUsernameDXB" name="username">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group tempsing-formsmtp" >
+                                        <label style="color: #d2d2d2" for="addEmailDXB">Add User Email</label>
+                                        <input type="email" style="border-radius: 2px;background-color: #36424e !important;border: 0px;color: #fff;" class="form-control" id="addEmailDXB" name="email">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group tempsing-formsmtp">
+                                        <label style="color: #d2d2d2" for="addPasswordDXB">Set Password</label>
+                                        <input type="password" style="border-radius: 2px;background-color: #36424e !important;border: 0px;color: #fff;" class="form-control" id="addPasswordDXB" name="password">
+                                    </div>
+                                </div>
+<!--                                <div class="col-lg-6">-->
+<!--                                    <div class="form-group tempsing-formsmtp" >-->
+<!--                                        <label style="color: #d2d2d2" for="addDesignationDXB">Add User Designation</label>-->
+<!--                                        <input type="text" style="border-radius: 2px;background-color: #36424e !important;border: 0px;color: #fff;" class="form-control" id="addDesignationDXB" name="designation">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+                                <div class="col-lg-6">
+                                    <div class="form-group ">
+                                        <label style="color: #d2d2d2" for="addDesignationDXB">Add Status</label>
+                                        <select style="border-radius: 2px;background-color: #36424e !important;border: 0px;color: #fff;" class="form-control" id="addStatusDXB" name="status" title="Add User Status">
+                                            <option value="">Select Status</option>
+                                            <option value="super_administrator">Super Administrator</option>
+                                            <option value="administrator">Administrator</option>
+                                            <option value="support">Support</option>
+                                            <option value="security">Security</option>
+                                            <option value="helpdesk">Helpdesk</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group tempsing-formsmtp">
+                                        <label style="color: #d2d2d2" for="addContactDXB">Add User Contact Number</label>
+                                        <input type="number" style="border-radius: 2px;background-color: #36424e !important;border: 0px;color: #fff;" class="form-control" id="addContactDXB" name="contact">
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+                    <div class="modal-footer" style="background: #212936; border-top: 1px solid #afadad26;">
+                        <button type="button" class="btn btn-primary" onclick="addDetailsDXB();">Add User Details</button>
+                    </div><!-- /.modal-content -->
+</form>
+</div><!-- /.modal-dialog -->
+</div>
+<!--        <div id="addUserDXB" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">-->
+<!--            <div class="modal-dialog modal-md" style="top: 15%;" >-->
+<!--                <form style="padding: 0px !important;">-->
+<!--                <div class="modal-content">-->
+<!--                    <div class="modal-header" style="background: #212936; border-bottom: 1px solid #afadad26;">-->
+<!--                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: #d2d2d2">×</button>-->
+<!--                        <h4 class="modal-title" id="myModalLabel2" style="color: #d2d2d2">Add Location Details</h4>-->
+<!--                    </div>-->
+<!--                    <div class="modal-body" style="background: #212936;">-->
+<!--                        <div class="row">-->
+<!--                                &lt;!&ndash; <div class="col-lg-6">-->
+<!--                                    <div class="form-group tempsing-formsmtp"">-->
+<!--                                        <label style="color: #d2d2d2" for="addUsernameDXB">Email</label>-->
+<!--                                            <input type="text" style="border-radius: 2px;background-color: #36424e !important;border: 0px;color: #fff;" class="form-control" id="addUsernameDXB" name="username">-->
+<!--                                    </div>-->
+<!--                                </div> &ndash;&gt;-->
+<!--                                <div class="col-lg-6">-->
+<!--                                    <div class="form-group tempsing-formsmtp">-->
+<!--                                        <label style="color: #d2d2d2" for="addarea">Add Area</label>-->
+<!--                                        <input type="email" style="border-radius: 2px;background-color: #36424e !important;border: 0px;color: #fff;" class="form-control" id="addarea" name="text">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-lg-6">-->
+<!--                                    <div class="form-group tempsing-formsmtp">-->
+<!--                                        <label style="color: #d2d2d2" for="addpincode">Add Pincode</label>-->
+<!--                                        <input type="text" style="border-radius: 2px;background-color: #36424e !important;border: 0px;color: #fff;" class="form-control" id="addpincode" name="number">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                -->
+<!--                                 <div class="col-lg-4">-->
+<!--                                    <div class="form-group tempsing-formsmtp">-->
+<!--                                        <label style="color: #d2d2d2" for="addcity">Add City</label>-->
+<!--                                        <input type="text" style="border-radius: 2px;background-color: #36424e !important;border: 0px;color: #fff;" class="form-control" id="addcity" name="text">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                 <div class="col-lg-4">-->
+<!--                                    <div class="form-group tempsing-formsmtp">-->
+<!--                                        <label style="color: #d2d2d2" for="addstate">Add State</label>-->
+<!--                                        <input type="text" style="border-radius: 2px;background-color: #36424e !important;border: 0px;color: #fff;" class="form-control" id="addstate" name="text">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-lg-4">-->
+<!--                                    <div class="form-group tempsing-formsmtp">-->
+<!--                                        <label style="color: #d2d2d2" for="addcountry">Add Country</label>-->
+<!--                                        <input type="text" style="border-radius: 2px;background-color: #36424e !important;border: 0px;color: #fff;" class="form-control" id="addcountry" name="text">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-lg-4">-->
+<!--                                    <div class="form-group tempsing-formsmtp">-->
+<!--                                        <label style="color: #d2d2d2" for="addlat">Add Latitude</label>-->
+<!--                                        <input type="text" style="border-radius: 2px;background-color: #36424e !important;border: 0px;color: #fff;" class="form-control" id="addlat" name="text">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-lg-4">-->
+<!--                                    <div class="form-group tempsing-formsmtp">-->
+<!--                                        <label style="color: #d2d2d2" for="addlong">Add Longitude</label>-->
+<!--                                        <input type="text" style="border-radius: 2px;background-color: #36424e !important;border: 0px;color: #fff;" class="form-control" id="addlong" name="text">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-lg-4" style="margin-top: 18px;">-->
+<!--                        <button type="button" class="btn btn-primary"   style="width: 100%;" onclick="getlatlong();">Get LatLong</button>-->
+<!--                    </div>-->
+<!--                                -->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                    -->
+<!--                    <div class="modal-footer" style="background: #212936; border-top: 1px solid #afadad26;">-->
+<!--                        <button type="button" class="btn btn-primary"  style="width: 100%;" onclick="addDetailsDXB();">Add Location Details</button>-->
+<!--                    </div>-->
+<!--                </div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+<!--                </form>-->
+<!--            </div>&lt;!&ndash; /.modal-dialog &ndash;&gt;-->
+<!--        </div>-->
+<!--        <div id="modifySMTPDXB" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">-->
+<!--        <div class="modal-dialog modal-md" style="top: 15%;" >-->
+<!--            <div class="modal-content">-->
+<!--                <div class="modal-header" style="background: rgb(55, 59, 63); border-bottom: 1px solid #afadad26;">-->
+<!--                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: #d2d2d2">×</button>-->
+<!--                    <h4 class="modal-title" id="" style="color: #d2d2d2">Configure SMTP</h4>-->
+<!--                </div>-->
+<!--                <div class="modal-body" style="background: rgb(55, 59, 63);">-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--                                <label style="color: #d2d2d2" for="addUsernameDXB">Email</label>-->
+<!--                                <input type="text" style="border-radius: 2px;background-color: #dddddded;"  class="form-control" id="emailSMTPDXB">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--                                <label style="color: #d2d2d2" for="addUsernameDXB">Password</label>-->
+<!--                                    <input type="password" style="border-radius: 2px;background-color: #dddddded;" class="form-control" id="passwordSMTPDXB">-->
+<!--                                    <span onclick="changeTypeSMTP();" class="btn btn-inverse" style=" background-color: #dddddded; position: absolute; top: 32%; right: 5%;"><i class="fa fa-eye"></i></span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--                                <label style="color: #d2d2d2" for="addUsernameDXB">Server Name</label>-->
+<!--                                <input type="text" style="border-radius: 2px;background-color: #dddddded;" class="form-control" id="serverSMTPDXB">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-6">-->
+<!--                            <div class="form-group">-->
+<!--                                <label style="color: #d2d2d2" for="addUsernameDXB">Port</label>-->
+<!--                                <input type="text" style="border-radius: 2px;background-color: #dddddded;" class="form-control" id="portSMTPDXB">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="modal-footer" style="background: rgb(55, 59, 63); border-top: 1px solid #afadad26;">-->
+<!--                    <button type="button" class="btn btn-primary"  onclick="configureSMTP();">Configure Details</button>-->
+<!--                </div>-->
+<!--            </div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+<!--        </div>&lt;!&ndash; /.modal-dialog &ndash;&gt;-->
+<!--    </div>-->
+        
+<!--        <footer class="content-footer homfoot" style="position: initial">RAVEN AI - Powered by <a href="https://pivotchain.com" rel="nofollow noopener noreferrer" target="_blank">Pivotchain</a></footer>-->
+    </div>
+
+    <div class="loader-wrap hiding hide" id="loading-logs">
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+    </div>
+</div>
+<div id="modal-smtp"></div>
+
+
+<footer class="footer">
+    <div class="container-fluid foot_container">
+
+        <div class="copyright float-right">
+            RAVEN AI - Powered by <a href="https://pivotchain.com" rel="nofollow noopener noreferrer" target="_blank">Pivotchain</a>
+        </div>
+        <!-- your footer here -->
+    </div>
+</footer>
+
+<!-- common libraries. required for every page-->
+
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/jquery-migrate/jquery-migrate-3.1.0.js"></script>
+<!-- <script src="js/config/config.js"></script> -->
+<script src="lib/jquery-pjax/jquery.pjax.js"></script>
+<script src="lib/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+<script src="lib/widgster/widgster.js"></script>
+<script src="lib/underscore/underscore.js"></script>
+<script src="lib/moment/moment.js"></script>
+<script src="lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+<!-- common application js -->
+<script src="js/app.js"></script>
+<script src="js/settings.js"></script>
+
+<!-- page specific scripts -->
+<!-- page specific libs -->
+<script src="lib/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+<script src="lib/underscore/underscore.js"></script>
+<script src="lib/backbone/backbone.js"></script>
+<script src="lib/backbone.paginator/lib/backbone.paginator.min.js"></script>
+<script src="lib/backgrid/lib/backgrid.js"></script>
+<script src="lib/backgrid-paginator/backgrid-paginator.js"></script>
+<script src="lib/datatables/media/js/jquery.dataTables.min.js"></script>
+<script src="js/tables-dynamic.js"></script>
+
+<script src="lib/messenger/build/js/messenger.js"></script>
+<!-- <script src="js/ui-notifications.js"></script> -->
+<script src="js/index.js"></script>
+
+
+<!-- page application js -->
+
+
+
+</body>
+</html>

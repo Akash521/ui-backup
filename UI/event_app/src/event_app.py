@@ -28,8 +28,8 @@ from kubernetes import client, config
 from pytz import timezone
 from scipy.spatial.distance import cosine
 
-from FaceDetector import FaceDetector
-from FR_dlib import FaceRecognition
+# from FaceDetector import FaceDetector
+# from FR_dlib import FaceRecognition
 from json_encoder import JSONEncoder
 from launch_service import is_port_in_use, launch_service, is_port_free
 # from poi import *
@@ -44,8 +44,8 @@ logger= logging.getLogger(__name__)
 # FORMAT = "\n\n %(asctime)s --- %(message)s"
 # logging.basicConfig(format = FORMAT, datefmt= "%d-%b-%y %H:%M:%S", level= logging.DEBUG)
 
-detector = FaceDetector()
-recg = FaceRecognition()
+# detector = FaceDetector()
+# recg = FaceRecognition()
 
 vehicle_detector = {}
 num_plate_recognizer = get_numplate_model()
@@ -2197,158 +2197,158 @@ def delete_voi_track(account_id,user_name):
         logger.error("Exception occurred at **** event_app / delete_voi_track_function **** \n", exc_info=True)
         return jsonify({'status': 'failed','error':'failed to delete voi id'})    
 
-@app.route("/add_poi_track/<account_id>/<user_name>", methods=['POST'])
-@check_for_token
-def add_poi_track(account_id,user_name):
+# @app.route("/add_poi_track/<account_id>/<user_name>", methods=['POST'])
+# @check_for_token
+# def add_poi_track(account_id,user_name):
 
-    try:
-        image_file = request.files['file']
+#     try:
+#         image_file = request.files['file']
 
-        path = PATH_TO_SAVE + '/' + user_name+'/poi'
-        if not os.path.exists(path):
-            os.makedirs(path)
+#         path = PATH_TO_SAVE + '/' + user_name+'/poi'
+#         if not os.path.exists(path):
+#             os.makedirs(path)
 
-        form_dict = request.form.to_dict()
-        form_dict['poi_id'] = str(uuid.uuid4()).split('-')[1]
-        poi_face_path = path+'/'+form_dict['poi_id']+'.jpg'
-        image_file.save(poi_face_path)
-        # form_dict['poi_face_path']=poi_face_path.split(PATH_TO_SAVE+'/')[-1]
-        # json_query={'data':form_dict,'db_name':db_name,'collection_table_name': poi_track_collection}
-        # resp=requests.post('{}/insert_data'.format(dal_url),json=json_query)
+#         form_dict = request.form.to_dict()
+#         form_dict['poi_id'] = str(uuid.uuid4()).split('-')[1]
+#         poi_face_path = path+'/'+form_dict['poi_id']+'.jpg'
+#         image_file.save(poi_face_path)
+#         # form_dict['poi_face_path']=poi_face_path.split(PATH_TO_SAVE+'/')[-1]
+#         # json_query={'data':form_dict,'db_name':db_name,'collection_table_name': poi_track_collection}
+#         # resp=requests.post('{}/insert_data'.format(dal_url),json=json_query)
 
-        name = form_dict['name']
-        frame = cv2.imread(poi_face_path)
-        frame2 = frame.copy()
-        frame = cv2.resize(frame, input_res, interpolation=cv2.INTER_CUBIC)
-        try:
-            index = faiss.read_index(PATH_TO_SAVE+'/'+'embedding')
-            with open(PATH_TO_SAVE+'/'+'person_id', 'rb') as file_in:
-                person_id = list(pickle.load(file_in))
-        except:
-            logger.error("Exception occurred at **** event_app / add_poi_track_function **** \n", exc_info=True)
-            index = faiss.IndexFlatL2(128)
-            person_id = []
+#         name = form_dict['name']
+#         frame = cv2.imread(poi_face_path)
+#         frame2 = frame.copy()
+#         frame = cv2.resize(frame, input_res, interpolation=cv2.INTER_CUBIC)
+#         try:
+#             index = faiss.read_index(PATH_TO_SAVE+'/'+'embedding')
+#             with open(PATH_TO_SAVE+'/'+'person_id', 'rb') as file_in:
+#                 person_id = list(pickle.load(file_in))
+#         except:
+#             logger.error("Exception occurred at **** event_app / add_poi_track_function **** \n", exc_info=True)
+#             index = faiss.IndexFlatL2(128)
+#             person_id = []
 
-        try:
-            form_dict['age']
-        except:
-            try:
-                dob = form_dict['dob'][:4]
-                today = date.today().year
-                age = int(today) - int(dob)
-                form_dict['age'] = age
-            except:
-                pass
+#         try:
+#             form_dict['age']
+#         except:
+#             try:
+#                 dob = form_dict['dob'][:4]
+#                 today = date.today().year
+#                 age = int(today) - int(dob)
+#                 form_dict['age'] = age
+#             except:
+#                 pass
 
-        # _, encoded_image = cv2.imencode('.jpg', frame)
-        # encoded_image = encoded_image.tobytes()
-        # im_b64 = base64.b64encode(encoded_image).decode("utf8")
-        # payload = json.dumps({"image": im_b64, "other_key": "value"})
-        # with requests.post(api_detection_fr_url, data=payload) as resp:
-        #     det = resp.json()["fr_arr"][0]
-        det = detector.get_face_bbox(frame)
-        if not len(det):
-            return jsonify({'status': 'failed', 'error': 'failed to detect face please try with different image'})
-        det1 = det.copy()
+#         # _, encoded_image = cv2.imencode('.jpg', frame)
+#         # encoded_image = encoded_image.tobytes()
+#         # im_b64 = base64.b64encode(encoded_image).decode("utf8")
+#         # payload = json.dumps({"image": im_b64, "other_key": "value"})
+#         # with requests.post(api_detection_fr_url, data=payload) as resp:
+#         #     det = resp.json()["fr_arr"][0]
+#         det = detector.get_face_bbox(frame)
+#         if not len(det):
+#             return jsonify({'status': 'failed', 'error': 'failed to detect face please try with different image'})
+#         det1 = det.copy()
 
-        det1[0] = det1[0] * (frame2.shape[1] / frame.shape[1])
-        det1[1] = det1[1] * (frame2.shape[0] / frame.shape[0])
-        det1[2] = det1[2] * (frame2.shape[1] / frame.shape[1])
-        det1[3] = det1[3] * (frame2.shape[0] / frame.shape[0])
-        bbox = [det1[0], det1[1], det1[2], det1[3]]
-        c_x, c_y = (int(bbox[0]) + int(bbox[2])) // 2, (int(bbox[1]) + int(bbox[3])) // 2
-        max_coord = max(abs(int(bbox[0]) - int(bbox[2])), abs(int(bbox[1]) - int(bbox[3]))) // 2
-        bbox = [c_x - max_coord, c_y - max_coord, c_x + max_coord, c_y + max_coord]
-        # patch = frame2[int(bbox[1]):int(bbox[3]), int(bbox[0]):int(bbox[2])]
+#         det1[0] = det1[0] * (frame2.shape[1] / frame.shape[1])
+#         det1[1] = det1[1] * (frame2.shape[0] / frame.shape[0])
+#         det1[2] = det1[2] * (frame2.shape[1] / frame.shape[1])
+#         det1[3] = det1[3] * (frame2.shape[0] / frame.shape[0])
+#         bbox = [det1[0], det1[1], det1[2], det1[3]]
+#         c_x, c_y = (int(bbox[0]) + int(bbox[2])) // 2, (int(bbox[1]) + int(bbox[3])) // 2
+#         max_coord = max(abs(int(bbox[0]) - int(bbox[2])), abs(int(bbox[1]) - int(bbox[3]))) // 2
+#         bbox = [c_x - max_coord, c_y - max_coord, c_x + max_coord, c_y + max_coord]
+#         # patch = frame2[int(bbox[1]):int(bbox[3]), int(bbox[0]):int(bbox[2])]
 
-        embd = recg.get_embeddings(frame2,bbox)
-        index.add(embd)
-        person_id.append(name)
+#         embd = recg.get_embeddings(frame2,bbox)
+#         index.add(embd)
+#         person_id.append(name)
 
-        faiss.write_index(index, PATH_TO_SAVE+'/'+'embedding')
-        with open(PATH_TO_SAVE+'/'+'person_id', 'wb') as fp:
-            pickle.dump(np.array(person_id), fp)
+#         faiss.write_index(index, PATH_TO_SAVE+'/'+'embedding')
+#         with open(PATH_TO_SAVE+'/'+'person_id', 'wb') as fp:
+#             pickle.dump(np.array(person_id), fp)
 
-        form_dict['poi_face_path'] = poi_face_path.split(PATH_TO_SAVE + '/')[-1]
-        json_query = {'data': form_dict, 'db_name': db_name, 'collection_table_name': poi_track_collection}
-        resp = requests.post('{}/insert_data'.format(dal_url), json=json_query)
+#         form_dict['poi_face_path'] = poi_face_path.split(PATH_TO_SAVE + '/')[-1]
+#         json_query = {'data': form_dict, 'db_name': db_name, 'collection_table_name': poi_track_collection}
+#         resp = requests.post('{}/insert_data'.format(dal_url), json=json_query)
 
-        return jsonify({'result': 'face registered', 'status': 'success'})
-    except:
-        logger.error("Exception occurred at **** event_app / add_poi_track_function **** \n", exc_info=True)
-        os.remove(poi_face_path) if os.path.exists(poi_face_path) else None
-        return jsonify({'status': 'failed','error': 'failed to register new face'})
+#         return jsonify({'result': 'face registered', 'status': 'success'})
+#     except:
+#         logger.error("Exception occurred at **** event_app / add_poi_track_function **** \n", exc_info=True)
+#         os.remove(poi_face_path) if os.path.exists(poi_face_path) else None
+#         return jsonify({'status': 'failed','error': 'failed to register new face'})
 
 
-@app.route("/get_poi_tracks/<account_id>/<user_name>", methods=['GET'])
-@check_for_token
-def get_poi_track(account_id,user_name):
-    try:
-        json_query={'db_name':db_name,'collection_table_name': poi_track_collection,'condition':None}
-        poi_track=requests.post('{}/get_data'.format(dal_url),json=json_query)
-        poi_track =poi_track.json()['result']
+# @app.route("/get_poi_tracks/<account_id>/<user_name>", methods=['GET'])
+# @check_for_token
+# def get_poi_track(account_id,user_name):
+#     try:
+#         json_query={'db_name':db_name,'collection_table_name': poi_track_collection,'condition':None}
+#         poi_track=requests.post('{}/get_data'.format(dal_url),json=json_query)
+#         poi_track =poi_track.json()['result']
 
-        try:
-            for i in poi_track:
-                if i['valid_upto'] == "":
-                    i.pop('valid_upto')   
-        except:
-            pass
+#         try:
+#             for i in poi_track:
+#                 if i['valid_upto'] == "":
+#                     i.pop('valid_upto')   
+#         except:
+#             pass
 
-        return jsonify({'status':'success','data':poi_track})
-    except:
-        logger.error("Exception occurred at **** event_app / get_poi_tracks_function **** \n", exc_info=True)
-        return jsonify({'status': 'failed','error':'failed to get poi records'})    
+#         return jsonify({'status':'success','data':poi_track})
+#     except:
+#         logger.error("Exception occurred at **** event_app / get_poi_tracks_function **** \n", exc_info=True)
+#         return jsonify({'status': 'failed','error':'failed to get poi records'})    
 
-@app.route("/delete_poi_track/<account_id>/<user_name>", methods=['POST'])
-@check_for_token
-def delete_poi_track(account_id,user_name):
-    try:
-        data=request.json
-        json_query = {'db_name':db_name,'collection_table_name': poi_track_collection,'condition':"poi_id='%s'"%(data['poi_id'])}
-        resp = requests.post('{}/list_data'.format(dal_url), json=json_query)
-        resp1 = requests.post('{}/remove_data'.format(dal_url),json=json_query)
+# @app.route("/delete_poi_track/<account_id>/<user_name>", methods=['POST'])
+# @check_for_token
+# def delete_poi_track(account_id,user_name):
+#     try:
+#         data=request.json
+#         json_query = {'db_name':db_name,'collection_table_name': poi_track_collection,'condition':"poi_id='%s'"%(data['poi_id'])}
+#         resp = requests.post('{}/list_data'.format(dal_url), json=json_query)
+#         resp1 = requests.post('{}/remove_data'.format(dal_url),json=json_query)
         
-        poi_details = resp.json()['result'][0]
+#         poi_details = resp.json()['result'][0]
 
-        try:
-            index = faiss.read_index(PATH_TO_SAVE+'/'+'embedding')
-            with open(PATH_TO_SAVE+'/'+'person_id', 'rb') as file_in:
-                person_id = list(pickle.load(file_in))
+#         try:
+#             index = faiss.read_index(PATH_TO_SAVE+'/'+'embedding')
+#             with open(PATH_TO_SAVE+'/'+'person_id', 'rb') as file_in:
+#                 person_id = list(pickle.load(file_in))
 
-            name = poi_details['name']
-            rm_id = person_id.index(name)
+#             name = poi_details['name']
+#             rm_id = person_id.index(name)
 
-            index.remove_ids(np.array([rm_id]))
-            person_id.remove(name)
+#             index.remove_ids(np.array([rm_id]))
+#             person_id.remove(name)
 
-            faiss.write_index(index, PATH_TO_SAVE+'/'+'embedding')
-            with open(PATH_TO_SAVE+'/'+'person_id', 'wb') as fp:
-                pickle.dump(np.array(person_id), fp)
+#             faiss.write_index(index, PATH_TO_SAVE+'/'+'embedding')
+#             with open(PATH_TO_SAVE+'/'+'person_id', 'wb') as fp:
+#                 pickle.dump(np.array(person_id), fp)
 
-        except:
-            index = faiss.read_index(PATH_TO_SAVE + '/' + 'backup_embedding')
-            with open(PATH_TO_SAVE + '/' + 'backup_person_id', 'rb') as file_in:
-                person_id = list(pickle.load(file_in))
+#         except:
+#             index = faiss.read_index(PATH_TO_SAVE + '/' + 'backup_embedding')
+#             with open(PATH_TO_SAVE + '/' + 'backup_person_id', 'rb') as file_in:
+#                 person_id = list(pickle.load(file_in))
 
-            name = poi_details['name']
-            rm_id = person_id.index(name)
+#             name = poi_details['name']
+#             rm_id = person_id.index(name)
 
-            index.remove_ids(np.array([rm_id]))
-            person_id.remove(name)
+#             index.remove_ids(np.array([rm_id]))
+#             person_id.remove(name)
 
-            faiss.write_index(index, PATH_TO_SAVE + '/' + 'backup_embedding')
-            with open(PATH_TO_SAVE + '/' + 'backup_person_id', 'wb') as fp:
-                pickle.dump(np.array(person_id), fp)
+#             faiss.write_index(index, PATH_TO_SAVE + '/' + 'backup_embedding')
+#             with open(PATH_TO_SAVE + '/' + 'backup_person_id', 'wb') as fp:
+#                 pickle.dump(np.array(person_id), fp)
 
-        return jsonify({'status': 'success'})
-    except :
-        logger.error("Exception occurred at **** event_app / delete_poi_track_function **** \n", exc_info=True)
-        return jsonify({'status': 'failed','error': 'failed to delete registered face'})
+#         return jsonify({'status': 'success'})
+#     except :
+#         logger.error("Exception occurred at **** event_app / delete_poi_track_function **** \n", exc_info=True)
+#         return jsonify({'status': 'failed','error': 'failed to delete registered face'})
 
-@app.route("/update_poi_track/<account_id>/<user_name>", methods=['POST'])
-@check_for_token
-def update_poi_track(account_id,user_name):
+# @app.route("/update_poi_track/<account_id>/<user_name>", methods=['POST'])
+# @check_for_token
+# def update_poi_track(account_id,user_name):
     try:
         data = request.json
         update_data = {"valid_upto": data['valid_upto']}
@@ -2396,9 +2396,9 @@ def update_poi_track(account_id,user_name):
         return jsonify({'status':'failed', 'error':'failed to update registered face'})
 
 
-@app.route("/backup_poi_track", methods=['POST'])
-# @check_for_token
-def backup_poi_track():
+# @app.route("/backup_poi_track", methods=['POST'])
+# # @check_for_token
+# def backup_poi_track():
     try:
         data = request.json
         index = faiss.read_index(PATH_TO_SAVE + '/' + 'embedding')
@@ -2436,9 +2436,9 @@ def backup_poi_track():
         logger.error("Exception occurred at **** event_app / backup_poi_track **** \n", exc_info=True)
         return jsonify({'status':'failed', 'error':'failed to backup registered face'})
 
-@app.route("/search_poi_details/<account_id>/<user_name>", methods=['POST'])
-@check_for_token
-def search_poi_details(account_id, user_name):
+# @app.route("/search_poi_details/<account_id>/<user_name>", methods=['POST'])
+# @check_for_token
+# def search_poi_details(account_id, user_name):
     try:
         image_file = request.files['file']
         path = PATH_TO_SAVE + '/' + user_name+'/poi'

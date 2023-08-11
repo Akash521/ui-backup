@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AIAS | Pivotchain Solutions</title>
+    <link href="css/application.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="RAVEN AI | Pivotchain Solutions" />
+    <meta name="keywords" content="RAVEN AI | Pivotchain Solutions" />
+    <meta name="author" content="Flatlogic LLC" />
+    <link rel="stylesheet" href="lib/Tags-Input/jquery.tagsinput.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body class="bdf">
+    <div
+      id="modifySMTPDXB"
+      class="modal fade"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+      style="display: none"
+    >
+      <div class="modal-dialog modal-lg" style="top: 15%">
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            style="background: #212936; border-bottom: 1px solid #afadad26"
+          >
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-hidden="true"
+              style="color: #d2d2d2"
+            >
+              ×
+            </button>
+            <h4 class="modal-title" id="" style="color: #d2d2d2">Settings</h4>
+          </div>
+          <div class="modal-body" style="background: #212936; padding: 0px">
+            <div class="row">
+              <div class="col-md-12" style="padding-right: 0">
+                <section
+                  class="widget"
+                  style="
+                    background-color: #1e2936;
+                    padding: 0px;
+                    margin-bottom: 0px;
+                  "
+                >
+                  <div class="body" style="margin-top: 0px">
+                    <ul id="myTab" class="nav nav-tabs myTab mob-modal">
+                      <!-- <li>
+                        <a href="#home" data-toggle="tab">Configure Mail</a>
+                      </li> -->
+                      <li class="active">
+                        <a href="#profile" data-toggle="tab"
+                          >Configure License</a
+                        >
+                      </li>
+                      <li class="">
+                        <a href="#defaultpara" data-toggle="tab"
+                          >Default Parameters</a
+                        >
+                      </li>
+                      <!-- <li>
+                        <a href="#message" data-toggle="tab"
+                          >Configure Whatsapp</a
+                        >
+                      </li>-->
+                      <li>
+                        <a href="#alertsPriority" data-toggle="tab"
+                          >Set Alerts Priority</a
+                        >
+                      </li>
+                    </ul>
+                    <div
+                      id="myTabContent"
+                      class="tab-content mobcont"
+                      style="padding: 36px; background-color: rgb(23, 34, 47)"
+                    >
+                      <div class="tab-pane fade in" id="home">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="col-lg-6">
+                              <div class="form-group tempsing-formsmtp">
+                                <label
+                                  style="color: #d2d2d2"
+                                  for="addUsernameDXB"
+                                  >Email</label
+                                >
+                                <input
+                                  type="text"
+                                  style="
+                                    border-radius: 2px;
+                                    background-color: rgb(
+                                      54 66 78 / 55%
+                                    ) !important;
+                                    border: 0px;
+                                    color: #fff;
+                                  "
+                                  class="form-control"
+                                  id="emailSMTPDXB"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="form-group tempsing-formsmtp">
+                                <label
+                                  style="color: #d2d2d2"
+                                  for="addUsernameDXB"
+                                  >Password</label
+                                >
+                                <input
+                                  type="password"
+                                  style="
+                                    border-radius: 2px;
+                                    background-color: rgb(
+                                      54 66 78 / 55%
+                                    ) !important;
+                                    border: 0px;
+                                    color: #fff;
+                                  "
+                                  autocomplete="new-password"
+                                  class="form-control"
+                                  id="passwordSMTPDXB"
+                                />
+                                <span
+                                  onclick="changeTypeSMTP();"
+                                  class="btn btn-inverse mobeye"
+                                  style="
+                                    background-color: #1e2936;
+                                    position: absolute;
+                                    top: 26%;
+                                    right: 14px;
+                                    border: 1px solid #2b3643;
+                                    height: 31px;
+                                  "
+                                  ><i
+                                    class="fa fa-eye"
+                                    style="color: #d2d2d2"
+                                  ></i
+                                ></span>
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="form-group tempsing-formsmtp">
+                                <label
+                                  style="color: #d2d2d2"
+                                  for="addUsernameDXB"
+                                  >Server Name</label
+                                >
+                                <input
+                                  type="text"
+                                  style="
+                                    border-radius: 2px;
+                                    background-color: rgb(
+                                      54 66 78 / 55%
+                                    ) !important;
+                                    border: 0px;
+                                    color: #fff;
+                                  "
+                                  class="form-control"
+                                  id="serverSMTPDXB"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="form-group tempsing-formsmtp">
+                                <label
+                                  style="color: #d2d2d2"
+                                  for="addUsernameDXB"
+                                  >Port</label
+                                >
+                                <input
+                                  type="text"
+                                  style="
+                                    border-radius: 2px;
+                                    background-color: rgb(
+                                      54 66 78 / 55%
+                                    ) !important;
+                                    border: 0px;
+                                    color: #fff;
+                                  "
+                                  class="form-control"
+                                  id="portSMTPDXB"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <button
+                                type="button"
+                                class="btn btn-primary"
+                                onclick="configureSMTP();"
+                              >
+                                Save Changes
+                              </button>
+                              <span
+                                class="mailSMTPload"
+                                style="
+                                  display: none;
+                                  top: 4px;
+                                  color: white;
+                                  font-size: 17px;
+                                  position: relative;
+                                "
+                              >
+                                <i class="fa fa-circle-o-notch fa-spin"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade in active" id="profile">
+                        <div class="row" style="margin-right: -15px">
+                          <div class="col-lg-12">
+                            <div class="form-group tempsing-formsmtp">
+                              <label style="color: #d2d2d2" for="lisenceFiled"
+                                >License</label
+                              >
+                              <input
+                                type="text"
+                                style="
+                                  border-radius: 2px;
+                                  background-color: rgb(
+                                    54 66 78 / 55%
+                                  ) !important;
+                                  border: 0px;
+                                  color: #fff;
+                                "
+                                class="form-control"
+                                id="lisenceFiled"
+                                placeholder="XXXXXXXXXXXXX"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-10">
+                            <button
+                              type="button"
+                              class="btn btn-primary"
+                              onclick="configureLicense();"
+                            >
+                              Save Changes
+                            </button>
+                            <span
+                              class="mailSMTPload"
+                              style="
+                                display: none;
+                                top: 4px;
+                                color: white;
+                                font-size: 17px;
+                                position: relative;
+                              "
+                            >
+                              <i class="fa fa-circle-o-notch fa-spin"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade in" id="defaultpara">
+                        <div
+                          class="row"
+                          id="defaultparacontainer"
+                          style="margin-right: -15px"
+                        ></div>
+                        <div class="col-md-10" style="padding: 0 !important">
+                          <button
+                            type="button"
+                            class="btn btn-primary"
+                            onclick="configureDefaultParams();"
+                          >
+                            Save Changes
+                          </button>
+                          <span
+                            class="mailSMTPload"
+                            style="
+                              display: none;
+                              top: 4px;
+                              color: white;
+                              font-size: 17px;
+                              position: relative;
+                            "
+                          >
+                            <i class="fa fa-circle-o-notch fa-spin"></i>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="message">
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <div class="col-lg-6">
+                              <div class="form-group tempsing-formsmtp">
+                                <label
+                                  style="color: #d2d2d2"
+                                  for="addUsernameDXB"
+                                  >Sender Contact</label
+                                >
+                                <input
+                                  type="text"
+                                  style="
+                                    border-radius: 2px;
+                                    background-color: rgb(
+                                      54 66 78 / 55%
+                                    ) !important;
+                                    border: 0px;
+                                    color: #fff;
+                                  "
+                                  class="form-control"
+                                  id="sender_contact"
+                                  onkeypress="allowNumbersOnly(event)"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="form-group tempsing-formsmtp">
+                                <label
+                                  style="color: #d2d2d2"
+                                  for="addUsernameDXB"
+                                  >Twillo SID</label
+                                >
+                                <input
+                                  type="text"
+                                  style="
+                                    border-radius: 2px;
+                                    background-color: rgb(
+                                      54 66 78 / 55%
+                                    ) !important;
+                                    border: 0px;
+                                    color: #fff;
+                                  "
+                                  class="form-control"
+                                  id="twillio_sid"
+                                />
+                                <!--                                                    <span onclick="changeTypeSMTP();" class="btn btn-inverse" style=" background-color: #dddddded; position: absolute; top: 32%; right: 5%;"><i class="fa fa-eye"></i></span>-->
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="form-group tempsing-formsmtp">
+                                <label
+                                  style="color: #d2d2d2"
+                                  for="addUsernameDXB"
+                                  >Twillo Auth Code</label
+                                >
+                                <input
+                                  type="text"
+                                  style="
+                                    border-radius: 2px;
+                                    background-color: rgb(
+                                      54 66 78 / 55%
+                                    ) !important;
+                                    border: 0px;
+                                    color: #fff;
+                                  "
+                                  class="form-control"
+                                  id="twillo_auth"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <button
+                                type="button"
+                                class="btn btn-primary"
+                                onclick="configuremessage();"
+                              >
+                                Save Changes
+                              </button>
+                              <span
+                                class="mailSMTPload"
+                                style="
+                                  display: none;
+                                  top: 4px;
+                                  color: white;
+                                  font-size: 17px;
+                                  position: relative;
+                                "
+                              >
+                                <i class="fa fa-circle-o-notch fa-spin"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="alertsPriority">
+                        <div class="row">
+                          <div class="col-lg-12" id="allPriority"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+          <!--            <div class="modal-footer" style="background: rgb(55, 59, 63); border-top: 1px solid #afadad26;">-->
+          <!--                <span class="mailSMTPload" style='display:none;top:4px;color: white; font-size: 17px; position: relative;'>-->
+          <!--                    <i class="fa fa-circle-o-notch fa-spin"></i>-->
+          <!--                </span>-->
+          <!--                <button type="button" class="btn btn-primary"  onclick="configureSMTP();">Configure Details</button>-->
+          <!--            </div>-->
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+
+    <footer class="footer">
+      <div class="container-fluid foot_container">
+        <!--            <nav class="float-left">-->
+        <!--                <ul>-->
+        <!--                    <li>-->
+        <!--                        <a href="#">-->
+        <!--                            About Us-->
+        <!--                        </a>-->
+        <!--                        <a href="#">-->
+        <!--                            Services-->
+        <!--                        </a>-->
+        <!--                        <a href="#">-->
+        <!--                            Contact Us-->
+        <!--                        </a>-->
+        <!--                    </li>-->
+        <!--                </ul>-->
+        <!--            </nav>-->
+        <div class="copyright float-right">
+          RAVEN AI - Powered by
+          <a
+            href="https://pivotchain.com"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+            >Pivotchain</a
+          >
+        </div>
+        <!-- your footer here -->
+      </div>
+    </footer>
+  </body>
+</html>

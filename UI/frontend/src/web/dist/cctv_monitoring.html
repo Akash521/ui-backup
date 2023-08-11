@@ -1,0 +1,1539 @@
+<!-- DXB Admin -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAVEN AI | Pivotchain Solutions</title>
+    <link href="css/application.css" rel="stylesheet">
+    <link href="css/custom-css/custom-style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom-css/map_nav.css">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <!-- <link rel="stylesheet" href="css/vms/font-awesome.min.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RAVEN AI | Pivotchain Solutions">
+    <meta name="keywords" content="RAVEN AI | Pivotchain Solutions">
+    <meta name="author" content="Pivotchain">
+    <link rel="stylesheet" href="lib/Tags-Input/jquery.tagsinput.css">
+    <meta charset="utf-8">
+<!--<script src="js/video-js/video-js.css"></script>-->
+
+
+
+</head>
+<body class="bgf">
+
+<header id="desktop_header" class="page-header navbar-header">
+    <div id='topheader' class="navbar">
+        <nav id="sidebar" class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top">
+            <!-- <a href="/cctv_monitoring" id="site_logo" class="navbar-brand"> -->
+                <!--                <img src="img/Raven-logo.png" alt="" width="60%" class="branding_logo">-->
+                <!-- <img src="img/hr4logo.png" alt="" width="60%" class="branding_logo">
+
+            </a> -->
+
+            <!-- <div class="b1" >
+                <a href="/addcam" class="navbar-brand link-menu navbar-nav">
+                    <p class="menu-2" style="text-align: center;">
+                        <i class="fa fa-plus-square"></i><br><br>
+                        <span class="link_p text">Add Camera</span></p>
+                </a>
+            </div>
+
+
+
+            <div class="b2" >
+                <a href="/cam" id="cam_moni" class="navbar-brand link-menu active-li">
+                    <p class="menu-1 " style="text-align: center;">
+                        <i class="fa fa-home"></i><br><br>
+                        <span class="link_p text add_cameratext">City</span></p>
+                </a>
+            </div> -->
+
+            <!-- <div class="b3" >
+                <a href="/analytics" class="navbar-brand link-menu">
+                    <p class="menu-1 " style="text-align: center;">
+                        <i class="fa fa-bars" aria-hidden="true"></i><br><br>
+                        <span class="link_p text">Analytics</span></p>
+                </a></div> -->
+
+            <!--            <div class="b4" >-->
+            <!--                <a href="/logs" class="navbar-brand link-menu">-->
+            <!--                    <p class="menu-1 " style="text-align: center;">-->
+            <!--                        <i class="fa fa-clipboard" aria-hidden="true"></i><br><br>-->
+            <!--                        <span class="link_p text">Alerts</span></p>-->
+
+            <!--                </a>-->
+            <!--            </div>-->
+
+<!--            <div class="b4" >-->
+<!--                <a href="/cctv_voi" class="navbar-brand link-menu">-->
+<!--                    <p class="menu-1 " style="text-align: center;">-->
+<!--                        <i class="fa fa-car" aria-hidden="true"></i><br><br>-->
+<!--                        <span class="link_p text">VOI</span></p>-->
+
+<!--                </a>-->
+<!--            </div>-->
+
+<!--            <div class="b4" >-->
+<!--                <a href="/cctv_poi" class="navbar-brand link-menu">-->
+<!--                    <p class="menu-1 " style="text-align: center;">-->
+<!--                        <i class="fa fa-user" aria-hidden="true"></i><br><br>-->
+<!--                        <span class="link_p text">POI</span></p>-->
+
+<!--                </a>-->
+<!--            </div>-->
+
+            <!-- <div class="b5" >
+                <a href="/users" class="navbar-brand link-menu">
+                    <p class="menu-1 " style="text-align: center;">
+                        <i class="fa fa-users"></i><br><br>
+                        <span class="link_p text">Users</span></p>
+
+                </a>
+            </div> -->
+
+<!--            <div class="b5" >-->
+<!--                <a href="/map-nav" class="navbar-brand link-menu">-->
+<!--                    <p class="menu-1 " style="text-align: center;">-->
+<!--                        <i class="fa fa-map-o" aria-hidden="true"></i><br><br>-->
+<!--                        <span class="link_p text">Map</span></p>-->
+
+<!--                </a>-->
+<!--            </div>-->
+
+            <!-- <div class="b6" onclick="openmodalSMTP();">
+                <span class="navbar-brand link-menu" >
+                     <p class="menu-1 " style="text-align: center;">
+                    <i class="fa fa-cog"></i><br><br>
+                    <span class="link_p text">Main Setup</span></p>
+
+                </span></div> -->
+
+            <ul class="nav navbar-nav nav bar-right pull-right">
+                <li class="visible-phone-landscape">
+                    <a href="#" id="search-toggle">
+                        <i class="fa fa-search"></i>
+                    </a>
+                </li>
+                <button type="button" class="btn btn-default dropdown-toggle tagbt" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span>
+                </button>
+                <ul id="acc_setting" class="dropdown-menu user_select">
+
+                    <!-- <li><a href="/userprofile"><i class="glyphicon glyphicon-cog">&nbsp;</i><span>Account Settings</span></a></li><hr>
+                    <li><a href="/logout"><i class="glyphicon glyphicon-off">&nbsp;</i><span>Logout</span></a></li> -->
+                </ul>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- header for mobile view start-->
+<nav id="mobile_header" class="sidebar nav-collapse navbar-dark collapse">
+    <div class="row mobrw">
+        <div class="col-sm-6 mobrw1" style="height:50px">
+            <a href="/cctv_monitoring"><img src="img/Raven-logo.png" alt="" height="100%" class="branding_logomob"></a>
+        </div>
+        <div class="col-sm-6 mobrw2">
+            <a href="#"
+               class="btn-navbar hum"
+               data-toggle="collapse"
+               data-target=".sidebar"
+               title="">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+    <ul id="mobile_side_nav" class="side-nav">
+    <!-- <nav id="sidebar" class="mobsidesrch mobilecam">
+        <input type="search" id="search" class="live-search-box" placeholder="Search" autocomplete="off" />
+        <ul id="side-nav" class="side-nav live-search-list">
+            <li class="panel">
+                <ul id="menu-levels-collapse" class="panel-collapse collapse in">
+                </ul>
+            </li>
+        </ul>
+    </nav> -->
+
+    </ul>
+
+    <!-- <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5> -->
+    <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
+    <!-- <ul class="sidebar-labels">
+        <li>
+            <a href="#">
+                 yep, .circle again
+                <i class="fa fa-circle text-warning"></i>
+                <span class="label-name">My Recent</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-circle text-gray"></i>
+                <span class="label-name">Starred</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-circle text-danger"></i>
+                <span class="label-name">Background</span>
+            </a>
+        </li>
+    </ul> -->
+
+    <!--  <h5 class="sidebar-nav-title">Projects</h5> -->
+    <!-- A place for sidebar notifications & alerts -->
+    <!--  <div class="sidebar-alerts">
+         <div class="alert fade in">
+             <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+             <span class="text-white fw-semi-bold">Sales Report</span> <br>
+             <div class="progress progress-xs mt-xs mb-0">
+                 <div class="progress-bar progress-bar-gray-light" style="width: 16%"></div>
+             </div>
+             <small>Calculating x-axis bias... 65%</small>
+         </div>
+         <div class="alert fade in">
+             <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+             <span class="text-white fw-semi-bold">Personal Responsibility</span> <br>
+             <div class="progress progress-xs mt-xs mb-0">
+                 <div class="progress-bar progress-bar-danger" style="width: 23%"></div>
+             </div>
+             <small>Provide required notes</small>
+         </div>
+     </div> -->
+</nav>
+<!-- header for mobile view end-->
+
+<!-- header for ipad and ipadpro view start-->
+<div class="navbar-dark ipdhdr" style="width: 100%" id="ipad_header">
+      <div class="row">
+        <div class="col-sm-6 ipadrw">
+          <!-- <a href="/cctv_map"
+            ><img
+              src="img/Raven-logo.png"
+              height="60px"
+              class="branding_logomob"
+          /></a> -->
+        </div>
+        <div class="col-xs-6">
+          <div class="dropdown ipddrp">
+            <button
+              class="btn btn-primary dropdown-toggle ipdrp"
+              type="button"
+              data-toggle="dropdown"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+            <ul id="ipad_dropdown_menu" class="dropdown-menu dropipad mapdrp">
+              <!-- <li>
+                        <a href="/addcam" class="navbar-brand link-menum">
+                            <p class="menu-2">
+                                <i class="fa fa-plus-square"></i>
+                                <span class="link_p text">Add Camera</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cam" id="cam_moni" class="navbar-brand link-menum ">
+                            <p class="menu-1 ">
+                                <i class="fa fa-home"></i>
+                                <span class="link_p text add_cameratext">City</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/analytics" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                <span class="link_p text">Analytics</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cctv_voi" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-car" aria-hidden="true"></i>
+                                <span class="link_p text">VOI</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cctv_poi" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="link_p text">POI</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/users" class="navbar-brand link-menum">
+                            <p class="menu-1">
+                                <i class="fa fa-users"></i>
+                                <span class="link_p text">Users</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/map-nav" class="navbar-brand link-menum active-li">
+                            <p class="menu-1">
+                                <i class="fa fa-map-o" aria-hidden="true"></i>
+                                <span class="link_p text">Map</span></p>
+
+                        </a>
+                    </li>
+                    <li>
+                        <div class="b6 navbar-brand link-menum" onclick="openmodalSMTP();"><i class="fa fa-cog"></i><span class="name"> Main Setup </span></div>
+                    </li>
+                    <li>
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default acpn">
+                                <div class="panel-heading2" role="tab" id="headingThree">
+                                    <a class="collapsed acipc" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <i class="glyphicon glyphicon-user select_clr" style="color: #767a81;"></i> &nbsp;Account Setting
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse2 collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        <ul id="tables-collapse" class="panel-collapse" aria-expanded="false" style="height: 0px;">
+                                            <li><a href="/userprofile" class="acipa"><i class="glyphicon glyphicon-cog select_clr">&nbsp;</i><span>Settings</span></a></li><hr>
+                                            <li><a href="/logout" class="acipa"><i class="glyphicon glyphicon-off select_clr">&nbsp;</i><span>Logout</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- header for ipad and ipadpro view end-->
+
+<div class="wrap">
+
+    <nav id="sidebar" class="sidebar nav-collapse collapse homeside">
+            <input type="search" id="search" class="live-search-box" placeholder="Search" autocomplete="off" />
+            <ul id="side-nav" class="side-nav layout_icon" style="position: relative;">
+                <li class="panel">
+                    <ul id="menu-levels-collapse" class="panel-collapse collapse in">
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+<!--    <header class="page-header">-->
+<!--            <div class="navbar">-->
+<!--                <ul class="nav navbar-nav navbar-right pull-right">-->
+<!--                   &lt;!&ndash;  <li class="visible-phone-landscape">-->
+<!--                        <a href="#" id="search-toggle">-->
+<!--                            <i class="fa fa-search"></i>-->
+<!--                        </a>-->
+<!--                    </li> &ndash;&gt;-->
+<!--                    &lt;!&ndash; <li class="divider"></li> &ndash;&gt;-->
+<!--                    &lt;!&ndash; <li class="hidden-xs dropdown">-->
+<!--                        <a href="#" title="Account" id="account"-->
+<!--                           class="dropdown-toggle"-->
+<!--                           data-toggle="dropdown">-->
+<!--                            <i class="glyphicon glyphicon-user"></i>-->
+<!--                        </a>-->
+<!--                        <ul id="account-menu" class="dropdown-menu account" role="menu">-->
+<!--                            <li role="presentation" class="account-picture">-->
+<!--                                <img src="img/logo_dark.png" style="width: 26px;" alt="">-->
+<!--                                Pivotchain-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </li> &ndash;&gt;-->
+<!--                    <li class="visible-xs mob-bar">-->
+<!--                        <a href=""-->
+<!--                           class="btn-navbar"-->
+<!--                           data-toggle="collapse"-->
+<!--                           data-target=".sidebar"-->
+<!--                           title="">-->
+<!--                            <i class="fa fa-bars"></i>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                  &lt;!&ndash;   <li class="hidden-xs"><a href="/logout"><i class="glyphicon glyphicon-off"></i></a></li> &ndash;&gt;-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--    </header>-->
+
+
+
+    <!-- live cam content  -->
+    <div class="content container main_body new-bdy anmob">
+        <!-- <nav id="sidebar" class="sidebar nav-collapse collapse homeside">
+           <input type="search" id="search" class="live-search-box" placeholder="Search" autocomplete="off" />
+            <ul id="side-nav" class="side-nav live-search-list">
+                <li class="panel">
+                    <ul id="menu-levels-collapse" class="panel-collapse collapse in">
+                    </ul>
+                </li>
+            </ul>
+        </nav> -->
+
+
+<!--                <h4 class="">Live CCTV Stream <small></small></h4>-->
+<!--            </div>-->
+<!--&lt;!&ndash;            <div class="col-lg-2" style="padding-right: 2px;" id="resetErl" >&ndash;&gt;-->
+<!--&lt;!&ndash;                <span style="width: 31px; float: right! important; margin-top: 0px;    margin-bottom: 5px; background-color: rgb(30 41 54);" class="btn btn-transparent btn-sm  pull-left " id="back-btn" onclick="deleteCamDXB();"> <i class="fa fa-trash"></i> </span>&ndash;&gt;-->
+<!--&lt;!&ndash;                <span style="width: 31px; float: right! important; margin-top: 5px; background-color: rgba(51, 51, 51, 0.425);margin-right: 2px;" class="btn btn-transparent btn-sm  pull-left " id="" onclick="modifyCamDXB();"> <i class="fa fa-edit"></i> </span>&ndash;&gt;-->
+<!--                <span style="width: 31px; float: right! important; margin-top: 0px;    margin-bottom: 5px; background-color: rgb(30 41 54);margin-right: 2px;" class="btn btn-transparent btn-sm  pull-left " id="" onclick="modalModifyPerimeter();"> <i class="fa fa-edit"></i> </span>-->
+<!--&lt;!&ndash;                <span type="button" style="float: right; margin-top: 23px;background-color: rgba(51, 51, 51, 0.425);margin-right: 4px; " class="btn btn-default btn-sm" data-placement="top" onclick="modalModifyPerimeter();" data-original-title=".btn .btn-default .btn-sm" aria-describedby="tooltip753069">&ndash;&gt;-->
+<!--&lt;!&ndash;                    Reset ERL&ndash;&gt;-->
+<!--&lt;!&ndash;                    <i class="fa fa-edit"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                </button>&ndash;&gt;-->
+<!--            </div>-->
+
+
+
+
+
+        <div class="row monitoring_row" style="margin-bottom: 30px;  margin-bottom: 30px;
+        margin-top: 92px;
+        background: #222936;
+        border: 1px solid #ffffff42;
+        margin-right: 15px;  margin-left: 279px;
+           padding: 0px;overflow: hidden;">
+           
+
+            
+        
+
+            <div class="col-lg-12 mob-cam-div1" style=" position: relative;
+            padding-right: 0 !important;
+            padding-left: 5px;
+            padding: 1px;">
+                
+                <section class="" style="padding: 0px 0px;
+                border-radius: 3px;
+                margin-bottom: 5px;
+                background: transparent;">
+                    <header>
+                        <!--                        <h4 >-->
+                        <!--                            Visits-->
+                        <!--                            <small>-->
+                        <!--                                Based on a three months data-->
+                        <!--                            </small>-->
+                        <!--                        </h4>-->
+                        <div class="widget-controls">
+                            <!--                            <a title="Options" href="#"><i class="glyphicon glyphicon-cog"></i></a>-->
+                            <!--                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>-->
+                            <!--                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>-->
+                            <!--                            <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>-->
+                        </div>
+                    </header>
+                    <div class="body no-margin ">
+
+                       
+                        
+
+                        <div class="showme " id="resetErl"  style=" z-index: 1000;
+                        height: 50px;
+                        top: 0px;
+                        right: 0px;
+                        opacity: 1;
+                        border-bottom: 1px solid #ffffff42;">
+                           </div>
+                        <div id="panel" style="max-height: 618px;overflow: scroll;border: 1px solid #ffffff20;">
+
+                            <div class="form-group col-sm-12" style="text-align: left;" >
+
+
+                    <ul id="selectservicestab" class="nav nav-tabs myTab mob-modal" style="border-bottom: 1px solid #ffffff42;">
+                        <li class="active"><a href="#service_list_modification" data-toggle="tab" style="text-align: center;text-decoration: none !important;" onclick="openPerimeterModal(false)">Choose Services</a></li>
+                        <li id="selectservicestabviewperimeter"><a href="#viewperimeter" data-toggle="tab" style="text-align: center;text-decoration: none !important;" onclick="openPerimeterModal(true)">View Perimeter</a></li>
+                    </ul>
+
+
+
+                    <div id="selectservicestabcontent" class="nav nav-tabs myTab " style="padding: 12px 17px;background-color: transparent" >
+                        <div id="service_list_modification" class="active"></div>
+                        <div id="viewperimeter" class="viewperimeterimages">
+                            
+                        </div>
+                    </div>
+
+                              <!-- <legend class="section" style="padding: 0px 0 0;border-color: #313c4e;">Choose Services</legend> -->
+                                
+
+
+
+
+                            </div>
+                            <div class="col-md-12" id="savechangesbtn">
+
+                            <button type="button" class="btn btn-primary"  onclick="saveSelectedService(this);">Save Changes</button>
+                            <!-- <span class="" style='display:none;top:4px;color: white; font-size: 17px; position: relative;'>
+                              <i class="fa fa-circle-o-notch fa-spin"></i>
+                            </span> -->
+                            <div class="loader-wrap verify-url-load-save submitServiceLoad " style="position:absolute; display: none; left:-50px;top:1px;text-align: left;">
+                                <img src="img/edlo3.gif" width="28px">
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="" style="margin: 0px 0px 0px; padding: 0px;"></div>
+                        <div id="videoDiv" style="width: 100%;
+                        height: 700px;
+                        text-align: center;
+                        overflow: hidden;" >
+                            <!-- <div style="margin-top: 50px;">No stream found, Please select camera or add new camera. </div> -->
+
+                        </div>
+                        <div class="visits-info well well-sm" style="margin: 0px 0px 0px;padding-bottom: 8px;padding-top: 8px;height: 70px; background-color:#212936;    border-top: 1px solid #ffffff30;">
+                            <div class="row monitoinginfo_row" style="height: 100%;">
+                                <div  style="height: 100%;display: flex;
+    flex-direction: column;
+    justify-content: center;border-right: 1px solid #ffffff42;" class="monitoring_info col-sm-3 col-xs-6">
+                                    <div class="key" style="padding-top: 0px;"><span style="color: #89bbf0;">City Name</span></div>
+                                    <div class="value" id="airportName" style="font-size: 13px;margin-top: 3px; margin-bottom: 3px; "> -</div>
+                                    <p id="camurl_bank" style="display: none;"></p>
+                                </div>
+                                <div style="height: 100%;display: flex;
+    flex-direction: column;
+    justify-content: center;border-right: 1px solid #ffffff42;" class="monitoring_info col-sm-2 col-xs-6">
+                                    <div class="key"><span style="color: #89bbf0;">Area Name</span></div>
+                                    <div class="value" id="terminalName" style="font-size: 13px; margin-top: 3px; margin-bottom: 3px;word-break: break-word;"> -</div>
+                                </div>
+<!--                                <div style="height: 100%;display: flex;
+    flex-direction: column;
+    justify-content: center;border-right: 1px solid #ffffff42;" class="monitoring_info col-sm-2 col-xs-6">-->
+<!--                                    <div class="key"><a>Area Name</a></div>-->
+<!--                                    <div class="value" id="aircraftStandName" style="font-size: 13px; margin-top: 3px; margin-bottom: 3px;word-break: break-word;"> - </div>-->
+<!--                                </div>-->
+                                <div style="height: 100%;display: flex;
+    flex-direction: column;
+    justify-content: center;border-right: 1px solid #ffffff42;" class="monitoring_info col-sm-2 col-xs-6">
+                                    <div class="key"><span style="color: #89bbf0;">Camera Name</span></div>
+                                    <div class="value" id="camName" style="font-size: 13px; margin-top: 3px; margin-bottom: 3px;word-break: break-word;" > - </div>
+                                </div>
+                                <div style="height: 100%;display: flex;
+    flex-direction: column;
+    justify-content: center;border-right: 1px solid #ffffff42;" class="monitoring_info col-sm-2 col-xs-6">
+                                    <div class="key"><span style="color: #89bbf0;">Camera Status</span></div>
+                                    <div class="value" id="camStatus" style="font-size: 13px; margin-top: 3px; margin-bottom: 3px;" > - </div>
+                                </div>
+                                <div style="height: 100%;display: flex;
+    flex-direction: column;
+    justify-content: center;" class="col-sm-3 col-xs-6 monitoring_info">
+                                    <div class="key"><span style="color: #89bbf0;">Current Time</span></div>
+                                    <div class="value" id="camCurTime" style="font-size: 13px; margin-top: 3px; margin-bottom: 3px;" > - </div>
+                                    <div class="value" id="camCurDate" style="font-size: 13px; margin-top: 3px; margin-bottom: 3px;" >  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- <div class="col-lg-4 mob-cam-div2" style="padding: 0px;padding-left: 0 !important;">
+                <section class="widget large" style="height: 783px;border-left: 1px solid #ffffff30; margin-bottom: 5px;background: #212936; box-shadow: 2px 2px 6px #17222f;padding: 0;">
+                    <header class="monitoring_header" style="height:51px; display: flex; align-items: center;padding: 0 10px; border-bottom: 1px solid #ffffff42;width: 100%;">
+                        <h4>
+                            Alerts
+                        </h4>
+                        <div class="actions">
+                        </div>
+                        <div class="widget-controls" style="top: 50%;transform: translateY(-50%);right: 10px;">
+                            <a style="cursor: pointer" title="Refresh" onclick="refreshAlertsCurrentCam();"><i class="fa fa-refresh"></i></a>
+                        </div>
+                    </header>
+                    <div class="body" style="margin-top: 0;" >
+
+                        <div class="row" style="margin: 0;">
+                            <div class="col-md-12" style="padding-right: 0px;padding-left: 0px;">
+                                <section class="widget" style="background-color:rgb(30 41 54);padding: 0px;margin-bottom: 0px;box-shadow: none;">
+                                    <div class="body" style="height:auto; margin-top: 0;">
+                                        <ul id="prioritesTab" class="nav nav-tabs " style="">
+
+                                        </ul>
+                                        <div id="prioritesTabContent" class="tab-content" style="padding: 18px 16px 0px 15px;" >
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div> -->
+        </div>
+<!--    <div class="row">-->
+<!--        <div class="col-lg-8" id="chart-gantt">-->
+<!--            <div id="chart-container" style="background-color: rgba(51, 51, 51, 0.425)!important;border-radius: 3px;"></div>-->
+
+<!--        </div>-->
+<!--        <div class="col-lg-4">-->
+<!--            <section class="widget large" style="height: 340px; margin-bottom: 5px;">-->
+<!--                <header>-->
+<!--                    <h4>-->
+<!--                        Alerts-->
+<!--                    </h4>-->
+<!--                    <div class="actions">-->
+<!--                    </div>-->
+<!--                </header>-->
+<!--                <div class="body" >-->
+<!--                    <div id="stats" class="tab-pane active clearfix">-->
+<!--                        <div id="feed2" class="feed">-->
+<!--                            <ul class="news-list" id="camAlertsDXB">-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--            </section>-->
+<!--        </div>-->
+
+        <div class="row cont-rw ganttchart_service" style="padding-top: 0px; display : none;">
+            <div class="col-lg-12" id="">
+                <section class="widget">
+                    <header style="text-align: center;padding: 30px;" id="switchTabDXB">
+
+                    </header>
+                    <div class="body" id="ganttChartEventGraph">
+                        <!--                            <div class="" id="loading-spinner" style="text-align: center; font-size: 18px;" >-->
+                        <!--                                <i class="fa fa-circle-o-notch fa-spin"></i>-->
+                        <!--                            </div>-->
+                        <div class="mt" id="chart-gantt">
+                        </div>
+                    </div>
+
+
+                    <div class="body" id="ganttChartEventTable" style="display: none;">
+                        <div class="" id="loading-spinnerEventTable" style="text-align: center; font-size: 18px;" >
+                            <i class="fa fa-circle-o-notch fa-spin"></i>
+                        </div>
+                        <br>
+                        <div class="mt" id="tble_cc">
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+<!--            </div>-->
+<!--</div>-->
+
+
+    </div>
+    
+
+    
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    <!-- <div
+          id="viewperimetermodal"
+          class="side-nav nav-left nav_com"
+          style="
+            transform: translateX(110%);
+            top: 92px;
+            right: 0;
+            left: auto;
+            height: calc(100% - 92px);
+            width: 59%;
+            z-index: 10000 !important;
+            box-shadow: none;
+            border: 1px solid #ffffff42;
+          "
+        >
+          <div
+            class="leaflet-sidebar left visible"
+            style="z-index: 999; background: #212936"
+          >
+            <div id="sidebar" class="leaflet-control">
+              <div class="modal-body" style="margin-top: 10px">
+                <div class="col-md-12 hideitem hlpsd">
+                  <div
+                    id="tabload"
+                    class="panel-group table-loader dataTable display skeleton-img viewperimeterimages"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="MultipuleCamModal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog modal-lg" style="width: 74%;">
+                <div class="modal-content">
+
+                    <div class="modal-header" style="background: #212936; border-bottom: 1px solid #5f5e5e9e;">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: #d2d2d2" onclick="close_modal();">×</button>
+                        <h4 class="modal-title" id="myModalLabel2" style="color: #f8f8f8">All Camerass</h4>
+                    </div>
+                    <div class="modal-body" style="background: #212936;">
+                        <div class="row">
+                            <div class="col-md-2">
+                               <span style="float: right;padding: 8px;color: #fff;">
+                                   Search:
+                               </span>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" style="border: 1px solid #8ec5fd; height: 39px;"  id="searchBox" class="form-control input-transparent" >
+                            </div>
+                            <div class="col-md-2">
+                            </div>
+
+                        </div>
+
+
+                        <br>
+
+                        <div class="row">
+                            <div class="col-md-12 connect-cat-state" >
+                                <legend style="border-bottom: 1px solid #5f5e5e9e;" class="stateName">Marina, Dubai</legend>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C111</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C112</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C113</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C114</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C115</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C116</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C117</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C118</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C119</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C120</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C121</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C122</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 connect-cat-state" >
+                                <legend style="border-bottom: 1px solid #5f5e5e9e;" class="stateName">Abu Dabi, Dubai</legend>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C111</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C112</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C113</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C114</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C115</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C116</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C117</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C118</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C119</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C120</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C121</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 connect-cat">
+                                    <div class="thumbnail">
+                                        <img src="img/10.jpg" alt="">
+                                        <div class="caption">
+                                            <a class=camName>C122</a><br>
+                                            <span class="StreetName">Marina Street</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+                    <!--                <div class="modal-footer" style="background: rgb(55, 59, 63);">-->
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+
+        <div id="alertsModal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog modal-lg" >
+                <div class="modal-content">
+
+                    <div class="modal-header" style="background: #212936; border-bottom: 1px solid #5f5e5e9e;">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: #d2d2d2" onclick="close_modal();">×</button>
+                        <h4 class="modal-title" id="myModalLabel2" style="color: #f8f8f8">Alerts ID : <span id="alert_id_s"> </span></h4>
+                    </div>
+                    <div class="modal-body" style="background: #212936;">
+                        <div class="">
+                            <video id="videoAlerts"  style="width:100%; height: 400px;"  controls loop autoplay muted>
+                                <source id="videoSourceAlerts"   type="video/mp4">
+                            </video>
+                            <div class="caption"  style="color: #f8f8f8">
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="col-lg-12">
+                                            <h4 style="color: #f8f8f8" id="event_name_Alerts"></h4>
+
+                                        </div>
+
+
+                                        <address class="col-lg-6">
+                                            <span  >Camera Name: </span><a id="cam_name_Alerts"> </a><br>
+                                            <span  >Alert Time: </span><a id="event_time_Alerts"> </a><br>
+                                            <span >Status: </span><a id="status_Alerts"> </a>
+
+                                            <!--                                        <span title="Work email" >Area Name: </span><a id="stand_type_Alerts"> Connected</a><br>-->
+                                        </address>
+                                        <address class="col-lg-6">
+                                            <span  >City Name: </span><a id="airport_Alerts"> </a><br>
+                                            <span  >Area Name: </span><a id="terminal_Alerts"> Terminal 2</a><br>
+
+                                        </address>
+                                    </div>
+
+                                    <div class="col-lg-6" id="poi_deatils_text" style="display:none;">
+
+
+                                        <div class="col-lg-12">
+                                            <h4 style="color:#f8f8f8;">POI Details:</h4>
+                                        </div>
+                                        <address class="col-lg-12">
+
+                                            <textarea id="poi_det_api_text" style="width: 100%;height: 63px;margin-bottom: 0px;background: #212a36;border: 1px solid #606468;" disabled>
+
+                                            </textarea>
+
+
+                                        </address>
+
+                                    </div>
+
+                                    <div class="col-lg-6" id="voi_deatils_text" style="display:none;">
+
+
+                                        <div class="col-lg-12">
+                                            <h4 style="color:#f8f8f8;">VOI Details:</h4>
+                                        </div>
+                                        <address class="col-lg-12">
+
+                                            <img src="" alt="" style="max-height: 100px;width: 100%;" id="voi_det_number_img">
+
+                                            <textarea id="voi_det_api_text" style="width: 100%;height: 63px;margin-bottom: 0px;background: #212a36;border: 1px solid #606468;" onfocus="showupdateVehicleNumber(this)">
+
+                                            </textarea>
+                                             <div class="col-lg-10"></div>
+                                            <button class="btn btn-primary col-lg-2 updatevehicleNumber" onclick="updatevehicleNumber()" style="display: none;">Update</button>
+
+
+                                        </address>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--                <div class="modal-footer" style="background: rgb(55, 59, 63);">-->
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+
+
+        <div id="deleteCamDXB" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static" style="display: none;">
+            <div class="modal-dialog " style="width: 35%; top: 15%">
+                <div class="modal-content">
+
+                    <div class="modal-header" style="background: #212936; border-bottom: 1px solid #afadad26;">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: #d2d2d2">×</button>
+                        <h4 class="modal-title" id="" style="color: #d2d2d2">Delete Confirmation</h4>
+                    </div>
+                    <div class="modal-body" style="background: #212936;">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                            <span style="color: #d2d2d2;">
+                                Do you really want to delete this camera? This process cannot be undone.
+                            </span><br>
+                                <div style="color: #d2d2d2;">
+
+                                    <i class="fa fa-circle" style=" font-size:6px; position: relative; top: 1px;"></i> <span style="margin: 0px; position: relative; top: 3px;" id="camDxblocal">2567</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="background: #212936;border-top: 1px solid #afadad26;">
+                        <span class="deleteCamLoad " style='display:none;top:4px;color: white; font-size: 17px; position: relative;'>
+                                    <i class="fa fa-circle-o-notch fa-spin"></i>
+                                </span>
+                        <button type="button" class="btn label-inverse" data-dismiss="modal" style="background-color:#323f50fa;">Cancel</button>
+                        <button type="button" class="btn label-important" onclick="emptyCamDetailsDXB();">Delete</button>
+                    </div>
+
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+        <div id="modifycctvDXB" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static" style="display: none;">
+            <div class="modal-dialog " style="width: 35%; top: 15%">
+                <div class="modal-content">
+
+                    <div class="modal-header" style="background: rgb(55, 59, 63); border-bottom: 1px solid #afadad26;">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: #d2d2d2">×</button>
+                        <h4 class="modal-title" id="" style="color: #d2d2d2">Modify CCTV Services</h4>
+                    </div>
+                    <div class="modal-body" style="background: rgb(55, 59, 63);">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <!--                            <span style="color: #d2d2d2;">-->
+                                <!--                                Please Select Services to modify details-->
+                                <!--                            </span><br>-->
+                                <legend for="cameraName-field-DXB" class=" control-label" >
+                                    Services
+                                </legend>
+                                <div style="color: #d2d2d2;" class="row">
+
+                                    <!--                                    <i class="fa fa-circle" style=" font-size:6px; position: relative; top: 1px;"></i> <span style="margin: 0px; position: relative; top: 3px;" id="camDxbmodify">2567</span>-->
+
+                                    <div class="col-md-12">
+
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group ">
+                                            <div class="checkbox checkbox-primary col-sm-3" style="margin-top: -5px;">
+                                                <input id="checkboxArson" type="checkbox" value="Arson" onclick="getArrayEventsListLive(this);">
+                                                <label for="checkbox2">
+                                                    Arson
+                                                </label>
+                                            </div>
+                                            <div class="checkbox checkbox-primary col-sm-3" style="margin-top: -5px;">
+                                                <input id="checkboxExplosion" type="checkbox" value="Explosion" onclick="getArrayEventsListLive(this);" >
+                                                <label for="checkboxExplosion">
+                                                    Explosion
+                                                </label>
+                                            </div>
+                                            <div class="checkbox checkbox-primary col-sm-3" style="margin-top: -5px;">
+                                                <input id="checkboxRoadAccident" type="checkbox" value="Road Accident" onclick="getArrayEventsListLive(this);" >
+                                                <label for="checkboxRoadAccident">
+                                                    Road Accident
+                                                </label>
+                                            </div>
+                                            <div class="checkbox checkbox-primary col-sm-3" style="margin-top: -5px;">
+                                                <input id="checkboxSnatching" type="checkbox" value="Snatching" onclick="getArrayEventsListLive(this);">
+                                                <label for="checkboxSnatching">
+                                                    Snatching
+                                                </label>
+                                            </div>
+                                            <div class="checkbox checkbox-primary col-sm-3" style="margin-top: -5px;">
+                                                <input id="checkboxFighting" type="checkbox" value="Fighting" onclick="getArrayEventsListLive(this);" >
+                                                <label for="checkboxFighting">
+                                                    Fighting
+                                                </label>
+                                            </div>
+                                            <!--                                            <div class="checkbox checkbox-primary col-sm-3" style="margin-top: -5px;">-->
+                                            <!--                                                <input id="checkboxFire" type="checkbox" value="Fire" onclick="getArrayEventsListLive(this);">-->
+                                            <!--                                                <label for="checkboxFire">-->
+                                            <!--                                                    Fire-->
+                                            <!--                                                </label>-->
+                                            <!--                                            </div>-->
+                                            <div class="checkbox checkbox-primary col-sm-3" style="margin-top: -5px;">
+                                                <input id="checkboxRobbery" type="checkbox" value="Robbery" onclick="getArrayEventsListLive(this);" >
+                                                <label for="checkboxRobbery">
+                                                    Robbery
+                                                </label>
+                                            </div>
+                                            <div class="checkbox checkbox-primary col-sm-3" style="margin-top: -5px;">
+                                                <input id="checkboxShooting" type="checkbox" value="Shooting" onclick="getArrayEventsListLive(this);">
+                                                <label for="checkboxShooting">
+                                                    Shooting
+                                                </label>
+                                            </div>
+                                            <div class="checkbox checkbox-primary col-sm-3" style="margin-top: -5px;">
+                                                <input id="checkboxVandalism" type="checkbox" value="Vandalism" onclick="getArrayEventsListLive(this);">
+                                                <label for="checkboxVandalism">
+                                                    Vandalism
+                                                </label>
+                                            </div>
+                                            <div class="checkbox checkbox-primary col-sm-3" style="margin-top: -5px;">
+                                                <input id="checkboxProtest" type="checkbox" value="Protest" onclick="getArrayEventsListLive(this);">
+                                                <label for="checkboxProtest">
+                                                    Protest
+                                                </label>
+                                            </div>
+                                            <div class="checkbox checkbox-primary col-sm-3" style="margin-top: -5px;">
+                                                <input id="checkboxRiot" type="checkbox" value="Riot" onclick="getArrayEventsListLive(this);">
+                                                <label for="checkboxRiot">
+                                                    Riot
+                                                </label>
+                                            </div>
+                                            <div class="checkbox checkbox-primary col-sm-3" style="margin-top: -5px;">
+                                                <input id="checkboxSelectAll" type="checkbox" value="Select All" onclick="getArrayEventsListLive(this);">
+                                                <label for="checkboxSelectAll">
+                                                    Select All
+                                                </label>
+                                            </div>
+                                            <!--                                                 <div class="checkbox checkbox-primary col-sm-2">-->
+                                            <!--                                                     <input id="checkboxMotionDetection" type="checkbox" value="Motion Detection" onclick="getArrayEventsList(this);">-->
+                                            <!--                                                     <label for="checkboxVandalismMotion Detection">-->
+                                            <!--                                                         Motion Detection-->
+                                            <!--                                                     </label>-->
+                                            <!--                                                 </div>-->
+                                            <!--                                                 <div class="checkbox checkbox-primary col-sm-3">-->
+                                            <!--                                                     <input id="checkboxPerimeterBreach" type="checkbox" value="Perimeter Breach" onclick="getArrayEventsList(this);" >-->
+                                            <!--                                                     <label for="checkboxPerimeterBreach">-->
+                                            <!--                                                         Perimeter Breach-->
+                                            <!--                                                     </label>-->
+                                            <!--                                                 </div>-->
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="background: rgb(55, 59, 63);border-top: 1px solid #afadad26;">
+                        <span class="modifyCamLoad " style='display:none;top:4px;color: white; font-size: 17px; position: relative;'>
+                                    <i class="fa fa-circle-o-notch fa-spin"></i>
+                                </span>
+                        <button type="button" class="btn label-inverse" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" onclick="modifyCCTVDetails();">Save Changes</button>
+                    </div>
+
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+
+
+        <div id="myModal2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" style="display: none;">
+            <div class="modal-dialog modal-lg" style="width:830px;">
+                <div class="modal-content">
+                    <div class="modal-header" style="background: #212936;">
+                        <button type="button" class="close" aria-hidden="true" style="color: #d2d2d2" id="close_perimiter_modal" onclick="close_modal_fun_peri(this);" >×</button>
+                        <h4 class="modal-title" id="myModalLabel2" style="color: #d2d2d2">Define Perimeter</h4>
+                    </div>
+                    <div class="modal-body" style="background: #212936;">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class = "parent" id="iVideo">
+                                    <img id="video_p"  >
+                                </div>
+                                <div id="int_per_cc" class="col-md-12 col-sm-12 col-xs-12" style="position:relative;margin-top: -1px;margin-left: 13px; display:none;">
+                                    <div id="imgCanv" style="background-position:center;background-repeat:no-repeat;background-size:contain;text-align:center">
+                                        <canvas id="output"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="perimeter_with_time_icici" class="col-md-12" style="top: 15px;margin-bottom: 12px; display:none;" >
+                                <div class='col-sm-3 ' style="width: 28%; margin-left: 23%;">
+                                    <div class="form-group">
+                                        <div class='input-group date datetimepicker5' id=''>
+                                            <input type='text'  class="form-control datetimepicker5 from_time_service_perimeter"   />
+                                            <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-time"></span>
+        </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='col-sm-3' style="width: 28%;">
+                                    <div class="form-group">
+                                        <div class='input-group date datetimepicker6' id='endTime1'>
+                                            <input type='text' class="form-control datetimepicker6 to_time_service_perimeter" />
+                                            <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-time"></span>
+        </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                            <div id="duration_parameter_icici" class="col-md-12" style="top: 15px;margin-bottom: 12px; display:none;" >
+                                <div class='col-sm-3 ' style="width: 28%; margin-left: 23%;">
+                                    <div class="form-group">
+                                        <div class='input-group' id=''>
+                                            <label for="duration_service_perimeter">Object Duration (s)</label>
+                                            <input type='text'  class="form-control duration_service_perimeter" id="duration_service_perimeter"   />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div id="personcount_parameter_icici" class="col-md-12" style="top: 15px;margin-bottom: 12px; display:none;" >
+                                <div class='col-sm-3 ' style="width: 28%; margin-left: 23%;">
+                                    <div class="form-group">
+                                        <div class='input-group' id=''>
+                                            <label for="personcount_service_perimeter">Person Count</label>
+
+                                            <input type='text'  class="form-control personcount_service_perimeter" id="personcount_service_perimeter"   />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                            <div id="perimeter_with_distance_icici" class="col-md-12" style="top: 15px;margin-bottom: 12px; display:none;" >
+                                <div class='col-sm-3 ' style="width: 28%; margin-left: 23%;">
+                                    <div class="form-group">
+                                        <div class='input-group' id=''>
+                                            <input type='number' class="form-control voi_service_perimeter_distance"  placeholder="Distance (in meters)" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='col-sm-3' style="width: 28%;">
+                                    <div class="form-group">
+                                        <div class='input-group date' id=''>
+                                            <input type='number' class="form-control voi_service_perimeter_speed"  placeholder="Speed (in Km/h)" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="background: #212936;">
+
+
+                        <button type="button" class="btn btn-default" onclick="int_detect_cc_reload();" >Reload frame</button>
+                        <button type="button" class="btn btn-default" onclick="resetPerimeterDXB();" >Reset</button>
+                        <button type="button" class="btn btn-primary"  onclick="closeModal_perimeter();">Save changes</button>
+                    </div>
+
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+        <div id="camDeletedDXB" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static" style="display: none;">
+            <div class="modal-dialog " style="width: 35%; top: 15%">
+                <div class="modal-content">
+
+                    <div class="modal-header" style="background: rgb(55, 59, 63); border-bottom: 1px solid #afadad26;">
+                        <!--                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: #d2d2d2">×</button>-->
+                        <h4 class="modal-title" id="" style="color: #d2d2d2">Monitering Disabled</h4>
+                    </div>
+                    <div class="modal-body" style="background: rgb(55, 59, 63);">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                            <span style="color: #d2d2d2;">
+                                This camera has been deleted by DXB user, You can't Monitor more.
+                            </span><br>
+                                <div style="color: #d2d2d2;">
+
+                                    <!--                                <i class="fa fa-circle" style=" font-size:6px; position: relative; top: 1px;"></i> <span style="margin: 0px; position: relative; top: 3px;" id="camDxblocal">2567</span>-->
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer" style="background: rgb(55, 59, 63);border-top: 1px solid #afadad26;">
+                        <!--                    <button type="button" class="btn label-inverse" data-dismiss="modal">ok</button>-->
+                        <button type="button" class="btn label-important" onclick="emptyCamDetailsDXBBrowser();">ok</button>
+                    </div>
+
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+        <br>
+
+<!--            <footer class="content-footer" style="position: initial">-->
+<!--                RAVEN AI - Powered by <a href="https://pivotchain.com" rel="nofollow noopener noreferrer" target="_blank">Pivotchain</a>-->
+<!--            </footer>-->
+
+
+
+        </div>
+
+
+
+
+</div>
+<div id="modal-smtp"></div>
+
+<!--    <footer class="footer">-->
+<!--        <div class="container-fluid foot_container">-->
+<!--            &lt;!&ndash;            <nav class="float-left">&ndash;&gt;-->
+<!--            &lt;!&ndash;                <ul>&ndash;&gt;-->
+<!--            &lt;!&ndash;                    <li>&ndash;&gt;-->
+<!--            &lt;!&ndash;                        <a href="#">&ndash;&gt;-->
+<!--            &lt;!&ndash;                            city&ndash;&gt;-->
+<!--            &lt;!&ndash;                        </a>&ndash;&gt;-->
+<!--            &lt;!&ndash;                        <a href="#">&ndash;&gt;-->
+<!--            &lt;!&ndash;                            Analytics&ndash;&gt;-->
+<!--            &lt;!&ndash;                        </a>&ndash;&gt;-->
+<!--            &lt;!&ndash;                        <a href="#">&ndash;&gt;-->
+<!--            &lt;!&ndash;                            Alerts&ndash;&gt;-->
+<!--            &lt;!&ndash;                        </a>&ndash;&gt;-->
+<!--            &lt;!&ndash;                    </li>&ndash;&gt;-->
+<!--            &lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--            &lt;!&ndash;            </nav>&ndash;&gt;-->
+<!--            <div class="copyright float-right">-->
+<!--                RAVEN AI - Powered by <a href="https://pivotchain.com" rel="nofollow noopener noreferrer" target="_blank">Pivotchain</a>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; your footer here &ndash;&gt;-->
+<!--        </div>-->
+<!--    </footer>-->
+<!-- loader screen  -->
+
+
+
+
+<div class="loader-wrap hiding hide">
+    <i class="fa fa-circle-o-notch fa-spin"></i>
+<!--    <img src="img/edlo3.gif" width="28px">-->
+</div>
+
+
+
+
+
+</div>
+
+
+
+<!-- common libraries. required for every page-->
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<!-- <script src="js/config/config.js"></script> -->
+<script src="lib/jquery-migrate/jquery-migrate-3.1.0.js"></script>
+
+<!--<script src="lib/jquery/dist/jquery.min.js"></script>-->
+<!--<script src="lib/jquery-migrate/jquery-migrate-3.1.0.js"></script>-->
+<script src="lib/jquery-pjax/jquery.pjax.js"></script>
+<script src="lib/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+<script src="lib/widgster/widgster.js"></script>
+<script src="lib/underscore/underscore.js"></script>
+<script src="lib/moment/moment.js"></script>
+<script src="lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="lib/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+<script src="lib/jquery-ui/ui/widgets/datepicker.js"></script>
+<script src="js/video-js/video.js"></script>
+<script src="js/d3.v3.min.js" charset="utf-8"></script>
+<!--<script src="js/perimeter/modifyPerimeter.js"></script>-->
+
+<!-- common application js -->
+<script src="js/app.js"></script>
+<script src="js/settings.js"></script>
+
+
+<script src="lib/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+<script src="lib/backbone/backbone.js"></script>
+<script src="lib/backbone.paginator/lib/backbone.paginator.min.js"></script>
+<script src="lib/backgrid/lib/backgrid.js"></script>
+<script src="lib/backgrid-paginator/backgrid-paginator.js"></script>
+<script src="lib/datatables/media/js/jquery.dataTables.min.js"></script>
+<script src="js/tables-dynamic.js"></script>
+
+
+<!--<script src="https://unpkg.com/video.js@7.10.2/dist/video.js"></script>-->
+<!--<script src="lib/videojs/videojs-flash.min.js"></script>-->
+<!--<script src="js/video-js/video.js"></script>-->
+<!--<script src="https://unpkg.com/video.js/dist/video.js"></script>-->
+
+<!--<script src="js/video-js/video.js"></script>-->
+<script src="js/video-js/hls.js@latest"></script>
+
+<script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="lib/jquery.sparkline/index.js"></script>
+<script src="lib/backbone.localStorage/build/backbone.localStorage.min.js"></script>
+<script src="lib/nvd3/build/nv.d3.min.js"></script>
+<script src="lib/messenger/build/js/messenger.js"></script>
+<!-- page application js -->
+<script src="js/ui-notifications.js"></script>
+
+<!-- <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.62/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script> -->
+<script src="lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="lib/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+<script src="lib/jquery.maskedinput/dist/jquery.maskedinput.min.js"></script>
+<script src="lib/jquery-autosize/dist/autosize.min.js"></script>
+<script src="lib/bootstrap3-wysihtml5-bower/dist/bootstrap3-wysihtml5.all.min.js"></script>
+<script src="lib/select2/dist/js/select2.min.js"></script>
+<!--<script src=""></script>-->
+<!-- page application js -->
+<!-- <script src="js/forms-elements.js"></script> -->
+<script src="js/index.js"></script>
+<script src="js/chat.js"></script>
+
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js" integrity="sha512-zMfrMAZYAlNClPKjN+JMuslK/B6sPM09BGvrWlW+cymmPmsUT1xJF3P4kxI3lOh9zypakSgWaTpY6vDJY/3Dig==" crossorigin="anonymous"></script>-->
+<script>
+    // $(document).ready(function(){
+    //     $(this).scrollTop(0);
+    //
+    //
+    // });
+
+
+function getScripts(scripts, callback) {
+    var progress = 0;
+    scripts.forEach(function(script) {
+        $.getScript(script, function () {
+            if (++progress == scripts.length) callback();
+        });
+    });
+}
+</script>
+<script>
+
+    // refreshEventsCurrentCam =function () {
+    //     var settings = {
+    //         "async": true,
+    //         "crossDomain": true,
+    //         "url": "http://"+base_domainip+"/event-app/get_cam_events/saurabh/saurabh/"+$('li.active').attr('id'),
+    //         "method": "GET",
+    //         "headers": {
+    //             "cache-control": "no-cache",
+    //         }
+    //     }
+    //
+    //     $.ajax(settings).done(function (response) {
+    //         if(response.cam_events.length>0){
+    //             localStorage.removeItem('EventsDXB')
+    //             localStorage.setItem(localStorage.getItem('camName-DXB'),JSON.stringify(response.cam_events));
+    //             $('#eventsDXB').empty();
+    //             var uniqueArr=['Parking Area Clear','Aircraft Arriving','Aircraft Parked','Tyre Blocks Applied','Aircraft Towing Away'];
+    //             for(l=0;l<response.cam_events.length;l++){
+    //                 var datetest= new Date();
+    //                 var TimeFormat= datetest.toLocaleString('en-GB');
+    //                 if(uniqueArr.includes(response.cam_events[l].operation_type)){
+    //                     if(response.cam_events[l].operation_status != "end"){
+    //                         $('#eventsDXB').prepend('<section class="feed-item "  style="border-top: 1px solid rgb(95, 100, 104); padding: 10px 0px 0px; width: 95%;"> <div class="icon pull-left"> <i class="fa fa-check color-green"></i> </div> <div class="feed-item-body"> <div class="text"> ' + response.cam_events[l].event_name + ' at ' + response.cam_events[l].event_time + '</div> <div class="time pull-left" style="visibility: hidden"> 10 h </div> </div> </section>')
+    //                     }
+    //                 }
+    //                 else {
+    //                     $('#eventsDXB').prepend('<section class="feed-item "  style="border-top: 1px solid rgb(95, 100, 104); padding: 10px 0px 0px; width: 95%;"> <div class="icon pull-left"> <i class="fa fa-check color-green"></i> </div> <div class="feed-item-body"> <div class="text"> ' + response.cam_events[l].event_name + ' at ' + response.cam_events[l].event_time + '</div> <div class="time pull-left" style="visibility: hidden"> 10 h </div> </div> </section>')
+    //
+    //                 }
+    //
+    //
+    //                 $('#eventsDXB').prepend('<section class="feed-item "  style="border-top: 1px solid rgb(95, 100, 104); padding: 10px 0px 0px; width: 95%;"> <div class="icon pull-left"> <i class="fa fa-check color-green"></i> </div> <div class="feed-item-body"> <div class="text"> '+response.cam_events[l].event_name+' at '+response.cam_events[l].event_time+'</div> <div class="time pull-left" style="visibility: hidden"> 10 h </div> </div> </section>')
+    //
+    //             }
+    //
+    //         }else {
+    //
+    //             $('#eventsDXB').empty();
+    //             $('#eventsDXB').append('<div id="loadingEvent" class="position eventsDXBA" style="text-align:center ">No Events Found</div>')
+    //
+    //         }
+    //     });
+    // }
+
+</script>
+
+<footer class="footer">
+    <div class="container-fluid foot_container">
+
+        <div class="copyright float-right">
+            RAVEN AI - Powered by <a href="https://pivotchain.com" rel="nofollow noopener noreferrer" target="_blank">Pivotchain</a>
+        </div>
+        <!-- your footer here -->
+    </div>
+</footer>
+</body>
+</html>
